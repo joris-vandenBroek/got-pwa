@@ -1,8 +1,6 @@
-const CACHE_NAME = 'got-pwa-v7';
+const CACHE_NAME = 'got-pwa-v8';
 
 const ASSETS = [
-  './',
-  './index.html',
   './css/style.css',
   './js/app.js',
   './data/characters.json',
@@ -41,7 +39,7 @@ const ASSETS = [
   './images/organizations/nights-watch.svg',
   './images/organizations/small-council.webp',
   './images/organizations/wildlings.webp',
-  // Ontbrekende personages (batch 2)
+  // Ontbrekende personages
   './images/characters/benjen-stark.webp',
   './images/characters/renly-baratheon.webp',
   './images/characters/loras-tyrell.webp',
@@ -93,7 +91,19 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+
+  // HTML altijd van netwerk (meest recente versie), met cache als fallback
+  if (event.request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname === '/got-pwa/' || url.pathname === '/got-pwa') {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  // Alles overige: cache-first
   event.respondWith(
-    caches.match(event.request).then(cached => cached || fetch(event.request))
+    caches.match(event.request, { ignoreSearch: true })
+      .then(cached => cached || fetch(event.request))
   );
 });

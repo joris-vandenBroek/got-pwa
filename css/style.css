@@ -733,7 +733,7 @@ html.light-mode:root[data-show="hotd"] {
 }
 
 /* === Responsive === */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header { padding: 0.7rem 1rem; gap: 0.5rem; }
   .view { padding: 1rem 0.75rem; }
 
@@ -763,7 +763,7 @@ html.light-mode:root[data-show="hotd"] {
   .show-btn { font-size: clamp(0.85rem, 3.8vw, 1.15rem); }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 769px) {
   header { flex-direction: row; justify-content: space-between; }
   .logo { font-size: 1.6rem; }
   .search-container { max-width: 380px; }
