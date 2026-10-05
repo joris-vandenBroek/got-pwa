@@ -366,7 +366,7 @@
             {
               "id": "aegon-targaryen",
               "name": "Aegon II Targaryen",
-              "image": "images/hotd/characters/aegon-targaryen.webp",
+              "image": "images/hotd/characters/aegon-ii-targaryen.webp",
               "houseId": "de-groenen"
             },
             {
@@ -477,7 +477,7 @@
             {
               "id": "rhaenys-targaryen",
               "name": "Rhaenys Targaryen",
-              "image": "images/hotd/characters/rhaenys-targaryen.webp",
+              "image": "images/hotd/characters/rhaenys-targaryen-velaryon.webp",
               "houseId": "velaryon"
             }
           ],
