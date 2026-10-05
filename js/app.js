@@ -709,7 +709,12 @@ document.getElementById('back-btn').addEventListener('click', () => {
 // === Service Worker registreren ===
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('service-worker.js').catch(() => {});
+    navigator.serviceWorker.register('service-worker.js').then(reg => {
+      // Herlaad pagina zodra een nieuwe service worker actief wordt
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    }).catch(() => {});
   });
 }
 
