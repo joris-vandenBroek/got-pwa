@@ -1,0 +1,463 @@
+{
+  "houses": [
+    {
+      "id": "stark",
+      "name": "House Stark",
+      "sigil": "Direwolf",
+      "motto": "Winter is Coming",
+      "color": "#708090",
+      "characters": [
+        {
+          "id": "eddard-stark",
+          "name": "Eddard Stark",
+          "image": "images/characters/eddard-stark.jpg",
+          "description": "Eervolle en rechtvaardige heer van Winterfell en hoofd van House Stark. Hij staat bekend om zijn strikte morele code en trouw aan de wet.",
+          "relationships": [
+            { "id": "catelyn-stark", "label": "Echtgenote" },
+            { "id": "robb-stark", "label": "Zoon" },
+            { "id": "sansa-stark", "label": "Dochter" },
+            { "id": "arya-stark", "label": "Dochter" },
+            { "id": "bran-stark", "label": "Zoon" },
+            { "id": "jon-snow", "label": "Neef (opgegroeid als zoon)" },
+            { "id": "robert-baratheon", "label": "Oude vriend en koning" }
+          ]
+        },
+        {
+          "id": "catelyn-stark",
+          "name": "Catelyn Stark",
+          "image": "images/characters/catelyn-stark.jpg",
+          "description": "Lady van Winterfell en echtgenote van Eddard Stark, afkomstig uit House Tully. Ze is een vastberaden en beschermende moeder.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Echtgenoot" },
+            { "id": "robb-stark", "label": "Zoon" },
+            { "id": "sansa-stark", "label": "Dochter" },
+            { "id": "arya-stark", "label": "Dochter" },
+            { "id": "lysa-arryn", "label": "Zus" }
+          ]
+        },
+        {
+          "id": "robb-stark",
+          "name": "Robb Stark",
+          "image": "images/characters/robb-stark.jpg",
+          "description": "De oudste zoon en erfgenaam van House Stark, opgegroeid als toekomstige heer van Winterfell. Hij staat bekend om zijn leiderscapaciteiten en moed.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Vader" },
+            { "id": "catelyn-stark", "label": "Moeder" },
+            { "id": "jon-snow", "label": "Neef (opgegroeid als broer)" }
+          ]
+        },
+        {
+          "id": "sansa-stark",
+          "name": "Sansa Stark",
+          "image": "images/characters/sansa-stark.jpg",
+          "description": "De oudste dochter van House Stark, opgevoed met ridderlijke idealen en hoofse manieren. Ze droomt van een leven aan het koninklijk hof.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Vader" },
+            { "id": "catelyn-stark", "label": "Moeder" },
+            { "id": "arya-stark", "label": "Zus" },
+            { "id": "joffrey-baratheon", "label": "Verloofde" }
+          ]
+        },
+        {
+          "id": "arya-stark",
+          "name": "Arya Stark",
+          "image": "images/characters/arya-stark.jpg",
+          "description": "De jongste dochter van House Stark, eigenzinnig en avontuurlijk van aard. Ze heeft meer interesse in vechten dan in de gebruikelijke vrouwelijke rollen.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Vader" },
+            { "id": "catelyn-stark", "label": "Moeder" },
+            { "id": "sansa-stark", "label": "Zus" },
+            { "id": "jon-snow", "label": "Neef (opgegroeid als broer)" }
+          ]
+        },
+        {
+          "id": "bran-stark",
+          "name": "Bran Stark",
+          "image": "images/characters/bran-stark.jpg",
+          "description": "De tweede zoon van House Stark, een levendige jongen met een passie voor klimmen en avontuur. Hij droomt ervan ooit ridder te worden.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Vader" },
+            { "id": "catelyn-stark", "label": "Moeder" },
+            { "id": "robb-stark", "label": "Broer" }
+          ]
+        },
+        {
+          "id": "jon-snow",
+          "name": "Jon Snow",
+          "image": "images/characters/jon-snow.jpg",
+          "description": "Opgegroeid in Winterfell als neef van de Stark-kinderen. Hij is eerlijk en plichtsgetrouw en sluit zich aan bij de Nachtwacht.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Oom (opgegroeid als vader)" },
+            { "id": "robb-stark", "label": "Neef (opgegroeid als broer)" },
+            { "id": "arya-stark", "label": "Nicht (opgegroeid als zus)" },
+            { "id": "samwell-tarly", "label": "Vriend bij de Nachtwacht" },
+            { "id": "jeor-mormont", "label": "Commandant" }
+          ]
+        },
+        {
+          "id": "benjen-stark",
+          "name": "Benjen Stark",
+          "image": "images/characters/benjen-stark.jpg",
+          "description": "Jongere broer van Eddard Stark en Eerste Ranger van de Nachtwacht. Een ervaren verkenner die voorbij de Muur patrouilleert.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Broer" },
+            { "id": "jon-snow", "label": "Neef" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lannister",
+      "name": "House Lannister",
+      "sigil": "Leeuw",
+      "motto": "Hear Me Roar",
+      "color": "#CFB53B",
+      "characters": [
+        {
+          "id": "tywin-lannister",
+          "name": "Tywin Lannister",
+          "image": "images/characters/tywin-lannister.jpg",
+          "description": "Het machtige hoofd van House Lannister en een van de meest gevreesde politieke strategen in Westeros. Hij stelt de eer en macht van zijn huis boven alles.",
+          "relationships": [
+            { "id": "cersei-lannister", "label": "Dochter" },
+            { "id": "jaime-lannister", "label": "Zoon" },
+            { "id": "tyrion-lannister", "label": "Zoon" }
+          ]
+        },
+        {
+          "id": "cersei-lannister",
+          "name": "Cersei Lannister",
+          "image": "images/characters/cersei-lannister.jpg",
+          "description": "Dochter van Tywin Lannister en koningin van Westeros als echtgenote van koning Robert Baratheon. Ze is ambitieus en beschermend ten opzichte van haar kinderen.",
+          "relationships": [
+            { "id": "tywin-lannister", "label": "Vader" },
+            { "id": "jaime-lannister", "label": "Broer" },
+            { "id": "tyrion-lannister", "label": "Broer" },
+            { "id": "robert-baratheon", "label": "Echtgenoot" },
+            { "id": "joffrey-baratheon", "label": "Zoon" }
+          ]
+        },
+        {
+          "id": "jaime-lannister",
+          "name": "Jaime Lannister",
+          "image": "images/characters/jaime-lannister.jpg",
+          "description": "Lid van de Koningsgarde en een van de meest getalenteerde zwaardvechters van Westeros, bijgenaamd 'Koningsdoder'. Broer van Cersei en Tyrion.",
+          "relationships": [
+            { "id": "tywin-lannister", "label": "Vader" },
+            { "id": "cersei-lannister", "label": "Zus" },
+            { "id": "tyrion-lannister", "label": "Broer" }
+          ]
+        },
+        {
+          "id": "tyrion-lannister",
+          "name": "Tyrion Lannister",
+          "image": "images/characters/tyrion-lannister.jpg",
+          "description": "De jongste zoon van Tywin Lannister, bekend om zijn scherpe geest, gevoel voor humor en politieke slimheid. Hij compenseert zijn kleine gestalte met woorden en intellect.",
+          "relationships": [
+            { "id": "tywin-lannister", "label": "Vader" },
+            { "id": "cersei-lannister", "label": "Zus" },
+            { "id": "jaime-lannister", "label": "Broer" },
+            { "id": "varys", "label": "Raadsgenoot" }
+          ]
+        },
+        {
+          "id": "joffrey-baratheon",
+          "name": "Joffrey Baratheon",
+          "image": "images/characters/joffrey-baratheon.jpg",
+          "description": "Prins van Westeros en troonopvolger, zoon van koningin Cersei en koning Robert. Hij is verwend en houdt van macht en aanzien.",
+          "relationships": [
+            { "id": "cersei-lannister", "label": "Moeder" },
+            { "id": "robert-baratheon", "label": "Vader" },
+            { "id": "sansa-stark", "label": "Verloofde" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "targaryen",
+      "name": "House Targaryen",
+      "sigil": "Draak",
+      "motto": "Fire and Blood",
+      "color": "#8B0000",
+      "characters": [
+        {
+          "id": "daenerys-targaryen",
+          "name": "Daenerys Targaryen",
+          "image": "images/characters/daenerys-targaryen.jpg",
+          "description": "De laatste bekende erfgenaam van House Targaryen, een ooit machtig koningshuis. Ze begint haar reis als een jonge vrouw ver van haar thuisland en zoekt haar weg in een vijandige wereld.",
+          "relationships": [
+            { "id": "viserys-targaryen", "label": "Broer" },
+            { "id": "khal-drogo", "label": "Echtgenoot" },
+            { "id": "jorah-mormont", "label": "Raadgever en beschermer" }
+          ]
+        },
+        {
+          "id": "viserys-targaryen",
+          "name": "Viserys Targaryen",
+          "image": "images/characters/viserys-targaryen.jpg",
+          "description": "Oudere broer van Daenerys en zelfbenoemde erfgenaam van de IJzeren Troon. Hij is vastbesloten de troon terug te veroveren die zijn familie verloor.",
+          "relationships": [
+            { "id": "daenerys-targaryen", "label": "Zus" }
+          ]
+        },
+        {
+          "id": "khal-drogo",
+          "name": "Khal Drogo",
+          "image": "images/characters/khal-drogo.jpg",
+          "description": "Een machtige Dothraki-leider (khal) die bekendstaat om zijn onoverwinnelijkheid in de strijd. Hij is de echtgenoot van Daenerys Targaryen.",
+          "relationships": [
+            { "id": "daenerys-targaryen", "label": "Echtgenote" }
+          ]
+        },
+        {
+          "id": "jorah-mormont",
+          "name": "Jorah Mormont",
+          "image": "images/characters/jorah-mormont.jpg",
+          "description": "Een geballingde Westerse ridder die dient als raadgever en beschermer van Daenerys Targaryen. Hij kent de politiek van Westeros van binnenuit.",
+          "relationships": [
+            { "id": "daenerys-targaryen", "label": "Beschermeling" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baratheon",
+      "name": "House Baratheon",
+      "sigil": "Hert",
+      "motto": "Ours is the Fury",
+      "color": "#B8860B",
+      "characters": [
+        {
+          "id": "robert-baratheon",
+          "name": "Robert Baratheon",
+          "image": "images/characters/robert-baratheon.jpg",
+          "description": "Koning van de Zeven Koninkrijken, een voormalig groot strijder die de troon veroverde in een grote opstand. Nu geniet hij liever van feesten dan van politiek.",
+          "relationships": [
+            { "id": "cersei-lannister", "label": "Echtgenote" },
+            { "id": "eddard-stark", "label": "Oude vriend" },
+            { "id": "stannis-baratheon", "label": "Broer" },
+            { "id": "renly-baratheon", "label": "Broer" },
+            { "id": "joffrey-baratheon", "label": "Zoon" }
+          ]
+        },
+        {
+          "id": "stannis-baratheon",
+          "name": "Stannis Baratheon",
+          "image": "images/characters/stannis-baratheon.jpg",
+          "description": "De middelste broer van koning Robert Baratheon en heer van Dragonstone. Hij is een strenge en principiële man die gelooft in recht en plicht boven alles.",
+          "relationships": [
+            { "id": "robert-baratheon", "label": "Broer" },
+            { "id": "renly-baratheon", "label": "Broer" }
+          ]
+        },
+        {
+          "id": "renly-baratheon",
+          "name": "Renly Baratheon",
+          "image": "images/characters/renly-baratheon.jpg",
+          "description": "De jongste broer van koning Robert, populair aan het hof en beminnelijk van karakter. Hij is heer van Storm's End.",
+          "relationships": [
+            { "id": "robert-baratheon", "label": "Broer" },
+            { "id": "stannis-baratheon", "label": "Broer" },
+            { "id": "loras-tyrell", "label": "Ridder van de lijfwacht" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tyrell",
+      "name": "House Tyrell",
+      "sigil": "Roos",
+      "motto": "Growing Strong",
+      "color": "#2E7D32",
+      "characters": [
+        {
+          "id": "margaery-tyrell",
+          "name": "Margaery Tyrell",
+          "image": "images/characters/margaery-tyrell.jpg",
+          "description": "Kleindochter van Olenna Tyrell en een behendig politiek figuur aan het hof. Ze is charmant, vriendelijk en populair bij het gewone volk.",
+          "relationships": [
+            { "id": "olenna-tyrell", "label": "Grootmoeder" },
+            { "id": "loras-tyrell", "label": "Broer" }
+          ]
+        },
+        {
+          "id": "olenna-tyrell",
+          "name": "Olenna Tyrell",
+          "image": "images/characters/olenna-tyrell.jpg",
+          "description": "Bijgenaamd de 'Koningin der Doornen', is zij het sluwe en scherptongige hoofd van House Tyrell. Ze is een meester in hofpolitiek.",
+          "relationships": [
+            { "id": "margaery-tyrell", "label": "Kleindochter" },
+            { "id": "loras-tyrell", "label": "Kleinzoon" }
+          ]
+        },
+        {
+          "id": "loras-tyrell",
+          "name": "Loras Tyrell",
+          "image": "images/characters/loras-tyrell.jpg",
+          "description": "Bekend als de 'Ridder der Bloemen', is hij een van de knapste en meest getalenteerde toernooivechters van Westeros.",
+          "relationships": [
+            { "id": "margaery-tyrell", "label": "Zus" },
+            { "id": "olenna-tyrell", "label": "Grootmoeder" },
+            { "id": "renly-baratheon", "label": "Heer die hij dient" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greyjoy",
+      "name": "House Greyjoy",
+      "sigil": "Inktvis",
+      "motto": "We Do Not Sow",
+      "color": "#37474F",
+      "characters": [
+        {
+          "id": "theon-greyjoy",
+          "name": "Theon Greyjoy",
+          "image": "images/characters/theon-greyjoy.jpg",
+          "description": "Erfgenaam van House Greyjoy en gijzelaar opgegroeid bij House Stark in Winterfell. Hij worstelt met zijn identiteit tussen twee werelden.",
+          "relationships": [
+            { "id": "balon-greyjoy", "label": "Vader" },
+            { "id": "yara-greyjoy", "label": "Zus" },
+            { "id": "robb-stark", "label": "Vriend (opgegroeid samen)" }
+          ]
+        },
+        {
+          "id": "balon-greyjoy",
+          "name": "Balon Greyjoy",
+          "image": "images/characters/balon-greyjoy.jpg",
+          "description": "Heer van de Ijzeren Eilanden en hoofd van House Greyjoy. Hij is trots op de rooftradities van zijn volk en veracht het ploegen en verbouwen van anderen.",
+          "relationships": [
+            { "id": "theon-greyjoy", "label": "Zoon" },
+            { "id": "yara-greyjoy", "label": "Dochter" }
+          ]
+        },
+        {
+          "id": "yara-greyjoy",
+          "name": "Yara Greyjoy",
+          "image": "images/characters/yara-greyjoy.jpg",
+          "description": "Dochter van Balon Greyjoy en commandant van haar eigen schip. Ze is een bekwame en moedige strijdster die haar mannen inspireert.",
+          "relationships": [
+            { "id": "balon-greyjoy", "label": "Vader" },
+            { "id": "theon-greyjoy", "label": "Broer" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "martell",
+      "name": "House Martell",
+      "sigil": "Zon en speer",
+      "motto": "Unbowed, Unbent, Unbroken",
+      "color": "#E65100",
+      "characters": [
+        {
+          "id": "oberyn-martell",
+          "name": "Oberyn Martell",
+          "image": "images/characters/oberyn-martell.jpg",
+          "description": "Prins van Dorne en bijgenaamd de 'Rode Adder', bekend om zijn vluchtigheid en zijn gevaarlijke vaardigheden als vechter met speer en gif.",
+          "relationships": [
+            { "id": "doran-martell", "label": "Broer" },
+            { "id": "ellaria-sand", "label": "Levensgezellin" }
+          ]
+        },
+        {
+          "id": "doran-martell",
+          "name": "Doran Martell",
+          "image": "images/characters/doran-martell.jpg",
+          "description": "Prins van Dorne en het rustige, bedachtzame hoofd van House Martell. Hij geeft de voorkeur aan diplomatie boven oorlog.",
+          "relationships": [
+            { "id": "oberyn-martell", "label": "Broer" }
+          ]
+        },
+        {
+          "id": "ellaria-sand",
+          "name": "Ellaria Sand",
+          "image": "images/characters/ellaria-sand.jpg",
+          "description": "Levensgezellin van Oberyn Martell en moeder van enkele van zijn dochters. Ze staat bekend om haar onverschrokken karakter.",
+          "relationships": [
+            { "id": "oberyn-martell", "label": "Levensgezel" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arryn",
+      "name": "House Arryn",
+      "sigil": "Valk",
+      "motto": "As High as Honor",
+      "color": "#1565C0",
+      "characters": [
+        {
+          "id": "lysa-arryn",
+          "name": "Lysa Arryn",
+          "image": "images/characters/lysa-arryn.jpg",
+          "description": "Zus van Catelyn Stark en weduwe van de voormalige Hand des Konings. Ze heerst als regentes over de Adelaarsnest namens haar jonge zoon.",
+          "relationships": [
+            { "id": "catelyn-stark", "label": "Zus" },
+            { "id": "robin-arryn", "label": "Zoon" },
+            { "id": "petyr-baelish", "label": "Oude kennis" }
+          ]
+        },
+        {
+          "id": "robin-arryn",
+          "name": "Robin Arryn",
+          "image": "images/characters/robin-arryn.jpg",
+          "description": "Jonge heer van de Adelaarsnest en erfgenaam van House Arryn. Hij groeit op in het onneembare kasteel hoog in de bergen.",
+          "relationships": [
+            { "id": "lysa-arryn", "label": "Moeder" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nachtwacht",
+      "name": "De Nachtwacht",
+      "sigil": "Zwaard en raaf",
+      "motto": "Night gathers, and now my watch begins",
+      "color": "#546E7A",
+      "characters": [
+        {
+          "id": "jeor-mormont",
+          "name": "Jeor Mormont",
+          "image": "images/characters/jeor-mormont.jpg",
+          "description": "Lord Commander van de Nachtwacht, bijgenaamd de 'Oude Beer'. Hij leidt de broederschap met strenge maar rechtvaardige hand.",
+          "relationships": [
+            { "id": "jon-snow", "label": "Jonge rekruut onder zijn hoede" },
+            { "id": "samwell-tarly", "label": "Rekruut" }
+          ]
+        },
+        {
+          "id": "samwell-tarly",
+          "name": "Samwell Tarly",
+          "image": "images/characters/samwell-tarly.jpg",
+          "description": "Een vriendelijke en belezenе jongeman die rekruut wordt bij de Nachtwacht. Hij is geen geboren strijder maar bezit een scherp verstand en brede kennis.",
+          "relationships": [
+            { "id": "jon-snow", "label": "Beste vriend" },
+            { "id": "jeor-mormont", "label": "Commandant" }
+          ]
+        },
+        {
+          "id": "petyr-baelish",
+          "name": "Petyr Baelish",
+          "image": "images/characters/petyr-baelish.jpg",
+          "description": "Bijgenaamd 'Littlefinger', is hij de Master of Coin aan het hof van Koningslanding. Hij is een meester van intriges en financiële manipulatie.",
+          "relationships": [
+            { "id": "lysa-arryn", "label": "Oude liefde" },
+            { "id": "catelyn-stark", "label": "Oude kennis" },
+            { "id": "varys", "label": "Rivaal aan het hof" }
+          ]
+        },
+        {
+          "id": "varys",
+          "name": "Varys",
+          "image": "images/characters/varys.jpg",
+          "description": "De Master of Whisperers aan het hof van Koningsland, bijgenaamd de 'Spin'. Hij beschikt over een uitgestrekt netwerk van informanten in heel Westeros.",
+          "relationships": [
+            { "id": "petyr-baelish", "label": "Rivaal aan het hof" },
+            { "id": "tyrion-lannister", "label": "Raadsgenoot" }
+          ]
+        }
+      ]
+    }
+  ]
+}
