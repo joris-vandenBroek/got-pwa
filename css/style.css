@@ -346,9 +346,10 @@ header {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.2rem 1.3rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .info-card::before {
   content: '';
@@ -356,6 +357,25 @@ header {
   top: 0; left: 0;
   width: 3px; height: 100%;
   background: var(--gold);
+  z-index: 1;
+}
+.info-card-img {
+  width: 100%;
+  aspect-ratio: 16/7;
+  object-fit: cover;
+  object-position: center 30%;
+  background: #1a1209;
+  display: block;
+}
+.info-card-img.is-svg {
+  aspect-ratio: unset;
+  height: 140px;
+  object-fit: contain;
+  padding: 1rem;
+  background: #0f0802;
+}
+.info-card-body {
+  padding: 1.1rem 1.3rem;
 }
 .info-card h3 {
   font-family: var(--font-heading);
@@ -380,6 +400,58 @@ header {
   border: 1px solid var(--border);
   border-radius: 3px;
   padding: 0.1rem 0.4rem;
+}
+
+/* === Westeros kaart === */
+.map-container {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.map-container h2 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+}
+.westeros-map {
+  width: 100%;
+  display: block;
+}
+.map-region { fill: #1e2a1a; stroke: #3a4a30; stroke-width: 1; }
+.map-region.crownlands { fill: #2a1e0a; }
+.map-region.north { fill: #1a2230; }
+.map-region.essos { fill: #2a1e0f; }
+.map-sea { fill: #0a1520; }
+.map-ice { fill: #1a2838; }
+.map-pin { fill: var(--gold); stroke: #0d0d0d; stroke-width: 1.5; cursor: pointer; transition: fill 0.15s; }
+.map-pin:hover { fill: #fff3a0; }
+.map-label {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 7px;
+  fill: #8a9a7a;
+  text-anchor: middle;
+  pointer-events: none;
+}
+.map-pin-label {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 6px;
+  fill: var(--gold);
+  text-anchor: middle;
+  pointer-events: none;
+}
+.map-region-label {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 7.5px;
+  fill: #4a5a40;
+  text-anchor: middle;
+  pointer-events: none;
+  font-style: italic;
 }
 
 /* === Woordenlijst === */

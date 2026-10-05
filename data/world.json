@@ -5,105 +5,120 @@
       "name": "King's Landing",
       "region": "De Kroonlanden",
       "description": "De hoofdstad van de Zeven Koninkrijken, gelegen aan de monding van de rivier de Blackwater. Hier bevindt zich de IJzeren Troon in het Rode Kasteel, de zetel van de macht van Westeros.",
-      "significance": "Politiek centrum van Westeros"
+      "significance": "Politiek centrum van Westeros",
+      "image": "images/locations/kings-landing.webp"
     },
     {
       "id": "winterfell",
       "name": "Winterfell",
       "region": "Het Noorden",
       "description": "Het eeuwenoude kasteel en de zetel van House Stark, gelegen in het hart van het Noorden. Ondanks de naam houdt Winterfell zijn bewoners warm dankzij hete bronnen die door de muren lopen.",
-      "significance": "Zetel van House Stark"
+      "significance": "Zetel van House Stark",
+      "image": "images/locations/winterfell.webp"
     },
     {
       "id": "the-wall",
       "name": "The Wall",
       "region": "Het Hoge Noorden",
       "description": "Een massieve barrière van ijs en steen, meer dan 300 meter hoog en honderden kilometers lang, die de grens van de beschaafde wereld markeert. De Nachtwacht bewaakt deze muur tegen dreigingen uit het noorden.",
-      "significance": "Grens tussen de bewoonde wereld en de wildernis"
+      "significance": "Grens tussen de bewoonde wereld en de wildernis",
+      "image": "images/locations/the-wall.webp"
     },
     {
       "id": "casterly-rock",
       "name": "Casterly Rock",
       "region": "Het Westen",
       "description": "Het imposante kasteel van House Lannister, gebouwd in en op een enorme rots aan de Westzee. Ooit een rijke goudmijn, is het de rijkste burcht in heel Westeros.",
-      "significance": "Zetel van House Lannister"
+      "significance": "Zetel van House Lannister",
+      "image": "images/locations/casterly-rock.webp"
     },
     {
       "id": "dragonstone",
       "name": "Dragonstone",
       "region": "Blackwater Bay",
       "description": "Een eilandkasteel gebouwd van donker steen, ooit het thuisland van House Targaryen voordat zij de Zeven Koninkrijken veroverden. Het eiland is bezaaid met drakengrotafbeeldingen en staat bekend om zijn sombere uitstraling.",
-      "significance": "Oud thuis van House Targaryen"
+      "significance": "Oud thuis van House Targaryen",
+      "image": "images/locations/dragonstone.webp"
     },
     {
       "id": "the-eyrie",
       "name": "The Eyrie",
       "region": "Het Dal",
       "description": "Het nagenoeg onneembare kasteel van House Arryn, hoog in de Maanbergen gelegen. Het kan alleen te voet bereikt worden via een smalle bergweg en is berucht om zijn 'hemelcellen' — open cellen aan de rand van de bergtop.",
-      "significance": "Zetel van House Arryn"
+      "significance": "Zetel van House Arryn",
+      "image": "images/locations/the-eyrie.webp"
     },
     {
       "id": "storm-s-end",
       "name": "Storm's End",
       "region": "De Stormgronden",
       "description": "Het massieve kasteel van House Baratheon aan de Stormzee, gebouwd om de hevige orkanen te weerstaan die de kust teisteren. De muren zijn zo dik dat geen storm of magie erdoorheen kan.",
-      "significance": "Zetel van House Baratheon"
+      "significance": "Zetel van House Baratheon",
+      "image": "images/locations/storm-s-end.webp"
     },
     {
       "id": "highgarden",
       "name": "Highgarden",
       "region": "Het Bereik",
       "description": "Het rijke en weelderige kasteel van House Tyrell, omgeven door bloeiende tuinen en velden. Het Bereik is de meest vruchtbare regio van Westeros en Highgarden staat symbool voor zijn overvloed.",
-      "significance": "Zetel van House Tyrell"
+      "significance": "Zetel van House Tyrell",
+      "image": "images/locations/highgarden.webp"
     },
     {
       "id": "pyke",
       "name": "Pyke",
       "region": "De Ijzeren Eilanden",
       "description": "Het ruïneuze kasteel van House Greyjoy, verspreid over meerdere kleine eilandjes die door smalle bruggen verbonden zijn. De Ijzeren Eilanden zijn ruw en arm, maar hun bewoners zijn bekwame zeevaarders en strijders.",
-      "significance": "Zetel van House Greyjoy"
+      "significance": "Zetel van House Greyjoy",
+      "image": "images/locations/pyke.webp"
     },
     {
       "id": "sunspear",
       "name": "Sunspear",
       "region": "Dorne",
       "description": "De hoofdstad van Dorne en zetel van House Martell, gelegen in de woestijnachtige zuidelijke uithoek van Westeros. Dorne heeft als enige regio de verovering van de Targaryen-draken weerstaan en heeft eigen wetten en tradities.",
-      "significance": "Zetel van House Martell"
+      "significance": "Zetel van House Martell",
+      "image": "images/locations/sunspear.webp"
     },
     {
       "id": "the-godswood",
       "name": "The Godswood",
       "region": "Overal in het Noorden",
       "description": "Een heilig bos dat bij elk Noordelijk kasteel hoort, met centraal een Hartenbboom — een grote witte boom met een gezichtsachtig patroon in de schors. Het is de gebedsplaats van de Ouden Goden, de godsdienst van het Noorden.",
-      "significance": "Religieuze plek van de Ouden Goden"
+      "significance": "Religieuze plek van de Ouden Goden",
+      "image": "images/locations/the-godswood.webp"
     },
     {
       "id": "castle-black",
       "name": "Castle Black",
       "region": "Het Hoge Noorden",
       "description": "Het hoofdkwartier van de Nachtwacht, gelegen aan de voet van The Wall. Het is een vervallen fort dat ooit een grote kazerne was maar nu slechts een fractie van zijn vroegere bezetting herbergt.",
-      "significance": "Hoofdkwartier van de Nachtwacht"
+      "significance": "Hoofdkwartier van de Nachtwacht",
+      "image": "images/locations/castle-black.webp"
     },
     {
       "id": "braavos",
       "name": "Braavos",
       "region": "De Vrije Steden",
       "description": "De rijkste en machtigste van de Vrije Steden, gelegen op een archipel aan de westkust van Essos. Braavos staat bekend om zijn Ijzeren Bank, zijn Gezichtsloze Mannen en het kolossale standbeeld 'de Titan van Braavos'.",
-      "significance": "Belangrijkste Vrije Stad"
+      "significance": "Belangrijkste Vrije Stad",
+      "image": "images/locations/braavos.webp"
     },
     {
       "id": "pentos",
       "name": "Pentos",
       "region": "De Vrije Steden",
       "description": "Een welvarende handelsstad aan de westkust van Essos, geregeerd door magisters. Het is de stad waar Daenerys Targaryen en haar broer Viserys verbleven voor hun reis naar de Dothraki.",
-      "significance": "Vertrekpunt van Daenerys haar reis"
+      "significance": "Vertrekpunt van Daenerys haar reis",
+      "image": "images/locations/pentos.webp"
     },
     {
       "id": "the-dothraki-sea",
       "name": "De Dothraki Zee",
       "region": "Essos",
       "description": "Een enorm, eindeloos grasvlakte op het continent Essos, thuis van de nomadische Dothraki-volkeren. De zee wordt zo genoemd omdat de wind door het hoge gras golven creëert die op water lijken.",
-      "significance": "Thuisland van de Dothraki"
+      "significance": "Thuisland van de Dothraki",
+      "image": "images/locations/the-dothraki-sea.webp"
     }
   ],
   "creatures": [
@@ -111,31 +126,36 @@
       "id": "dragons",
       "name": "Draken",
       "description": "Machtige vliegende reptielen die vuur kunnen spuwen en berucht zijn om hun kracht en intelligentie. Draken zijn voor lange tijd uitgestorven geweest in Westeros. Ze zijn het symbool van House Targaryen, die ze vroeger gebruikten om de Zeven Koninkrijken te veroveren.",
-      "associated_with": "House Targaryen"
+      "associated_with": "House Targaryen",
+      "image": "images/creatures/dragons.webp"
     },
     {
       "id": "white-walkers",
       "name": "White Walkers",
       "description": "Mysterieuze, ijskoude wezens uit het verre noorden, ook wel de 'Anderen' genoemd. Ze kunnen de dood manipuleren en doden tot leven wekken als ondoden strijders. De meeste mensen in Westeros beschouwen hen als sagen of legendes.",
-      "associated_with": "Het Hoge Noorden"
+      "associated_with": "Het Hoge Noorden",
+      "image": "images/creatures/white-walkers.webp"
     },
     {
       "id": "wights",
       "name": "Wights (Ondoden)",
       "description": "Dode mensen of dieren die tot leven zijn gewekt door de White Walkers. Ze dienen als het leger van de White Walkers en zijn te herkennen aan hun blauwe ogen. Ze kunnen alleen worden gedood door vuur of dragonglas.",
-      "associated_with": "White Walkers"
+      "associated_with": "White Walkers",
+      "image": "images/creatures/wights.webp"
     },
     {
       "id": "direwolves",
       "name": "Direwolves (Reuzenwolven)",
       "description": "Enorme, wolfsachtige roofdieren, groter dan een paard, die als symbool van House Stark dienen. Ze zijn normaal gesproken alleen gevonden voorbij The Wall, maar aan het begin van de serie worden ze ook in het Noorden gesignaleerd — wat als een slecht voorteken wordt beschouwd.",
-      "associated_with": "House Stark"
+      "associated_with": "House Stark",
+      "image": "images/creatures/direwolves.webp"
     },
     {
       "id": "giants",
       "name": "Reuzen",
       "description": "Enorme mensachtige wezens die leven voorbij The Wall, samen met de Wildlings. Ze zijn meer dan drie meter hoog en beschikken over bovenmenselijke kracht. Ze worden door de mensen van Westeros als mythologisch beschouwd.",
-      "associated_with": "Het Hoge Noorden"
+      "associated_with": "Het Hoge Noorden",
+      "image": "images/creatures/giants.webp"
     },
     {
       "id": "shadowcats",
@@ -156,56 +176,64 @@
       "name": "De Nachtwacht",
       "description": "Een oude broederschap van mannen die de grens bij The Wall bewaken. Leden zweren af om geen land, geen titel en geen vrouw te nemen en dienen tot hun dood. Ze rekruteren vaak misdadigers, bastaarden en verstotenen.",
       "motto": "Night gathers, and now my watch begins",
-      "base": "Castle Black"
+      "base": "Castle Black",
+      "image": "images/organizations/nights-watch.svg"
     },
     {
       "id": "kingsguard",
       "name": "De Koningsgarde",
       "description": "Zeven elite-ridders die gezworen hebben het leven van de vorst te beschermen met hun eigen leven. Ze dragen witte wapenrustingen en dienen tot hun dood. Ze mogen geen land bezitten of trouwen.",
       "motto": "Wij staan geen stap achteruit",
-      "base": "King's Landing"
+      "base": "King's Landing",
+      "image": "images/organizations/kingsguard.svg"
     },
     {
       "id": "small-council",
       "name": "De Kleine Raad",
       "description": "Het adviserende lichaam van de Koning, bestaande uit zijn meest vertrouwde raadgevers. Vaste leden zijn de Hand des Konings, de Master of Coin, de Master of Whisperers, de Master of Ships en de Master of Laws.",
       "motto": null,
-      "base": "King's Landing"
+      "base": "King's Landing",
+      "image": "images/organizations/small-council.webp"
     },
     {
       "id": "dothraki",
       "name": "De Dothraki",
       "description": "Een nomadisch steppevolk van Essos, beruchte ruiters en krijgers. Ze leven in rondtrekkende stammen (khalasars) geleid door een khal. Ze geloven dat alles wat gelopen kan worden, veroverd kan worden.",
       "motto": "Niets dat de aarde aanraakt kan ons weerstaan",
-      "base": "De Dothraki Zee"
+      "base": "De Dothraki Zee",
+      "image": "images/organizations/dothraki.webp"
     },
     {
       "id": "wildlings",
       "name": "Wildlings (Vrije Volkeren)",
       "description": "De mensen die leven voorbij The Wall, ook wel 'Vrije Volkeren' of 'Freefolk' genoemd. Ze erkennen geen koningen en leven in stammen. Ze worden door de mensen van Westeros als barbaars beschouwd, maar kennen een rijke eigen cultuur.",
       "motto": "Wij buigen voor geen enkele koning",
-      "base": "Het Hoge Noorden"
+      "base": "Het Hoge Noorden",
+      "image": "images/organizations/wildlings.webp"
     },
     {
       "id": "faceless-men",
       "name": "De Gezichtsloze Mannen",
       "description": "Een geheimzinnige broederschap van huurmoordenaars gevestigd in Braavos. Ze aanbidden de Velen Gezichten God, die de dood als genade beschouwt. Ze kunnen hun uiterlijk veranderen en zijn bekend als de meest bekwame moordenaars ter wereld.",
       "motto": "Valar Morghulis — Alle mensen moeten sterven",
-      "base": "Braavos"
+      "base": "Braavos",
+      "image": "images/organizations/faceless-men.svg"
     },
     {
       "id": "maesters",
       "name": "De Maesters",
       "description": "Geleerden die opgeleid zijn in de Citadel in Oldtown. Ze dienen als dokter, leraar en raadgever in de kastelen van Westeros. Elke maester draagt een keten van verschillende metalen ringen, elk symbool voor een kennisgebied.",
       "motto": null,
-      "base": "De Citadel, Oldtown"
+      "base": "De Citadel, Oldtown",
+      "image": "images/organizations/maesters.webp"
     },
     {
       "id": "lords-of-westeros",
       "name": "De Hoge Heren",
       "description": "De heerszuchtige adel van Westeros, de zogenoemde Lords Paramount. Zij heersen elk over een grote regio en zijn in theorie trouw aan de IJzeren Troon, maar voeren ook hun eigen politiek en oorlogen.",
       "motto": null,
-      "base": "Westeros"
+      "base": "Westeros",
+      "image": "images/organizations/lords-of-westeros.webp"
     }
   ],
   "glossary": [
