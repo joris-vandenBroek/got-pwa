@@ -1,4 +1,4 @@
-const CACHE_NAME = 'got-pwa-v2';
+const CACHE_NAME = 'got-pwa-v3';
 
 const ASSETS = [
   './',
@@ -41,6 +41,14 @@ const ASSETS = [
   './images/organizations/nights-watch.svg',
   './images/organizations/small-council.webp',
   './images/organizations/wildlings.webp',
+  // Ontbrekende personages (batch 2)
+  './images/characters/benjen-stark.webp',
+  './images/characters/renly-baratheon.webp',
+  './images/characters/loras-tyrell.webp',
+  './images/characters/balon-greyjoy.webp',
+  './images/characters/doran-martell.webp',
+  './images/characters/lysa-arryn.webp',
+  './images/characters/robin-arryn.webp',
 ];
 
 self.addEventListener('install', event => {

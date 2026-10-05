@@ -105,7 +105,7 @@
           "id": "benjen-stark",
           "name": "Benjen Stark",
           "actor": "Joseph Mawle",
-          "image": "images/characters/benjen-stark.jpg",
+          "image": "images/characters/benjen-stark.webp",
           "description": "Jongere broer van Eddard Stark en Eerste Ranger van de Nachtwacht. Een ervaren verkenner die voorbij de Muur patrouilleert.",
           "relationships": [
             { "id": "eddard-stark", "label": "Broer" },
@@ -273,7 +273,7 @@
           "id": "renly-baratheon",
           "name": "Renly Baratheon",
           "actor": "Gethin Anthony",
-          "image": "images/characters/renly-baratheon.jpg",
+          "image": "images/characters/renly-baratheon.webp",
           "description": "De jongste broer van koning Robert, populair aan het hof en beminnelijk van karakter. Hij is heer van Storm's End.",
           "relationships": [
             { "id": "robert-baratheon", "label": "Broer" },
@@ -316,7 +316,7 @@
           "id": "loras-tyrell",
           "name": "Loras Tyrell",
           "actor": "Finn Jones",
-          "image": "images/characters/loras-tyrell.jpg",
+          "image": "images/characters/loras-tyrell.webp",
           "description": "Bekend als de 'Ridder der Bloemen', is hij een van de knapste en meest getalenteerde toernooivechters van Westeros.",
           "relationships": [
             { "id": "margaery-tyrell", "label": "Zus" },
@@ -349,7 +349,7 @@
           "id": "balon-greyjoy",
           "name": "Balon Greyjoy",
           "actor": "Patrick Malahide",
-          "image": "images/characters/balon-greyjoy.jpg",
+          "image": "images/characters/balon-greyjoy.webp",
           "description": "Heer van de Ijzeren Eilanden en hoofd van House Greyjoy. Hij is trots op de rooftradities van zijn volk en veracht het ploegen en verbouwen van anderen.",
           "relationships": [
             { "id": "theon-greyjoy", "label": "Zoon" },
@@ -391,7 +391,7 @@
           "id": "doran-martell",
           "name": "Doran Martell",
           "actor": "Alexander Siddig",
-          "image": "images/characters/doran-martell.jpg",
+          "image": "images/characters/doran-martell.webp",
           "description": "Prins van Dorne en het rustige, bedachtzame hoofd van House Martell. Hij geeft de voorkeur aan diplomatie boven oorlog.",
           "relationships": [
             { "id": "oberyn-martell", "label": "Broer" }
@@ -420,7 +420,7 @@
           "id": "lysa-arryn",
           "name": "Lysa Arryn",
           "actor": "Kate Dickie",
-          "image": "images/characters/lysa-arryn.jpg",
+          "image": "images/characters/lysa-arryn.webp",
           "description": "Zus van Catelyn Stark en weduwe van de voormalige Hand des Konings. Ze heerst als regentes over de Adelaarsnest namens haar jonge zoon.",
           "relationships": [
             { "id": "catelyn-stark", "label": "Zus" },
@@ -432,7 +432,7 @@
           "id": "robin-arryn",
           "name": "Robin Arryn",
           "actor": "Lino Facioli",
-          "image": "images/characters/robin-arryn.jpg",
+          "image": "images/characters/robin-arryn.webp",
           "description": "Jonge heer van de Adelaarsnest en erfgenaam van House Arryn. Hij groeit op in het onneembare kasteel hoog in de bergen.",
           "relationships": [
             { "id": "lysa-arryn", "label": "Moeder" }
