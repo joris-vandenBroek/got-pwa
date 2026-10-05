@@ -290,6 +290,253 @@ header {
   grid-column: 1 / -1;
 }
 
+/* === Acteur-badge === */
+.actor-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.3rem;
+}
+.actor-badge span { color: var(--gold-dim); }
+
+/* === Navigatietabbladen === */
+.main-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background: #0f0802;
+  border-bottom: 1px solid var(--border);
+  padding: 0 0.5rem;
+  position: sticky;
+  top: var(--header-height, 96px);
+  z-index: 90;
+}
+.main-nav::-webkit-scrollbar { display: none; }
+
+.nav-tab {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+  letter-spacing: 0.04em;
+}
+.nav-tab:hover { color: var(--text); }
+.nav-tab.active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* === Info-kaartlijst (locaties, wezens, organisaties) === */
+.info-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+}
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--gold);
+}
+.info-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+.info-card .info-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+.info-card p { font-size: 0.92rem; line-height: 1.6; }
+.info-card .info-tag {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  font-family: var(--font-heading);
+  color: var(--gold-dim);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+}
+
+/* === Woordenlijst === */
+.glossary-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+
+.glossary-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+}
+.glossary-item dt {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.glossary-item dd {
+  font-size: 0.87rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* === Zoekresultaten (gecombineerd) === */
+.results-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.result-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.result-item img {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  background: #1a1209;
+}
+.result-item .result-body { flex: 1; min-width: 0; }
+.result-item h3 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 0.15rem;
+}
+.result-item p { font-size: 0.85rem; color: var(--text); }
+.result-item .result-type {
+  font-size: 0.7rem;
+  font-family: var(--font-heading);
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.04em;
+}
+.result-item.clickable { cursor: pointer; }
+.result-item.clickable:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-card-hover);
+}
+
+/* === Seizoenen === */
+.spoiler-notice {
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  background: #1e1000;
+  border: 1px solid #5a3a00;
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  color: #c49a3c;
+}
+
+.seasons-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.season-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.season-card summary {
+  list-style: none;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+}
+.season-card summary::-webkit-details-marker { display: none; }
+.season-card summary:hover { background: var(--bg-card-hover); }
+
+.season-card .season-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--gold);
+}
+.season-card .season-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.season-card .season-chevron {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+}
+.season-card[open] .season-chevron { transform: rotate(180deg); }
+
+.season-card .season-body {
+  padding: 0 1.2rem 1rem;
+  border-top: 1px solid var(--border);
+}
+.season-card .spoiler-label {
+  font-size: 0.72rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  padding: 0.6rem 0 0.4rem;
+  color: var(--text-muted);
+}
+.season-card p { font-size: 0.9rem; line-height: 1.6; }
+
+/* === Sectie-heading === */
+.section-heading {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  font-size: 1rem;
+  max-width: 900px;
+  margin: 0 auto 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
 /* === Responsive === */
 @media (max-width: 600px) {
   header { padding: 0.7rem 1rem; }
@@ -298,6 +545,8 @@ header {
   .character-card img { aspect-ratio: 2/3; }
   .character-card .card-body { padding: 0.7rem; }
   .house-card { padding: 1rem; }
+  .nav-tab { font-size: 0.75rem; padding: 0.65rem 0.7rem; }
+  .glossary-list { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 900px) {

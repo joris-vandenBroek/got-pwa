@@ -10,6 +10,7 @@
         {
           "id": "eddard-stark",
           "name": "Eddard Stark",
+          "actor": "Sean Bean",
           "image": "images/characters/eddard-stark.jpg",
           "description": "Eervolle en rechtvaardige heer van Winterfell en hoofd van House Stark. Hij staat bekend om zijn strikte morele code en trouw aan de wet.",
           "relationships": [
@@ -25,6 +26,7 @@
         {
           "id": "catelyn-stark",
           "name": "Catelyn Stark",
+          "actor": "Michelle Fairley",
           "image": "images/characters/catelyn-stark.jpg",
           "description": "Lady van Winterfell en echtgenote van Eddard Stark, afkomstig uit House Tully. Ze is een vastberaden en beschermende moeder.",
           "relationships": [
@@ -38,6 +40,7 @@
         {
           "id": "robb-stark",
           "name": "Robb Stark",
+          "actor": "Richard Madden",
           "image": "images/characters/robb-stark.jpg",
           "description": "De oudste zoon en erfgenaam van House Stark, opgegroeid als toekomstige heer van Winterfell. Hij staat bekend om zijn leiderscapaciteiten en moed.",
           "relationships": [
@@ -49,6 +52,7 @@
         {
           "id": "sansa-stark",
           "name": "Sansa Stark",
+          "actor": "Sophie Turner",
           "image": "images/characters/sansa-stark.jpg",
           "description": "De oudste dochter van House Stark, opgevoed met ridderlijke idealen en hoofse manieren. Ze droomt van een leven aan het koninklijk hof.",
           "relationships": [
@@ -61,6 +65,7 @@
         {
           "id": "arya-stark",
           "name": "Arya Stark",
+          "actor": "Maisie Williams",
           "image": "images/characters/arya-stark.jpg",
           "description": "De jongste dochter van House Stark, eigenzinnig en avontuurlijk van aard. Ze heeft meer interesse in vechten dan in de gebruikelijke vrouwelijke rollen.",
           "relationships": [
@@ -73,6 +78,7 @@
         {
           "id": "bran-stark",
           "name": "Bran Stark",
+          "actor": "Isaac Hempstead Wright",
           "image": "images/characters/bran-stark.jpg",
           "description": "De tweede zoon van House Stark, een levendige jongen met een passie voor klimmen en avontuur. Hij droomt ervan ooit ridder te worden.",
           "relationships": [
@@ -84,6 +90,7 @@
         {
           "id": "jon-snow",
           "name": "Jon Snow",
+          "actor": "Kit Harington",
           "image": "images/characters/jon-snow.jpg",
           "description": "Opgegroeid in Winterfell als neef van de Stark-kinderen. Hij is eerlijk en plichtsgetrouw en sluit zich aan bij de Nachtwacht.",
           "relationships": [
@@ -97,6 +104,7 @@
         {
           "id": "benjen-stark",
           "name": "Benjen Stark",
+          "actor": "Joseph Mawle",
           "image": "images/characters/benjen-stark.jpg",
           "description": "Jongere broer van Eddard Stark en Eerste Ranger van de Nachtwacht. Een ervaren verkenner die voorbij de Muur patrouilleert.",
           "relationships": [
@@ -116,6 +124,7 @@
         {
           "id": "tywin-lannister",
           "name": "Tywin Lannister",
+          "actor": "Charles Dance",
           "image": "images/characters/tywin-lannister.jpg",
           "description": "Het machtige hoofd van House Lannister en een van de meest gevreesde politieke strategen in Westeros. Hij stelt de eer en macht van zijn huis boven alles.",
           "relationships": [
@@ -127,6 +136,7 @@
         {
           "id": "cersei-lannister",
           "name": "Cersei Lannister",
+          "actor": "Lena Headey",
           "image": "images/characters/cersei-lannister.jpg",
           "description": "Dochter van Tywin Lannister en koningin van Westeros als echtgenote van koning Robert Baratheon. Ze is ambitieus en beschermend ten opzichte van haar kinderen.",
           "relationships": [
@@ -140,6 +150,7 @@
         {
           "id": "jaime-lannister",
           "name": "Jaime Lannister",
+          "actor": "Nikolaj Coster-Waldau",
           "image": "images/characters/jaime-lannister.jpg",
           "description": "Lid van de Koningsgarde en een van de meest getalenteerde zwaardvechters van Westeros, bijgenaamd 'Koningsdoder'. Broer van Cersei en Tyrion.",
           "relationships": [
@@ -151,6 +162,7 @@
         {
           "id": "tyrion-lannister",
           "name": "Tyrion Lannister",
+          "actor": "Peter Dinklage",
           "image": "images/characters/tyrion-lannister.jpg",
           "description": "De jongste zoon van Tywin Lannister, bekend om zijn scherpe geest, gevoel voor humor en politieke slimheid. Hij compenseert zijn kleine gestalte met woorden en intellect.",
           "relationships": [
@@ -163,6 +175,7 @@
         {
           "id": "joffrey-baratheon",
           "name": "Joffrey Baratheon",
+          "actor": "Jack Gleeson",
           "image": "images/characters/joffrey-baratheon.jpg",
           "description": "Prins van Westeros en troonopvolger, zoon van koningin Cersei en koning Robert. Hij is verwend en houdt van macht en aanzien.",
           "relationships": [
@@ -183,6 +196,7 @@
         {
           "id": "daenerys-targaryen",
           "name": "Daenerys Targaryen",
+          "actor": "Emilia Clarke",
           "image": "images/characters/daenerys-targaryen.jpg",
           "description": "De laatste bekende erfgenaam van House Targaryen, een ooit machtig koningshuis. Ze begint haar reis als een jonge vrouw ver van haar thuisland en zoekt haar weg in een vijandige wereld.",
           "relationships": [
@@ -194,6 +208,7 @@
         {
           "id": "viserys-targaryen",
           "name": "Viserys Targaryen",
+          "actor": "Harry Lloyd",
           "image": "images/characters/viserys-targaryen.jpg",
           "description": "Oudere broer van Daenerys en zelfbenoemde erfgenaam van de IJzeren Troon. Hij is vastbesloten de troon terug te veroveren die zijn familie verloor.",
           "relationships": [
@@ -203,6 +218,7 @@
         {
           "id": "khal-drogo",
           "name": "Khal Drogo",
+          "actor": "Jason Momoa",
           "image": "images/characters/khal-drogo.jpg",
           "description": "Een machtige Dothraki-leider (khal) die bekendstaat om zijn onoverwinnelijkheid in de strijd. Hij is de echtgenoot van Daenerys Targaryen.",
           "relationships": [
@@ -212,6 +228,7 @@
         {
           "id": "jorah-mormont",
           "name": "Jorah Mormont",
+          "actor": "Iain Glen",
           "image": "images/characters/jorah-mormont.jpg",
           "description": "Een geballingde Westerse ridder die dient als raadgever en beschermer van Daenerys Targaryen. Hij kent de politiek van Westeros van binnenuit.",
           "relationships": [
@@ -230,6 +247,7 @@
         {
           "id": "robert-baratheon",
           "name": "Robert Baratheon",
+          "actor": "Mark Addy",
           "image": "images/characters/robert-baratheon.jpg",
           "description": "Koning van de Zeven Koninkrijken, een voormalig groot strijder die de troon veroverde in een grote opstand. Nu geniet hij liever van feesten dan van politiek.",
           "relationships": [
@@ -243,6 +261,7 @@
         {
           "id": "stannis-baratheon",
           "name": "Stannis Baratheon",
+          "actor": "Stephen Dillane",
           "image": "images/characters/stannis-baratheon.jpg",
           "description": "De middelste broer van koning Robert Baratheon en heer van Dragonstone. Hij is een strenge en principiële man die gelooft in recht en plicht boven alles.",
           "relationships": [
@@ -253,6 +272,7 @@
         {
           "id": "renly-baratheon",
           "name": "Renly Baratheon",
+          "actor": "Gethin Anthony",
           "image": "images/characters/renly-baratheon.jpg",
           "description": "De jongste broer van koning Robert, populair aan het hof en beminnelijk van karakter. Hij is heer van Storm's End.",
           "relationships": [
@@ -273,6 +293,7 @@
         {
           "id": "margaery-tyrell",
           "name": "Margaery Tyrell",
+          "actor": "Natalie Dormer",
           "image": "images/characters/margaery-tyrell.jpg",
           "description": "Kleindochter van Olenna Tyrell en een behendig politiek figuur aan het hof. Ze is charmant, vriendelijk en populair bij het gewone volk.",
           "relationships": [
@@ -283,6 +304,7 @@
         {
           "id": "olenna-tyrell",
           "name": "Olenna Tyrell",
+          "actor": "Diana Rigg",
           "image": "images/characters/olenna-tyrell.jpg",
           "description": "Bijgenaamd de 'Koningin der Doornen', is zij het sluwe en scherptongige hoofd van House Tyrell. Ze is een meester in hofpolitiek.",
           "relationships": [
@@ -293,6 +315,7 @@
         {
           "id": "loras-tyrell",
           "name": "Loras Tyrell",
+          "actor": "Finn Jones",
           "image": "images/characters/loras-tyrell.jpg",
           "description": "Bekend als de 'Ridder der Bloemen', is hij een van de knapste en meest getalenteerde toernooivechters van Westeros.",
           "relationships": [
@@ -313,6 +336,7 @@
         {
           "id": "theon-greyjoy",
           "name": "Theon Greyjoy",
+          "actor": "Alfie Allen",
           "image": "images/characters/theon-greyjoy.jpg",
           "description": "Erfgenaam van House Greyjoy en gijzelaar opgegroeid bij House Stark in Winterfell. Hij worstelt met zijn identiteit tussen twee werelden.",
           "relationships": [
@@ -324,6 +348,7 @@
         {
           "id": "balon-greyjoy",
           "name": "Balon Greyjoy",
+          "actor": "Patrick Malahide",
           "image": "images/characters/balon-greyjoy.jpg",
           "description": "Heer van de Ijzeren Eilanden en hoofd van House Greyjoy. Hij is trots op de rooftradities van zijn volk en veracht het ploegen en verbouwen van anderen.",
           "relationships": [
@@ -334,6 +359,7 @@
         {
           "id": "yara-greyjoy",
           "name": "Yara Greyjoy",
+          "actor": "Gemma Whelan",
           "image": "images/characters/yara-greyjoy.jpg",
           "description": "Dochter van Balon Greyjoy en commandant van haar eigen schip. Ze is een bekwame en moedige strijdster die haar mannen inspireert.",
           "relationships": [
@@ -353,6 +379,7 @@
         {
           "id": "oberyn-martell",
           "name": "Oberyn Martell",
+          "actor": "Pedro Pascal",
           "image": "images/characters/oberyn-martell.jpg",
           "description": "Prins van Dorne en bijgenaamd de 'Rode Adder', bekend om zijn vluchtigheid en zijn gevaarlijke vaardigheden als vechter met speer en gif.",
           "relationships": [
@@ -363,6 +390,7 @@
         {
           "id": "doran-martell",
           "name": "Doran Martell",
+          "actor": "Alexander Siddig",
           "image": "images/characters/doran-martell.jpg",
           "description": "Prins van Dorne en het rustige, bedachtzame hoofd van House Martell. Hij geeft de voorkeur aan diplomatie boven oorlog.",
           "relationships": [
@@ -372,6 +400,7 @@
         {
           "id": "ellaria-sand",
           "name": "Ellaria Sand",
+          "actor": "Indira Varma",
           "image": "images/characters/ellaria-sand.jpg",
           "description": "Levensgezellin van Oberyn Martell en moeder van enkele van zijn dochters. Ze staat bekend om haar onverschrokken karakter.",
           "relationships": [
@@ -390,6 +419,7 @@
         {
           "id": "lysa-arryn",
           "name": "Lysa Arryn",
+          "actor": "Kate Dickie",
           "image": "images/characters/lysa-arryn.jpg",
           "description": "Zus van Catelyn Stark en weduwe van de voormalige Hand des Konings. Ze heerst als regentes over de Adelaarsnest namens haar jonge zoon.",
           "relationships": [
@@ -401,6 +431,7 @@
         {
           "id": "robin-arryn",
           "name": "Robin Arryn",
+          "actor": "Lino Facioli",
           "image": "images/characters/robin-arryn.jpg",
           "description": "Jonge heer van de Adelaarsnest en erfgenaam van House Arryn. Hij groeit op in het onneembare kasteel hoog in de bergen.",
           "relationships": [
@@ -419,6 +450,7 @@
         {
           "id": "jeor-mormont",
           "name": "Jeor Mormont",
+          "actor": "James Cosmo",
           "image": "images/characters/jeor-mormont.jpg",
           "description": "Lord Commander van de Nachtwacht, bijgenaamd de 'Oude Beer'. Hij leidt de broederschap met strenge maar rechtvaardige hand.",
           "relationships": [
@@ -429,6 +461,7 @@
         {
           "id": "samwell-tarly",
           "name": "Samwell Tarly",
+          "actor": "John Bradley",
           "image": "images/characters/samwell-tarly.jpg",
           "description": "Een vriendelijke en belezenе jongeman die rekruut wordt bij de Nachtwacht. Hij is geen geboren strijder maar bezit een scherp verstand en brede kennis.",
           "relationships": [
@@ -439,6 +472,7 @@
         {
           "id": "petyr-baelish",
           "name": "Petyr Baelish",
+          "actor": "Aidan Gillen",
           "image": "images/characters/petyr-baelish.jpg",
           "description": "Bijgenaamd 'Littlefinger', is hij de Master of Coin aan het hof van Koningslanding. Hij is een meester van intriges en financiële manipulatie.",
           "relationships": [
@@ -450,6 +484,7 @@
         {
           "id": "varys",
           "name": "Varys",
+          "actor": "Conleth Hill",
           "image": "images/characters/varys.jpg",
           "description": "De Master of Whisperers aan het hof van Koningsland, bijgenaamd de 'Spin'. Hij beschikt over een uitgestrekt netwerk van informanten in heel Westeros.",
           "relationships": [

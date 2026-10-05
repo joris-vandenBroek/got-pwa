@@ -1,11 +1,17 @@
 let allHouses = [];
+let worldData = {};
+let activeTab = 'houses';
 
 // === Data laden ===
 async function loadData() {
   try {
-    const res = await fetch('data/characters.json');
-    const data = await res.json();
-    allHouses = data.houses;
+    const [charRes, worldRes] = await Promise.all([
+      fetch('data/characters.json'),
+      fetch('data/world.json')
+    ]);
+    const charData = await charRes.json();
+    worldData = await worldRes.json();
+    allHouses = charData.houses;
     renderHouses();
   } catch (e) {
     document.getElementById('houses-grid').innerHTML =
@@ -18,12 +24,33 @@ async function loadData() {
 function showView(id) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+// === Navigatietabbladen ===
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.nav-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    activeTab = tab.dataset.tab;
+    document.getElementById('search-input').value = '';
+
+    switch (activeTab) {
+      case 'houses':       renderHouses(); break;
+      case 'locations':    renderLocations(); break;
+      case 'creatures':    renderCreatures(); break;
+      case 'organizations': renderOrganizations(); break;
+      case 'glossary':     renderGlossary(); break;
+      case 'seasons':      renderSeasons(); break;
+    }
+  });
+});
 
 // === Huizenoverzicht ===
 function renderHouses() {
-  document.getElementById('search-input').value = '';
   const grid = document.getElementById('houses-grid');
   grid.innerHTML = '';
   allHouses.forEach(house => {
@@ -43,6 +70,7 @@ function renderHouses() {
     grid.appendChild(card);
   });
   showView('houses-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // === Personageoverzicht van een huis ===
@@ -58,6 +86,7 @@ function showHouse(house) {
     grid.appendChild(buildCharacterCard(char, house.color));
   });
   showView('house-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // === Personagekaart bouwen ===
@@ -75,7 +104,10 @@ function buildCharacterCard(char, houseColor) {
 
   const body = document.createElement('div');
   body.className = 'card-body';
-  body.innerHTML = `<h3>${char.name}</h3><p class="description">${char.description}</p>`;
+  const actorLine = char.actor
+    ? `<p class="actor-badge">Gespeeld door: <span>${char.actor}</span></p>`
+    : '';
+  body.innerHTML = `<h3>${char.name}</h3>${actorLine}<p class="description">${char.description}</p>`;
 
   card.appendChild(img);
   card.appendChild(body);
@@ -89,7 +121,6 @@ function buildCharacterCard(char, houseColor) {
 // === Relatie-chips bouwen ===
 function buildRelationships(relationships) {
   if (relationships.length === 0) return null;
-
   const container = document.createElement('div');
   container.className = 'relationships';
 
@@ -119,7 +150,7 @@ function buildRelationships(relationships) {
   return container.children.length > 0 ? container : null;
 }
 
-// === Zoek een personage op ID door alle huizen ===
+// === Zoek een personage op ID ===
 function findCharacter(id) {
   for (const house of allHouses) {
     const char = house.characters.find(c => c.id === id);
@@ -130,6 +161,8 @@ function findCharacter(id) {
 
 // === Navigeer naar een specifiek personage ===
 function navigateToCharacter(char, house) {
+  // Zet de tab op 'huizen' als die nog niet actief is
+  setActiveTab('houses');
   showHouse(house);
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
@@ -139,41 +172,255 @@ function navigateToCharacter(char, house) {
   });
 }
 
-// === Live zoekfunctie ===
+function setActiveTab(tabId) {
+  document.querySelectorAll('.nav-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tabId);
+    t.setAttribute('aria-selected', t.dataset.tab === tabId ? 'true' : 'false');
+  });
+  activeTab = tabId;
+}
+
+// === Locaties ===
+function renderLocations() {
+  const list = document.getElementById('locations-list');
+  list.innerHTML = '';
+  (worldData.locations || []).forEach(loc => {
+    const card = document.createElement('div');
+    card.className = 'info-card';
+    card.innerHTML = `
+      <h3>${loc.name}</h3>
+      <p class="info-meta">${loc.region}</p>
+      <p>${loc.description}</p>
+      ${loc.significance ? `<span class="info-tag">${loc.significance}</span>` : ''}
+    `;
+    list.appendChild(card);
+  });
+  showView('locations-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// === Wezens ===
+function renderCreatures() {
+  const list = document.getElementById('creatures-list');
+  list.innerHTML = '';
+  (worldData.creatures || []).forEach(c => {
+    const card = document.createElement('div');
+    card.className = 'info-card';
+    card.innerHTML = `
+      <h3>${c.name}</h3>
+      ${c.associated_with ? `<p class="info-meta">${c.associated_with}</p>` : ''}
+      <p>${c.description}</p>
+    `;
+    list.appendChild(card);
+  });
+  showView('creatures-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// === Organisaties ===
+function renderOrganizations() {
+  const list = document.getElementById('organizations-list');
+  list.innerHTML = '';
+  (worldData.organizations || []).forEach(org => {
+    const card = document.createElement('div');
+    card.className = 'info-card';
+    card.innerHTML = `
+      <h3>${org.name}</h3>
+      ${org.base ? `<p class="info-meta">${org.base}</p>` : ''}
+      <p>${org.description}</p>
+      ${org.motto ? `<span class="info-tag">"${org.motto}"</span>` : ''}
+    `;
+    list.appendChild(card);
+  });
+  showView('organizations-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// === Woordenlijst ===
+function renderGlossary() {
+  const list = document.getElementById('glossary-list');
+  list.innerHTML = '';
+  (worldData.glossary || []).forEach(item => {
+    const el = document.createElement('dl');
+    el.className = 'glossary-item';
+    el.innerHTML = `<dt>${item.term}</dt><dd>${item.definition}</dd>`;
+    list.appendChild(el);
+  });
+  showView('glossary-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// === Seizoenen ===
+function renderSeasons() {
+  const list = document.getElementById('seasons-list');
+  list.innerHTML = '';
+  const spoilerLabels = {
+    laag: '&#128994; Lage spoilergraad',
+    middel: '&#128993; Gemiddelde spoilergraad',
+    hoog: '&#128308; Hoge spoilergraad',
+    maximum: '&#128308; Maximale spoilergraad — alleen lezen na volledig kijken'
+  };
+  (worldData.seasons || []).forEach(s => {
+    const details = document.createElement('details');
+    details.className = 'season-card';
+    details.innerHTML = `
+      <summary>
+        <div>
+          <div class="season-title">Seizoen ${s.number} (${s.year})</div>
+          <div class="season-meta">${s.episodes} afleveringen</div>
+        </div>
+        <span class="season-chevron">&#9660;</span>
+      </summary>
+      <div class="season-body">
+        <p class="spoiler-label">${spoilerLabels[s.spoiler_level] || ''}</p>
+        <p>${s.summary}</p>
+      </div>
+    `;
+    list.appendChild(details);
+  });
+  showView('seasons-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// === Live zoekfunctie (zoekt door alles) ===
 document.getElementById('search-input').addEventListener('input', function () {
   const query = this.value.trim().toLowerCase();
-  if (!query) { renderHouses(); return; }
+  if (!query) {
+    switch (activeTab) {
+      case 'houses': renderHouses(); break;
+      case 'locations': renderLocations(); break;
+      case 'creatures': renderCreatures(); break;
+      case 'organizations': renderOrganizations(); break;
+      case 'glossary': renderGlossary(); break;
+      case 'seasons': renderSeasons(); break;
+      default: renderHouses();
+    }
+    return;
+  }
 
   const results = [];
+
+  // Personages
   allHouses.forEach(house => {
     house.characters.forEach(char => {
-      const nameMatch = char.name.toLowerCase().includes(query);
-      const houseMatch = house.name.toLowerCase().includes(query);
-      if (nameMatch || houseMatch) results.push({ char, house });
+      if (
+        char.name.toLowerCase().includes(query) ||
+        house.name.toLowerCase().includes(query) ||
+        (char.actor && char.actor.toLowerCase().includes(query)) ||
+        char.description.toLowerCase().includes(query)
+      ) {
+        results.push({
+          type: 'Personage',
+          typeLabel: house.name,
+          title: char.name,
+          subtitle: char.actor ? `Gespeeld door ${char.actor}` : '',
+          text: char.description,
+          image: char.image,
+          action: () => navigateToCharacter(char, house)
+        });
+      }
     });
+  });
+
+  // Locaties
+  (worldData.locations || []).forEach(loc => {
+    if (loc.name.toLowerCase().includes(query) || loc.description.toLowerCase().includes(query)) {
+      results.push({
+        type: 'Locatie',
+        typeLabel: loc.region,
+        title: loc.name,
+        subtitle: loc.region,
+        text: loc.description,
+        image: null,
+        action: null
+      });
+    }
+  });
+
+  // Wezens
+  (worldData.creatures || []).forEach(c => {
+    if (c.name.toLowerCase().includes(query) || c.description.toLowerCase().includes(query)) {
+      results.push({
+        type: 'Wezen',
+        typeLabel: c.associated_with || '',
+        title: c.name,
+        subtitle: c.associated_with || '',
+        text: c.description,
+        image: null,
+        action: null
+      });
+    }
+  });
+
+  // Organisaties
+  (worldData.organizations || []).forEach(org => {
+    if (org.name.toLowerCase().includes(query) || org.description.toLowerCase().includes(query)) {
+      results.push({
+        type: 'Organisatie',
+        typeLabel: org.base || '',
+        title: org.name,
+        subtitle: org.base || '',
+        text: org.description,
+        image: null,
+        action: null
+      });
+    }
+  });
+
+  // Woordenlijst
+  (worldData.glossary || []).forEach(item => {
+    if (item.term.toLowerCase().includes(query) || item.definition.toLowerCase().includes(query)) {
+      results.push({
+        type: 'Term',
+        typeLabel: '',
+        title: item.term,
+        subtitle: '',
+        text: item.definition,
+        image: null,
+        action: null
+      });
+    }
   });
 
   const grid = document.getElementById('search-results');
   grid.innerHTML = '';
 
   if (results.length === 0) {
-    grid.innerHTML = '<p class="no-results">Geen personages gevonden voor deze zoekopdracht.</p>';
+    grid.innerHTML = '<p class="no-results">Geen resultaten gevonden voor deze zoekopdracht.</p>';
   } else {
-    results.forEach(({ char, house }) => {
-      const card = buildCharacterCard(char, house.color);
-      const badge = document.createElement('span');
-      badge.className = 'house-badge';
-      badge.style.color = house.color;
-      badge.textContent = house.name;
-      card.querySelector('.card-body').prepend(badge);
-      grid.appendChild(card);
+    results.forEach(r => {
+      const el = document.createElement('div');
+      el.className = 'result-item' + (r.action ? ' clickable' : '');
+      if (r.action) el.addEventListener('click', r.action);
+
+      let imgHtml = '';
+      if (r.image) {
+        imgHtml = `<img src="${r.image}" alt="${r.title}" onerror="this.src='images/characters/placeholder.jpg';this.onerror=null">`;
+      }
+
+      el.innerHTML = `
+        ${imgHtml}
+        <div class="result-body">
+          <div class="result-type">${r.type}${r.typeLabel ? ' · ' + r.typeLabel : ''}</div>
+          <h3>${r.title}</h3>
+          ${r.subtitle ? `<p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.2rem">${r.subtitle}</p>` : ''}
+          <p>${r.text.length > 140 ? r.text.slice(0, 140) + '…' : r.text}</p>
+        </div>
+      `;
+      grid.appendChild(el);
     });
   }
+
+  setActiveTab(activeTab); // bewaar de huidige tab
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   showView('search-view');
 });
 
 // === Terugknop ===
-document.getElementById('back-btn').addEventListener('click', renderHouses);
+document.getElementById('back-btn').addEventListener('click', () => {
+  document.getElementById('search-input').value = '';
+  renderHouses();
+});
 
 // === Service Worker registreren ===
 if ('serviceWorker' in navigator) {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1a0a00">
-  <meta name="description" content="Ontdek de personages en huizen van Game of Thrones">
+  <meta name="description" content="Ontdek de personages, locaties en wereld van Game of Thrones">
   <title>Game of Thrones</title>
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="images/icons/icon-192.png">
@@ -20,15 +20,26 @@
       <input
         type="search"
         id="search-input"
-        placeholder="Zoek een personage..."
-        aria-label="Zoek een personage"
+        placeholder="Zoek personages, locaties, termen..."
+        aria-label="Zoeken"
         autocomplete="off"
       >
     </div>
   </header>
 
+  <!-- Navigatietabbladen -->
+  <nav class="main-nav" role="tablist">
+    <button class="nav-tab active" data-tab="houses" role="tab" aria-selected="true">Huizen</button>
+    <button class="nav-tab" data-tab="locations" role="tab" aria-selected="false">Locaties</button>
+    <button class="nav-tab" data-tab="creatures" role="tab" aria-selected="false">Wezens</button>
+    <button class="nav-tab" data-tab="organizations" role="tab" aria-selected="false">Organisaties</button>
+    <button class="nav-tab" data-tab="glossary" role="tab" aria-selected="false">Woordenlijst</button>
+    <button class="nav-tab" data-tab="seasons" role="tab" aria-selected="false">Seizoenen</button>
+  </nav>
+
   <main id="main-content">
-    <!-- Huizenoverzicht -->
+
+    <!-- === HUIZEN === -->
     <section id="houses-view" class="view active">
       <div id="houses-grid" class="grid"></div>
     </section>
@@ -47,9 +58,36 @@
 
     <!-- Zoekresultaten -->
     <section id="search-view" class="view">
-      <h2 class="search-heading">Zoekresultaten</h2>
-      <div id="search-results" class="grid"></div>
+      <h2 class="section-heading">Zoekresultaten</h2>
+      <div id="search-results" class="results-list"></div>
     </section>
+
+    <!-- === LOCATIES === -->
+    <section id="locations-view" class="view">
+      <div id="locations-list" class="info-list"></div>
+    </section>
+
+    <!-- === WEZENS === -->
+    <section id="creatures-view" class="view">
+      <div id="creatures-list" class="info-list"></div>
+    </section>
+
+    <!-- === ORGANISATIES === -->
+    <section id="organizations-view" class="view">
+      <div id="organizations-list" class="info-list"></div>
+    </section>
+
+    <!-- === WOORDENLIJST === -->
+    <section id="glossary-view" class="view">
+      <div id="glossary-list" class="glossary-list"></div>
+    </section>
+
+    <!-- === SEIZOENEN === -->
+    <section id="seasons-view" class="view">
+      <p class="spoiler-notice">&#9888; De seizoensamenvattingen bevatten spoilers. Open ze pas nadat je dat seizoen hebt gekeken.</p>
+      <div id="seasons-list" class="seasons-list"></div>
+    </section>
+
   </main>
 
   <script src="js/app.js"></script>
