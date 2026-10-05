@@ -49,7 +49,7 @@
             {
               "id": "rickon-stark",
               "name": "Rickon Stark",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "stark"
             }
           ],
@@ -60,13 +60,13 @@
             {
               "id": "rhaegar-targaryen",
               "name": "Rhaegar Targaryen",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             },
             {
               "id": "lyanna-stark",
               "name": "Lyanna Stark",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "stark"
             }
           ],
@@ -99,7 +99,7 @@
             {
               "id": "joanna-lannister",
               "name": "Joanna Lannister †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             }
           ],
@@ -150,13 +150,13 @@
             {
               "id": "myrcella-baratheon",
               "name": "Myrcella Baratheon",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             },
             {
               "id": "tommen-baratheon",
               "name": "Tommen Baratheon",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             }
           ],
@@ -175,13 +175,13 @@
             {
               "id": "aerys-targaryen",
               "name": "Aerys II (the Mad King)",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "targaryen"
             },
             {
               "id": "rhaella-targaryen",
               "name": "Rhaella Targaryen †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             }
           ],
@@ -189,7 +189,7 @@
             {
               "id": "rhaegar-targaryen",
               "name": "Rhaegar Targaryen †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             },
             {
@@ -212,13 +212,13 @@
             {
               "id": "rhaegar-targaryen",
               "name": "Rhaegar Targaryen †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             },
             {
               "id": "lyanna-stark",
               "name": "Lyanna Stark †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "stark"
             }
           ],
@@ -265,13 +265,13 @@
             {
               "id": "myrcella-baratheon",
               "name": "Myrcella Baratheon",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             },
             {
               "id": "tommen-baratheon",
               "name": "Tommen Baratheon",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             }
           ],
@@ -282,13 +282,13 @@
             {
               "id": "steffon-baratheon",
               "name": "Steffon Baratheon †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             },
             {
               "id": "cassana-estermont",
               "name": "Cassana Estermont †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             }
           ],
@@ -333,7 +333,7 @@
             {
               "id": "aemma-arryn",
               "name": "Aemma Arryn †",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": null
             }
           ],
@@ -384,7 +384,7 @@
             {
               "id": "daeron-targaryen",
               "name": "Daeron Targaryen",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "de-groenen"
             }
           ],
@@ -421,7 +421,7 @@
             {
               "id": "joffrey-velaryon",
               "name": "Joffrey Velaryon",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "de-zwarten"
             }
           ],
@@ -446,13 +446,13 @@
             {
               "id": "aegon-younger",
               "name": "Aegon Targaryen (the Younger)",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "de-zwarten"
             },
             {
               "id": "viserys-II",
               "name": "Viserys II Targaryen",
-              "image": "images/characters/placeholder.jpg",
+              "image": "images/characters/silhouette.svg",
               "houseId": "de-zwarten"
             }
           ],

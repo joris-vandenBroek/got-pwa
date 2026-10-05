@@ -51,6 +51,10 @@ html.light-mode .season-card summary { color: var(--text); }
 html.light-mode details.season-card[open] summary { border-color: var(--gold); }
 html.light-mode .actor-link { color: #0050a0; }
 html.light-mode .actor-link:hover { color: #003070; }
+html.light-mode .lang-toggle,
+html.light-mode .theme-toggle { color: #d4c5a9; border-color: #a89060; }
+html.light-mode .lang-toggle:hover,
+html.light-mode .theme-toggle:hover { border-color: #f0c040; background: rgba(240,192,64,0.15); }
 
 /* === Reset & base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
