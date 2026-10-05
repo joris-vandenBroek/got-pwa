@@ -55,6 +55,13 @@ html.light-mode .lang-toggle,
 html.light-mode .theme-toggle { color: #d4c5a9; border-color: #a89060; }
 html.light-mode .lang-toggle:hover,
 html.light-mode .theme-toggle:hover { border-color: #f0c040; background: rgba(240,192,64,0.15); }
+html.light-mode .rel-chip { background: #e8d8b8; color: #1a0e00; border-color: #c8a870; }
+html.light-mode .rel-chip:hover { background: #dcc8a0; border-color: #8a6a00; }
+html.light-mode .rel-chip .rel-label { color: #5a4020; }
+html.light-mode .rel-chip img { background: #e0d0b8; }
+html.light-mode .spoiler-notice { background: #f5e8cc; border-color: #c8a870; color: #7a4800; }
+html.light-mode .info-card-img { background: #e0d0b8; }
+html.light-mode .info-card-img.is-svg { background: #e8d8b8; }
 
 /* === Reset & base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
