@@ -70,6 +70,8 @@ const I18N = {
     mapPinDothrakiSea: 'Dothraki Zee',
     mapLegendPin: 'Locatie (klik om te bekijken)',
     mapLegendWall: 'The Wall',
+    mapLegendRiver: 'Rivier',
+    mapExtLink: 'Interactieve kaart',
     loadError: 'Fout bij laden van data. Probeer de pagina te herladen.',
     donateText: 'Vond je dit leuk? Koop me een koffie'
   },
@@ -129,6 +131,8 @@ const I18N = {
     mapPinDothrakiSea: 'Dothraki Sea',
     mapLegendPin: 'Location (click to view)',
     mapLegendWall: 'The Wall',
+    mapLegendRiver: 'River',
+    mapExtLink: 'Interactive map',
     loadError: 'Error loading data. Please reload the page.',
     donateText: 'Enjoyed this? Buy me a coffee'
   }
@@ -535,7 +539,11 @@ function buildWesterosMap(locations) {
   const t = I18N[currentLang];
   const container = document.createElement('div');
   container.className = 'map-container';
-  container.innerHTML = `<h2>${t.mapTitle}</h2>`;
+  container.innerHTML = `
+    <div class="map-header">
+      <h2>${t.mapTitle}</h2>
+      <a href="https://quartermaester.info" target="_blank" rel="noopener noreferrer" class="map-ext-link">🗺 ${t.mapExtLink} ↗</a>
+    </div>`;
 
   const svgNS = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(svgNS, 'svg');
@@ -544,136 +552,181 @@ function buildWesterosMap(locations) {
   svg.setAttribute('role', 'img');
   svg.setAttribute('aria-label', t.mapAriaLabel);
 
+  // Teardrop pin path: tip at (cx,cy), head at (cx,cy-12), total height 19px
+  const P = (cx, cy) =>
+    `M${cx},${cy} C${cx-7},${cy-4} ${cx-8},${cy-12} ${cx},${cy-19} C${cx+8},${cy-12} ${cx+7},${cy-4} ${cx},${cy}Z`;
+  const mkPin = (cx, cy, id, extraStyle = '') =>
+    `<path d="${P(cx,cy)}" class="map-pin" data-loc="${id}"${extraStyle ? ` style="${extraStyle}"` : ''} stroke="rgba(0,0,0,0.35)" stroke-width="0.7"/>` +
+    `<circle cx="${cx}" cy="${cy-12}" r="2.6" fill="rgba(255,255,255,0.45)" pointer-events="none"/>`;
+
   svg.innerHTML = `
+    <defs>
+      <radialGradient id="vigG" cx="50%" cy="50%" r="68%">
+        <stop offset="52%" stop-color="transparent"/>
+        <stop offset="100%" stop-color="rgba(0,0,0,0.26)"/>
+      </radialGradient>
+    </defs>
+
     <!-- Zee achtergrond -->
     <rect width="500" height="680" class="map-sea"/>
 
-    <!-- === WESTEROS === -->
-    <!-- Het Hoge Noorden (ijzig) -->
-    <polygon points="85,10 230,10 240,50 220,70 180,80 130,75 95,60" class="map-ice"/>
-    <!-- The Wall lijn -->
-    <line x1="95" y1="90" x2="215" y2="90" stroke="#4a7a9b" stroke-width="3" stroke-dasharray="4,2"/>
-    <text x="155" y="86" class="map-label" fill="#4a7a9b">The Wall</text>
+    <!-- Decoratief frame -->
+    <rect x="5" y="5" width="490" height="670" rx="3" fill="none" stroke="#3a2e1e" stroke-width="1.5"/>
+    <rect x="8" y="8" width="484" height="664" rx="2" fill="none" stroke="#5a4a2a" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <text x="11" y="20" font-size="10" fill="#5a4a2a" opacity="0.55">✦</text>
+    <text x="489" y="20" font-size="10" fill="#5a4a2a" opacity="0.55" text-anchor="end">✦</text>
+    <text x="11" y="676" font-size="10" fill="#5a4a2a" opacity="0.55">✦</text>
+    <text x="489" y="676" font-size="10" fill="#5a4a2a" opacity="0.55" text-anchor="end">✦</text>
 
-    <!-- Het Noorden -->
-    <polygon points="95,90 215,90 225,140 210,180 175,210 140,215 105,195 90,155 85,115" class="map-region north"/>
-    <text x="155" y="155" class="map-region-label">${t.mapRegionNorth}</text>
-
-    <!-- De Ijzeren Eilanden -->
-    <ellipse cx="60" cy="220" rx="22" ry="14" class="map-region" fill="#1e2020"/>
-    <text x="60" y="223" class="map-label">IJz. Eilanden</text>
-
-    <!-- De Rivierland + Westerland -->
-    <polygon points="90,195 140,215 175,210 210,180 225,220 215,265 185,285 155,290 120,275 90,250 80,225" class="map-region"/>
-    <text x="130" y="245" class="map-region-label">${t.mapRegionRiverlands}</text>
-
-    <!-- Westerland (Casterly Rock) -->
-    <polygon points="80,225 90,250 85,295 70,320 60,290 65,255" class="map-region" fill="#2a1e08"/>
-    <text x="68" y="280" class="map-region-label" font-size="6">${t.mapRegionWesterlands}</text>
-
-    <!-- Het Dal (The Vale) -->
-    <polygon points="215,180 225,140 265,130 280,160 270,210 245,225 225,220" class="map-region" fill="#1e2218"/>
-    <text x="248" y="180" class="map-region-label">${t.mapRegionVale}</text>
-
-    <!-- De Kroonlanden (King's Landing) -->
-    <polygon points="185,285 215,265 225,220 245,225 260,260 255,295 235,315 205,315 185,300" class="map-region crownlands"/>
-    <text x="223" y="278" class="map-region-label">${t.mapRegionCrownlands}</text>
-
-    <!-- Stormgronden -->
-    <polygon points="205,315 235,315 255,295 270,310 265,355 245,375 215,370 200,345" class="map-region"/>
-    <text x="233" y="345" class="map-region-label">${t.mapRegionStormlands}</text>
-
-    <!-- Het Bereik -->
-    <polygon points="85,295 120,275 155,290 185,300 185,340 165,375 135,390 105,380 80,355 75,320" class="map-region" fill="#1a2a10"/>
-    <text x="128" y="345" class="map-region-label">${t.mapRegionReach}</text>
-
-    <!-- Dorne -->
-    <polygon points="80,355 105,380 135,390 165,375 200,380 215,370 215,410 180,440 140,445 100,430 75,400" class="map-region" fill="#2a2010"/>
-    <text x="145" y="415" class="map-region-label">${t.mapRegionDorne}</text>
-
-    <!-- Dragonstone eiland -->
-    <ellipse cx="278" cy="305" rx="12" ry="8" class="map-region" fill="#1e1e2a"/>
-
-    <!-- === ESSOS === -->
-    <!-- Westkust Essos -->
-    <polygon points="330,60 430,60 470,100 480,160 460,220 440,260 420,290 360,300 330,260 325,200 320,140 315,100" class="map-region essos"/>
-    <!-- Dothraki Zee -->
-    <polygon points="360,180 440,160 480,200 480,280 440,260 420,290 360,300 340,260 330,220" class="map-region" fill="#2a2208"/>
-    <text x="415" y="240" class="map-region-label">${t.mapDothrakiSea}</text>
-    <text x="378" y="140" class="map-region-label">${t.mapFreeCities}</text>
-
-    <!-- Smalle Zee -->
-    <text x="290" y="200" class="map-label" fill="#2a4a6a">${t.mapNarrowSea}</text>
-    <text x="290" y="210" class="map-label" fill="#2a4a6a">${t.mapNarrowSeaLine2}</text>
-
-    <!-- === LOCATIE-PINS === -->
-    <!-- King's Landing -->
-    <circle cx="220" cy="305" r="5" class="map-pin" data-loc="kings-landing" title="King's Landing"/>
-    <text x="220" y="296" class="map-pin-label">King's Landing</text>
-
-    <!-- Winterfell -->
-    <circle cx="158" cy="160" r="5" class="map-pin" data-loc="winterfell" title="Winterfell"/>
-    <text x="158" y="151" class="map-pin-label">Winterfell</text>
+    <!-- Lands of Always Winter -->
+    <polygon points="85,10 230,10 240,50 220,68 182,79 132,74 97,59" class="map-ice"/>
+    <text x="162" y="42" class="map-label" fill="#6a8aa8" font-size="5.5">Lands of Always Winter</text>
 
     <!-- The Wall -->
-    <circle cx="155" cy="91" r="4" class="map-pin" data-loc="the-wall" title="The Wall" fill="#4a9abf"/>
+    <line x1="97" y1="90" x2="215" y2="90" stroke="#4a7a9b" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+    <text x="156" y="84" class="map-label" fill="#5a8aab" font-size="6.5" font-weight="600">The Wall</text>
 
-    <!-- Castle Black -->
-    <circle cx="150" cy="93" r="3" class="map-pin" data-loc="castle-black" fill="#9a9a9a"/>
+    <!-- === WESTEROS REGIO'S === -->
+    <!-- Het Noorden -->
+    <polygon points="97,90 215,90 226,138 210,182 175,212 140,217 104,195 88,154 83,116" class="map-region north"/>
+    <text x="155" y="152" class="map-region-label">${t.mapRegionNorth}</text>
 
-    <!-- Casterly Rock -->
-    <circle cx="72" cy="285" r="4" class="map-pin" data-loc="casterly-rock"/>
-    <text x="72" y="277" class="map-pin-label">Casterly Rock</text>
+    <!-- IJzeren Eilanden -->
+    <ellipse cx="58" cy="218" rx="14" ry="8" class="map-region iron-islands"/>
+    <ellipse cx="47" cy="229" rx="9" ry="5" class="map-region iron-islands"/>
+    <ellipse cx="66" cy="231" rx="10" ry="5" class="map-region iron-islands"/>
+    <text x="60" y="221" class="map-label" font-size="5.5">IJz. Eilanden</text>
+
+    <!-- Rivierland -->
+    <polygon points="88,195 140,217 175,212 210,182 225,222 216,266 186,287 154,291 118,274 88,249 79,224" class="map-region riverlands"/>
+    <text x="146" y="244" class="map-region-label">${t.mapRegionRiverlands}</text>
+
+    <!-- Westerland -->
+    <polygon points="79,224 88,249 85,296 69,322 58,292 62,256" class="map-region westerlands"/>
+    <text x="68" y="279" class="map-region-label" font-size="5.5">${t.mapRegionWesterlands}</text>
+
+    <!-- Het Dal -->
+    <polygon points="212,180 225,138 266,129 280,160 270,212 245,226 225,222" class="map-region vale"/>
+    <text x="248" y="180" class="map-region-label">${t.mapRegionVale}</text>
+
+    <!-- Kroonland -->
+    <polygon points="186,287 216,266 225,222 245,226 260,260 255,295 234,316 204,316 186,299" class="map-region crownlands"/>
+    <text x="224" y="278" class="map-region-label">${t.mapRegionCrownlands}</text>
+
+    <!-- Stormgronden -->
+    <polygon points="204,316 234,316 255,295 270,311 265,355 244,375 213,370 199,345" class="map-region stormlands"/>
+    <text x="233" y="346" class="map-region-label">${t.mapRegionStormlands}</text>
+
+    <!-- Het Bereik -->
+    <polygon points="84,296 118,274 154,291 186,299 185,340 164,376 134,390 104,380 77,354 73,320" class="map-region reach"/>
+    <text x="128" y="344" class="map-region-label">${t.mapRegionReach}</text>
+
+    <!-- Dorne -->
+    <polygon points="77,354 104,380 134,390 164,376 200,382 213,370 214,413 180,443 140,447 100,431 73,398" class="map-region dorne"/>
+    <text x="146" y="414" class="map-region-label">${t.mapRegionDorne}</text>
 
     <!-- Dragonstone -->
-    <circle cx="278" cy="305" r="4" class="map-pin" data-loc="dragonstone"/>
-    <text x="278" y="297" class="map-pin-label">Dragonstone</text>
+    <ellipse cx="279" cy="306" rx="14" ry="8" fill="#1e1e2a" stroke="#3a3a5a" stroke-width="0.8"/>
 
-    <!-- The Eyrie -->
-    <circle cx="252" cy="185" r="4" class="map-pin" data-loc="the-eyrie"/>
-    <text x="252" y="177" class="map-pin-label">The Eyrie</text>
+    <!-- === RIVIEREN === -->
+    <path d="M140,217 Q148,238 155,260 Q160,275 168,287" class="map-river"/>
+    <path d="M175,212 Q168,234 162,254 Q160,268 168,287" class="map-river"/>
+    <path d="M104,380 Q116,364 130,350 Q136,338 118,315 Q102,298 84,296" class="map-river"/>
+    <path d="M186,299 Q205,304 220,308" class="map-river" style="stroke-width:1.6;opacity:0.5"/>
 
-    <!-- Storm's End -->
-    <circle cx="245" cy="360" r="4" class="map-pin" data-loc="storm-s-end"/>
-    <text x="245" y="352" class="map-pin-label">Storm's End</text>
+    <!-- === BERGEN === -->
+    <text x="260" y="150" class="map-mountain-mark" font-size="8" text-anchor="middle">⛰</text>
+    <text x="270" y="160" class="map-mountain-mark" font-size="7" text-anchor="middle">⛰</text>
+    <text x="148" y="377" class="map-mountain-mark" font-size="7">⛰</text>
+    <text x="160" y="372" class="map-mountain-mark" font-size="8">⛰</text>
+    <text x="174" y="377" class="map-mountain-mark" font-size="7">⛰</text>
+    <text x="156" y="232" class="map-label" font-size="5.5" fill="#5a7a4a" opacity="0.65" font-style="italic">~ The Neck ~</text>
 
-    <!-- Highgarden -->
-    <circle cx="130" cy="360" r="4" class="map-pin" data-loc="highgarden"/>
-    <text x="130" y="352" class="map-pin-label">Highgarden</text>
+    <!-- === ESSOS === -->
+    <polygon points="328,60 436,60 470,103 482,162 462,222 440,262 420,292 360,300 330,260 323,200 317,140 312,100" class="map-region essos"/>
+    <polygon points="360,182 444,162 482,204 480,280 440,262 420,292 360,300 338,260 330,222" class="map-region dothraki"/>
+    <text x="416" y="240" class="map-region-label">${t.mapDothrakiSea}</text>
+    <text x="375" y="138" class="map-region-label">${t.mapFreeCities}</text>
 
-    <!-- Pyke (Iron Islands) -->
-    <circle cx="60" cy="222" r="4" class="map-pin" data-loc="pyke"/>
+    <!-- Smalle Zee -->
+    <text x="290" y="200" class="map-label" fill="#2a5a8a" font-size="7">${t.mapNarrowSea}</text>
+    <text x="290" y="210" class="map-label" fill="#2a5a8a" font-size="7">${t.mapNarrowSeaLine2}</text>
 
-    <!-- Sunspear -->
-    <circle cx="178" cy="430" r="4" class="map-pin" data-loc="sunspear"/>
-    <text x="178" y="422" class="map-pin-label">Sunspear</text>
+    <!-- === PINS === -->
+    ${mkPin(220, 305, 'kings-landing')}
+    <text x="220" y="281" class="map-pin-label" pointer-events="none">King's Landing</text>
 
-    <!-- Braavos -->
-    <circle cx="345" cy="80" r="4" class="map-pin" data-loc="braavos"/>
-    <text x="345" y="72" class="map-pin-label">Braavos</text>
+    ${mkPin(158, 160, 'winterfell')}
+    <text x="158" y="136" class="map-pin-label" pointer-events="none">Winterfell</text>
 
-    <!-- Pentos -->
-    <circle cx="325" cy="130" r="4" class="map-pin" data-loc="pentos"/>
-    <text x="325" y="122" class="map-pin-label">Pentos</text>
+    <circle cx="155" cy="91" r="4" class="map-pin" data-loc="the-wall" fill="#4a9abf" stroke="rgba(0,0,0,0.3)" stroke-width="0.7"/>
+    <circle cx="148" cy="91" r="3" class="map-pin" data-loc="castle-black" fill="#8a8a8a" stroke="rgba(0,0,0,0.3)" stroke-width="0.7"/>
+    <text x="152" y="98" class="map-label" font-size="5.5" fill="#6a8aaa">Castle Black</text>
 
-    <!-- Dothraki Zee -->
-    <circle cx="420" cy="220" r="4" class="map-pin" data-loc="the-dothraki-sea"/>
-    <text x="420" y="212" class="map-pin-label">${t.mapPinDothrakiSea}</text>
+    ${mkPin(72, 285, 'casterly-rock')}
+    <text x="72" y="261" class="map-pin-label" pointer-events="none">Casterly Rock</text>
 
-    <!-- Legenda -->
-    <rect x="10" y="620" width="200" height="55" fill="#0f0802" rx="4" stroke="#3a2e1e" stroke-width="0.5"/>
-    <circle cx="22" cy="633" r="4" fill="#CFB53B"/>
-    <text x="30" y="637" class="map-label" text-anchor="start">${t.mapLegendPin}</text>
-    <line x1="14" y1="648" x2="35" y2="648" stroke="#4a7a9b" stroke-width="2" stroke-dasharray="4,2"/>
-    <text x="40" y="651" class="map-label" text-anchor="start">${t.mapLegendWall}</text>
+    ${mkPin(279, 306, 'dragonstone', 'fill:#8a5abf')}
+    <text x="279" y="282" class="map-pin-label" pointer-events="none">Dragonstone</text>
+
+    ${mkPin(252, 185, 'the-eyrie')}
+    <text x="252" y="161" class="map-pin-label" pointer-events="none">The Eyrie</text>
+
+    ${mkPin(245, 360, 'storm-s-end')}
+    <text x="245" y="336" class="map-pin-label" pointer-events="none">Storm's End</text>
+
+    ${mkPin(130, 360, 'highgarden')}
+    <text x="130" y="336" class="map-pin-label" pointer-events="none">Highgarden</text>
+
+    ${mkPin(57, 222, 'pyke')}
+    <text x="57" y="198" class="map-pin-label" pointer-events="none">Pyke</text>
+
+    ${mkPin(178, 430, 'sunspear')}
+    <text x="178" y="406" class="map-pin-label" pointer-events="none">Sunspear</text>
+
+    ${mkPin(344, 80, 'braavos')}
+    <text x="344" y="56" class="map-pin-label" pointer-events="none">Braavos</text>
+
+    ${mkPin(325, 130, 'pentos')}
+    <text x="325" y="106" class="map-pin-label" pointer-events="none">Pentos</text>
+
+    <circle cx="420" cy="222" r="4" class="map-pin" data-loc="the-dothraki-sea" stroke="rgba(0,0,0,0.3)" stroke-width="0.7"/>
+    <text x="420" y="212" class="map-pin-label" pointer-events="none">${t.mapPinDothrakiSea}</text>
+
+    <!-- Vignette overlay -->
+    <rect width="500" height="680" fill="url(#vigG)" pointer-events="none"/>
+
+    <!-- === KOMPASROOS === -->
+    <g transform="translate(456,618)" pointer-events="none">
+      <circle r="20" class="map-compass-bg" stroke="#4a3820" stroke-width="0.8"/>
+      <circle r="16" fill="none" stroke="#3a2810" stroke-width="0.4"/>
+      <path d="M0,-16 L2.5,-7 L0,-10 L-2.5,-7 Z" fill="#CFB53B"/>
+      <path d="M0,16 L2.5,7 L0,10 L-2.5,7 Z" fill="#6a6a6a"/>
+      <path d="M16,0 L7,2.5 L10,0 L7,-2.5 Z" fill="#6a6a6a"/>
+      <path d="M-16,0 L-7,2.5 L-10,0 L-7,-2.5 Z" fill="#6a6a6a"/>
+      <circle r="2.8" fill="#CFB53B" stroke="#2a1a0a" stroke-width="0.5"/>
+      <text x="0" y="-20" text-anchor="middle" font-size="7" font-family="Cinzel,serif" fill="#CFB53B" font-weight="bold">N</text>
+    </g>
+
+    <!-- === LEGENDA === -->
+    <rect x="10" y="616" width="215" height="60" rx="3" class="map-legend-box" stroke="#3a2e1e" stroke-width="0.8"/>
+    <path d="${P(22, 635)}" class="map-pin" data-loc="" stroke="rgba(0,0,0,0.3)" stroke-width="0.6" pointer-events="none"/>
+    <circle cx="22" cy="623" r="2.4" fill="rgba(255,255,255,0.45)" pointer-events="none"/>
+    <text x="32" y="628" class="map-label" text-anchor="start" font-size="6.5">${t.mapLegendPin}</text>
+    <line x1="14" y1="643" x2="32" y2="643" stroke="#4a7a9b" stroke-width="2.5" stroke-dasharray="5,3" stroke-linecap="round"/>
+    <text x="38" y="646" class="map-label" text-anchor="start" font-size="6.5">${t.mapLegendWall}</text>
+    <line x1="14" y1="659" x2="32" y2="659" class="map-river" style="stroke-width:1.4;opacity:0.7"/>
+    <text x="38" y="662" class="map-label" text-anchor="start" font-size="6.5">${t.mapLegendRiver}</text>
+
+    <!-- Kaart ondertitel -->
+    <text x="250" y="672" text-anchor="middle" font-size="6" font-family="Cinzel,serif" fill="#5a4a2a" opacity="0.5" letter-spacing="0.28em">✦ WESTEROS &amp; ESSOS ✦</text>
   `;
 
-  // Maak pins klikbaar → scroll naar locatiekaart
-  svg.querySelectorAll('.map-pin').forEach(pin => {
-    pin.style.cursor = 'pointer';
-    pin.addEventListener('click', () => {
-      const locId = pin.dataset.loc;
-      const card = document.getElementById(`info-${locId}`);
+  // Klikbare pins → scroll naar locatiekaart
+  svg.querySelectorAll('.map-pin[data-loc]').forEach(el => {
+    if (!el.dataset.loc) return;
+    el.addEventListener('click', () => {
+      const card = document.getElementById(`info-${el.dataset.loc}`);
       if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });

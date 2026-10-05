@@ -40,12 +40,24 @@ html.light-mode .nav-tab.active { color: #f0c040; border-color: #f0c040; }
 html.light-mode .info-card-img { filter: brightness(1.05); }
 html.light-mode .map-sea { fill: #7aa8c8; }
 html.light-mode .map-region { fill: #c8b890; stroke: #8a7050; }
-html.light-mode .map-region.north { fill: #b0c8d8; }
-html.light-mode .map-region.crownlands { fill: #d4b870; }
-html.light-mode .map-region.essos { fill: #d4b870; }
+html.light-mode .map-region.north       { fill: #b0c8d8; }
+html.light-mode .map-region.crownlands  { fill: #d4b870; }
+html.light-mode .map-region.essos       { fill: #d0b880; }
+html.light-mode .map-region.riverlands  { fill: #c4d4a4; }
+html.light-mode .map-region.reach       { fill: #b8d098; }
+html.light-mode .map-region.dorne       { fill: #d4b880; }
+html.light-mode .map-region.vale        { fill: #b8c8a0; }
+html.light-mode .map-region.westerlands { fill: #d8c898; }
+html.light-mode .map-region.stormlands  { fill: #b8c0a8; }
+html.light-mode .map-region.iron-islands { fill: #a8b8b8; }
+html.light-mode .map-region.dothraki   { fill: #d0c880; }
 html.light-mode .map-ice { fill: #d8e8f0; }
 html.light-mode .map-pin { fill: #8a6a00; stroke: #fff; }
 html.light-mode .map-pin:hover { fill: #c09a00; }
+html.light-mode .map-river { stroke: #4878a8; opacity: 0.65; }
+html.light-mode .map-mountain-mark { fill: #6a5030; opacity: 0.5; }
+html.light-mode .map-legend-box { fill: rgba(248,240,224,0.88); }
+html.light-mode .map-compass-bg { fill: rgba(248,240,224,0.72); }
 html.light-mode .season-card { background: var(--bg-card); border-color: var(--border); }
 html.light-mode .season-card summary { color: var(--text); }
 html.light-mode details.season-card[open] summary { border-color: var(--gold); }
@@ -569,24 +581,59 @@ html.light-mode:root[data-show="hotd"] {
   border-radius: var(--radius);
   overflow: hidden;
 }
-.map-container h2 {
+.map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.map-header h2 {
   font-family: var(--font-heading);
   font-size: 0.9rem;
   color: var(--text-muted);
-  padding: 0.6rem 1rem;
-  border-bottom: 1px solid var(--border);
   letter-spacing: 0.06em;
 }
+.map-ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  color: var(--gold-dim);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.25rem 0.65rem;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.map-ext-link:hover { color: var(--gold); border-color: var(--gold-dim); }
 .westeros-map {
   width: 100%;
   display: block;
 }
 .map-region { fill: #1e2a1a; stroke: #3a4a30; stroke-width: 1; }
-.map-region.crownlands { fill: #2a1e0a; }
-.map-region.north { fill: #1a2230; }
-.map-region.essos { fill: #2a1e0f; }
+.map-region.crownlands  { fill: #2a1e0a; }
+.map-region.north       { fill: #1a2230; }
+.map-region.essos       { fill: #2a1e0f; }
+.map-region.riverlands  { fill: #1e2a14; }
+.map-region.reach       { fill: #182610; }
+.map-region.dorne       { fill: #2a2010; }
+.map-region.vale        { fill: #1c2218; }
+.map-region.westerlands { fill: #2a1e08; }
+.map-region.stormlands  { fill: #1e2218; }
+.map-region.iron-islands { fill: #1e2020; }
+.map-region.dothraki    { fill: #2a2208; }
 .map-sea { fill: #0a1520; }
 .map-ice { fill: #1a2838; }
+.map-river { fill: none; stroke: #2a5a8a; stroke-width: 1.3; stroke-linecap: round; opacity: 0.55; }
+.map-mountain-mark { fill: #4a3820; opacity: 0.45; }
+.map-legend-box { fill: rgba(5,2,0,0.62); }
+.map-compass-bg { fill: rgba(5,2,0,0.55); }
 .map-pin { fill: var(--gold); stroke: #0d0d0d; stroke-width: 1.5; cursor: pointer; transition: fill 0.15s; }
 .map-pin:hover { fill: #fff3a0; }
 .map-label {
