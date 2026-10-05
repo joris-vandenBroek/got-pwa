@@ -3,6 +3,11 @@ let worldData = {};
 let activeTab = 'houses';
 let currentShow = 'got'; // 'got' of 'hotd'
 
+// Zet class op basis van echte schermgrootte — werkt ook in Chrome desktopmodus
+if (Math.min(screen.width, screen.height) < 600) {
+  document.documentElement.classList.add('small-screen');
+}
+
 // IMDB name IDs per acteur → directe profielpagina
 const IMDB_IDS = {
   'Sean Bean':              'nm0000293',
