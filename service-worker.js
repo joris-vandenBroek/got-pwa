@@ -1,10 +1,8 @@
-const CACHE_NAME = 'got-pwa-v8';
+const CACHE_NAME = 'got-pwa-v9';
 
+// Alleen statische assets die zelden veranderen (afbeeldingen, data, manifest)
+// CSS en JS hebben version strings en worden door de browser zelf gecached
 const ASSETS = [
-  './css/style.css',
-  './js/app.js',
-  './data/characters.json',
-  './data/world.json',
   './manifest.json',
   './images/icons/icon-192.png',
   './images/icons/icon-512.png',
@@ -39,7 +37,7 @@ const ASSETS = [
   './images/organizations/nights-watch.svg',
   './images/organizations/small-council.webp',
   './images/organizations/wildlings.webp',
-  // Ontbrekende personages
+  // Personages GoT
   './images/characters/benjen-stark.webp',
   './images/characters/renly-baratheon.webp',
   './images/characters/loras-tyrell.webp',
@@ -47,9 +45,6 @@ const ASSETS = [
   './images/characters/doran-martell.webp',
   './images/characters/lysa-arryn.webp',
   './images/characters/robin-arryn.webp',
-  // HotD data
-  './data/hotd-characters.json',
-  './data/hotd-world.json',
   // HotD personages
   './images/hotd/characters/viserys-targaryen.webp',
   './images/hotd/characters/rhaenyra-targaryen.webp',
@@ -93,17 +88,31 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
-  // HTML altijd van netwerk (meest recente versie), met cache als fallback
-  if (event.request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname === '/got-pwa/' || url.pathname === '/got-pwa') {
+  // HTML en JSON data: altijd van netwerk (meest recente versie), cache als fallback
+  if (event.request.mode === 'navigate' ||
+      url.pathname.endsWith('.html') ||
+      url.pathname.endsWith('.json') ||
+      url.pathname === '/got-pwa/' ||
+      url.pathname === '/got-pwa') {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match('./index.html'))
+      fetch(event.request).catch(() =>
+        caches.match(event.request) || caches.match('./index.html')
+      )
     );
     return;
   }
 
-  // Alles overige: cache-first
+  // CSS en JS (hebben version strings): altijd van netwerk
+  if (url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Afbeeldingen en overige: cache-first voor offline gebruik
   event.respondWith(
-    caches.match(event.request, { ignoreSearch: true })
+    caches.match(event.request)
       .then(cached => cached || fetch(event.request))
   );
 });
