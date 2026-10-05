@@ -1,0 +1,534 @@
+{
+  "families": [
+    {
+      "id": "stark",
+      "name": "House Stark",
+      "show": "got",
+      "color": "#708090",
+      "units": [
+        {
+          "parents": [
+            {
+              "id": "eddard-stark",
+              "name": "Eddard Stark",
+              "image": "images/characters/eddard-stark.jpg",
+              "houseId": "stark"
+            },
+            {
+              "id": "catelyn-stark",
+              "name": "Catelyn Stark",
+              "image": "images/characters/catelyn-stark.jpg",
+              "houseId": "stark"
+            }
+          ],
+          "children": [
+            {
+              "id": "robb-stark",
+              "name": "Robb Stark",
+              "image": "images/characters/robb-stark.jpg",
+              "houseId": "stark"
+            },
+            {
+              "id": "sansa-stark",
+              "name": "Sansa Stark",
+              "image": "images/characters/sansa-stark.jpg",
+              "houseId": "stark"
+            },
+            {
+              "id": "arya-stark",
+              "name": "Arya Stark",
+              "image": "images/characters/arya-stark.jpg",
+              "houseId": "stark"
+            },
+            {
+              "id": "bran-stark",
+              "name": "Bran Stark",
+              "image": "images/characters/bran-stark.jpg",
+              "houseId": "stark"
+            },
+            {
+              "id": "rickon-stark",
+              "name": "Rickon Stark",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "stark"
+            }
+          ],
+          "note": "Jon Snow groeide op als Ned's bastaardzoon, maar is in werkelijkheid de zoon van Rhaegar Targaryen en Lyanna Stark."
+        },
+        {
+          "parents": [
+            {
+              "id": "rhaegar-targaryen",
+              "name": "Rhaegar Targaryen",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            },
+            {
+              "id": "lyanna-stark",
+              "name": "Lyanna Stark",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "stark"
+            }
+          ],
+          "children": [
+            {
+              "id": "jon-snow",
+              "name": "Jon Snow (Aegon Targaryen)",
+              "image": "images/characters/jon-snow.jpg",
+              "houseId": "stark"
+            }
+          ],
+          "note": "Lyanna Stark stierf kort na de geboorte. Ned Stark verborg Jon's afkomst om hem te beschermen."
+        }
+      ]
+    },
+    {
+      "id": "lannister",
+      "name": "House Lannister",
+      "show": "got",
+      "color": "#CFB53B",
+      "units": [
+        {
+          "parents": [
+            {
+              "id": "tywin-lannister",
+              "name": "Tywin Lannister",
+              "image": "images/characters/tywin-lannister.jpg",
+              "houseId": "lannister"
+            },
+            {
+              "id": "joanna-lannister",
+              "name": "Joanna Lannister †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            }
+          ],
+          "children": [
+            {
+              "id": "cersei-lannister",
+              "name": "Cersei Lannister",
+              "image": "images/characters/cersei-lannister.jpg",
+              "houseId": "lannister"
+            },
+            {
+              "id": "jaime-lannister",
+              "name": "Jaime Lannister",
+              "image": "images/characters/jaime-lannister.jpg",
+              "houseId": "lannister"
+            },
+            {
+              "id": "tyrion-lannister",
+              "name": "Tyrion Lannister",
+              "image": "images/characters/tyrion-lannister.jpg",
+              "houseId": "lannister"
+            }
+          ],
+          "note": "Joanna Lannister stierf bij de geboorte van Tyrion. Tywin verweet Tyrion haar dood altijd."
+        },
+        {
+          "parents": [
+            {
+              "id": "cersei-lannister",
+              "name": "Cersei Lannister",
+              "image": "images/characters/cersei-lannister.jpg",
+              "houseId": "lannister"
+            },
+            {
+              "id": "jaime-lannister",
+              "name": "Jaime Lannister",
+              "image": "images/characters/jaime-lannister.jpg",
+              "houseId": "lannister"
+            }
+          ],
+          "children": [
+            {
+              "id": "joffrey-baratheon",
+              "name": "Joffrey Baratheon",
+              "image": "images/characters/joffrey-baratheon.jpg",
+              "houseId": "lannister"
+            },
+            {
+              "id": "myrcella-baratheon",
+              "name": "Myrcella Baratheon",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            },
+            {
+              "id": "tommen-baratheon",
+              "name": "Tommen Baratheon",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            }
+          ],
+          "note": "Officieel kinderen van Robert Baratheon, in werkelijkheid geboren uit de verboden relatie van Cersei en Jaime."
+        }
+      ]
+    },
+    {
+      "id": "targaryen-got",
+      "name": "House Targaryen (GoT)",
+      "show": "got",
+      "color": "#8B0000",
+      "units": [
+        {
+          "parents": [
+            {
+              "id": "aerys-targaryen",
+              "name": "Aerys II (de Waanzinnige Koning)",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "targaryen"
+            },
+            {
+              "id": "rhaella-targaryen",
+              "name": "Rhaella Targaryen †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            }
+          ],
+          "children": [
+            {
+              "id": "rhaegar-targaryen",
+              "name": "Rhaegar Targaryen †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            },
+            {
+              "id": "viserys-targaryen",
+              "name": "Viserys Targaryen",
+              "image": "images/characters/viserys-targaryen.jpg",
+              "houseId": "targaryen"
+            },
+            {
+              "id": "daenerys-targaryen",
+              "name": "Daenerys Targaryen",
+              "image": "images/characters/daenerys-targaryen.jpg",
+              "houseId": "targaryen"
+            }
+          ],
+          "note": "Aerys II 'de Waanzinnige Koning' werd gedood door Jaime Lannister. Rhaella stierf bij de geboorte van Daenerys op Dragonstone."
+        },
+        {
+          "parents": [
+            {
+              "id": "rhaegar-targaryen",
+              "name": "Rhaegar Targaryen †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            },
+            {
+              "id": "lyanna-stark",
+              "name": "Lyanna Stark †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "stark"
+            }
+          ],
+          "children": [
+            {
+              "id": "jon-snow",
+              "name": "Jon Snow (Aegon Targaryen)",
+              "image": "images/characters/jon-snow.jpg",
+              "houseId": "stark"
+            }
+          ],
+          "note": "Rhaegar en Lyanna trouwden in het geheim. Jon is de wettige Targaryen-erfgenaam, opgegroeid als Jon Snow bij de Starks."
+        }
+      ]
+    },
+    {
+      "id": "baratheon",
+      "name": "House Baratheon",
+      "show": "got",
+      "color": "#B8860B",
+      "units": [
+        {
+          "parents": [
+            {
+              "id": "robert-baratheon",
+              "name": "Robert Baratheon",
+              "image": "images/characters/robert-baratheon.jpg",
+              "houseId": "baratheon"
+            },
+            {
+              "id": "cersei-lannister",
+              "name": "Cersei Lannister",
+              "image": "images/characters/cersei-lannister.jpg",
+              "houseId": "lannister"
+            }
+          ],
+          "children": [
+            {
+              "id": "joffrey-baratheon",
+              "name": "Joffrey (bio. Lannister)",
+              "image": "images/characters/joffrey-baratheon.jpg",
+              "houseId": "lannister"
+            },
+            {
+              "id": "myrcella-baratheon",
+              "name": "Myrcella Baratheon",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            },
+            {
+              "id": "tommen-baratheon",
+              "name": "Tommen Baratheon",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            }
+          ],
+          "note": "Roberts drie 'kinderen' zijn biologisch van Jaime Lannister. Robert zelf heeft tientallen bastaardkinderen verspreid over Westeros."
+        },
+        {
+          "parents": [
+            {
+              "id": "steffon-baratheon",
+              "name": "Steffon Baratheon †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            },
+            {
+              "id": "cassana-estermont",
+              "name": "Cassana Estermont †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            }
+          ],
+          "children": [
+            {
+              "id": "robert-baratheon",
+              "name": "Robert Baratheon",
+              "image": "images/characters/robert-baratheon.jpg",
+              "houseId": "baratheon"
+            },
+            {
+              "id": "stannis-baratheon",
+              "name": "Stannis Baratheon",
+              "image": "images/characters/stannis-baratheon.jpg",
+              "houseId": "baratheon"
+            },
+            {
+              "id": "renly-baratheon",
+              "name": "Renly Baratheon",
+              "image": "images/characters/renly-baratheon.webp",
+              "houseId": "baratheon"
+            }
+          ],
+          "note": "De drie Baratheon-broers kwamen voort uit Lord Steffon en Lady Cassana, die beiden omkwamen op zee voor Storms End."
+        }
+      ]
+    },
+    {
+      "id": "targaryen-hotd",
+      "name": "Targaryen-dynastie (HotD)",
+      "show": "hotd",
+      "color": "#8B0000",
+      "units": [
+        {
+          "parents": [
+            {
+              "id": "viserys-targaryen",
+              "name": "Viserys I Targaryen",
+              "image": "images/hotd/characters/viserys-targaryen.webp",
+              "houseId": "viserys-hof"
+            },
+            {
+              "id": "aemma-arryn",
+              "name": "Aemma Arryn †",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": null
+            }
+          ],
+          "children": [
+            {
+              "id": "rhaenyra-targaryen",
+              "name": "Rhaenyra Targaryen",
+              "image": "images/hotd/characters/rhaenyra-targaryen.webp",
+              "houseId": "de-zwarten"
+            }
+          ],
+          "note": "Aemma Arryn stierf aan complicaties bij de geboorte van een zoon (Baelon), die zelf maar één dag leefde."
+        },
+        {
+          "parents": [
+            {
+              "id": "viserys-targaryen",
+              "name": "Viserys I Targaryen",
+              "image": "images/hotd/characters/viserys-targaryen.webp",
+              "houseId": "viserys-hof"
+            },
+            {
+              "id": "alicent-hightower",
+              "name": "Alicent Hightower",
+              "image": "images/hotd/characters/alicent-hightower.webp",
+              "houseId": "de-groenen"
+            }
+          ],
+          "children": [
+            {
+              "id": "aegon-targaryen",
+              "name": "Aegon II Targaryen",
+              "image": "images/hotd/characters/aegon-targaryen.webp",
+              "houseId": "de-groenen"
+            },
+            {
+              "id": "helaena-targaryen",
+              "name": "Helaena Targaryen",
+              "image": "images/hotd/characters/helaena-targaryen.webp",
+              "houseId": "de-groenen"
+            },
+            {
+              "id": "aemond-targaryen",
+              "name": "Aemond Targaryen",
+              "image": "images/hotd/characters/aemond-targaryen.webp",
+              "houseId": "de-groenen"
+            },
+            {
+              "id": "daeron-targaryen",
+              "name": "Daeron Targaryen",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "de-groenen"
+            }
+          ],
+          "note": "Alicent's kinderen vormen de basis van de Groenen-factie. Aegon II wordt door de Groenen gekroond boven Rhaenyra."
+        },
+        {
+          "parents": [
+            {
+              "id": "rhaenyra-targaryen",
+              "name": "Rhaenyra Targaryen",
+              "image": "images/hotd/characters/rhaenyra-targaryen.webp",
+              "houseId": "de-zwarten"
+            },
+            {
+              "id": "laenor-velaryon",
+              "name": "Laenor Velaryon",
+              "image": "images/hotd/characters/laenor-velaryon.webp",
+              "houseId": "velaryon"
+            }
+          ],
+          "children": [
+            {
+              "id": "jacaerys-velaryon",
+              "name": "Jacaerys Velaryon",
+              "image": "images/hotd/characters/jacaerys-velaryon.webp",
+              "houseId": "de-zwarten"
+            },
+            {
+              "id": "lucerys-velaryon",
+              "name": "Lucerys Velaryon",
+              "image": "images/hotd/characters/lucerys-velaryon.webp",
+              "houseId": "de-zwarten"
+            },
+            {
+              "id": "joffrey-velaryon",
+              "name": "Joffrey Velaryon",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "de-zwarten"
+            }
+          ],
+          "note": "Rhaenyra's kinderen uit haar huwelijk met Laenor dragen de Velaryon-naam maar worden door velen als bastaarden beschouwd."
+        },
+        {
+          "parents": [
+            {
+              "id": "rhaenyra-targaryen",
+              "name": "Rhaenyra Targaryen",
+              "image": "images/hotd/characters/rhaenyra-targaryen.webp",
+              "houseId": "de-zwarten"
+            },
+            {
+              "id": "daemon-targaryen",
+              "name": "Daemon Targaryen",
+              "image": "images/hotd/characters/daemon-targaryen.webp",
+              "houseId": "de-zwarten"
+            }
+          ],
+          "children": [
+            {
+              "id": "aegon-younger",
+              "name": "Aegon Targaryen (jongere)",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "de-zwarten"
+            },
+            {
+              "id": "viserys-II",
+              "name": "Viserys II Targaryen",
+              "image": "images/characters/placeholder.jpg",
+              "houseId": "de-zwarten"
+            }
+          ],
+          "note": "Rhaenyra's kinderen met Daemon zijn volbloed Targaryens. Aegon III (Rhaenyra's jongste) wordt later koning na de Dansers."
+        }
+      ]
+    },
+    {
+      "id": "velaryon",
+      "name": "House Velaryon",
+      "show": "hotd",
+      "color": "#1a6b8a",
+      "units": [
+        {
+          "parents": [
+            {
+              "id": "corlys-velaryon",
+              "name": "Corlys Velaryon",
+              "image": "images/hotd/characters/corlys-velaryon.webp",
+              "houseId": "velaryon"
+            },
+            {
+              "id": "rhaenys-targaryen",
+              "name": "Rhaenys Targaryen",
+              "image": "images/hotd/characters/rhaenys-targaryen.webp",
+              "houseId": "velaryon"
+            }
+          ],
+          "children": [
+            {
+              "id": "laena-velaryon",
+              "name": "Laena Velaryon",
+              "image": "images/hotd/characters/laena-velaryon.webp",
+              "houseId": "velaryon"
+            },
+            {
+              "id": "laenor-velaryon",
+              "name": "Laenor Velaryon",
+              "image": "images/hotd/characters/laenor-velaryon.webp",
+              "houseId": "velaryon"
+            }
+          ],
+          "note": "Corlys 'de Zeeslang' is de rijkste man van Westeros en Rhaenys was bijna zelf koningin — ze rijdt Meleys, de Rode Koningin."
+        },
+        {
+          "parents": [
+            {
+              "id": "laena-velaryon",
+              "name": "Laena Velaryon †",
+              "image": "images/hotd/characters/laena-velaryon.webp",
+              "houseId": "velaryon"
+            },
+            {
+              "id": "daemon-targaryen",
+              "name": "Daemon Targaryen",
+              "image": "images/hotd/characters/daemon-targaryen.webp",
+              "houseId": "de-zwarten"
+            }
+          ],
+          "children": [
+            {
+              "id": "baela-targaryen",
+              "name": "Baela Targaryen",
+              "image": "images/hotd/characters/baela-targaryen.webp",
+              "houseId": "de-zwarten"
+            },
+            {
+              "id": "rhaena-targaryen",
+              "name": "Rhaena Targaryen",
+              "image": "images/hotd/characters/rhaena-targaryen.webp",
+              "houseId": "de-zwarten"
+            }
+          ],
+          "note": "Laena stierf in Pentos door zichzelf te laten verbranden door haar draak Vhagar nadat een keizersnede haar leven zou kosten."
+        }
+      ]
+    }
+  ]
+}

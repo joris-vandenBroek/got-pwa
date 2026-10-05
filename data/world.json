@@ -123,11 +123,28 @@
   ],
   "creatures": [
     {
-      "id": "dragons",
-      "name": "Draken",
-      "description": "Machtige vliegende reptielen die vuur kunnen spuwen en berucht zijn om hun kracht en intelligentie. Draken zijn voor lange tijd uitgestorven geweest in Westeros. Ze zijn het symbool van House Targaryen, die ze vroeger gebruikten om de Zeven Koninkrijken te veroveren.",
-      "associated_with": "House Targaryen",
-      "image": "images/creatures/dragons.webp"
+      "id": "drogon",
+      "name": "Drogon",
+      "description": "De grootste en wildste draak van Daenerys, zwart met rode vleugels en vernoemd naar haar gevallen echtgenoot Khal Drogo. Drogon is de meest gevreesde draak van zijn tijd en verdwijnt spoorloos na de dood van Daenerys.",
+      "associated_with": "Daenerys Targaryen",
+      "image": "images/creatures/dragons.webp",
+      "show": "got"
+    },
+    {
+      "id": "rhaegal",
+      "name": "Rhaegal",
+      "description": "Een groene en bronsgekleurde draak, vernoemd naar Daenerys' broer Rhaegar Targaryen. Jon Snow rijdt Rhaegal als eerste niet-Targaryen drakenrijder in eeuwen. Rhaegal wordt gedood door Eurons vloot boven de Smalle Zee.",
+      "associated_with": "Daenerys Targaryen / Jon Snow",
+      "image": "images/creatures/dragons.webp",
+      "show": "got"
+    },
+    {
+      "id": "viserion",
+      "name": "Viserion",
+      "description": "Crème en goudgekleurde draak, vernoemd naar Daenerys' broer Viserys. Gedood door een ijsspeer van de Night King voorbij The Wall, maar vervolgens herboren als een ijsdraak die door de Night King wordt bereden en The Wall vernietigt.",
+      "associated_with": "Daenerys Targaryen / Night King",
+      "image": "images/creatures/dragons.webp",
+      "show": "got"
     },
     {
       "id": "white-walkers",

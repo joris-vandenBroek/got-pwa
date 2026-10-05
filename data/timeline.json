@@ -1,0 +1,190 @@
+{
+  "events": [
+    {
+      "year": "101 NK",
+      "title": "Rhaenyra aangewezen als erfgename",
+      "description": "Koning Viserys I benoemt zijn dochter Rhaenyra als zijn opvolgster — een ongekende keuze in het patriarchale Westeros. Dit besluit zaait de kiemen voor de Dansers van de Draken.",
+      "show": "hotd"
+    },
+    {
+      "year": "102 NK",
+      "title": "Daemon verbanned: Heir for a Day",
+      "description": "Daemon Targaryen valt in ongenade na zijn spottende opmerking over Rhaenyra als 'erfgename voor één dag'. Viserys verbant zijn broer, die vervolgens de Steppenstenen gaat veroveren.",
+      "show": "hotd"
+    },
+    {
+      "year": "104 NK",
+      "title": "Rhaenyra trouwt met Laenor Velaryon",
+      "description": "Om politieke banden te smeden trouwt Rhaenyra met Laenor Velaryon, erfgenaam van House Velaryon. Het huwelijk versterkt het bondgenootschap tussen de Targaryens en de rijkste zeevloot van Westeros.",
+      "show": "hotd"
+    },
+    {
+      "year": "106 NK",
+      "title": "Alicent Hightower trouwt met Viserys I",
+      "description": "Viserys I hertrouwt met de jonge Alicent Hightower — de beste vriendin van Rhaenyra — op aandringen van de slimme Hand des Konings Otto Hightower. Rhaenyra voelt zich verraden.",
+      "show": "hotd"
+    },
+    {
+      "year": "111 NK",
+      "title": "Aemond verovert Vhagar",
+      "description": "Na de dood van Laena Velaryon klimt de jonge Aemond Targaryen 's nachts naar de grootste levende draak Vhagar en tempert haar. Het incident mondt uit in een gevecht waarbij Aemond een oog verliest.",
+      "show": "hotd"
+    },
+    {
+      "year": "112 NK",
+      "title": "Brand van Harrenhal: Strong-familie sterft",
+      "description": "Lord Lyonel Strong en zijn zoon Harwin — de trouwe beschermer van Rhaenyra — sterven in een verdachte brand in Harrenhal. De sluwe Larys Strong stak de brand aan als dienst aan Alicent Hightower.",
+      "show": "hotd"
+    },
+    {
+      "year": "113 NK",
+      "title": "Rhaenyra en Daemon trouwen",
+      "description": "Na de dood van hun respectieve echtgenoten trouwen Rhaenyra en haar oom Daemon op Driftmark. De twee kampen — de Zwarten en de Groenen — worden definitief gevormd.",
+      "show": "hotd"
+    },
+    {
+      "year": "129 NK",
+      "title": "Viserys I sterft — de Dansers beginnen",
+      "description": "Koning Viserys I sterft na een slepende ziekte. Alicent misinterpreteert zijn laatste woorden als een wens voor Aegon II als opvolger, waarop de Groenen snel handelen en Aegon II kronen — de oorlog barst los.",
+      "show": "hotd"
+    },
+    {
+      "year": "129 NK",
+      "title": "Blood and Cheese",
+      "description": "Als wraak voor de dood van Lucerys Velaryon sturen Daemon en Rhaenyra huurmoordenaars naar het Rode Kasteel. Ze dringen de slaapkamer van Helaena binnen en vermoorden haar zoontje Jaehaerys.",
+      "show": "hotd"
+    },
+    {
+      "year": "129 NK",
+      "title": "Slag van Rook's Rest",
+      "description": "Aemond lokt Rhaenys en haar draak Meleys in een hinderlaag boven Rook's Rest. Rhaenys en Meleys sterven heroïsch; ook Aegon II's draak Sunfyre raakt zwaar gewond.",
+      "show": "hotd"
+    },
+    {
+      "year": "130 NK",
+      "title": "Slag aan de Gullet",
+      "description": "Een massale zeeslag in de Smalle Zee waarbij drie wilde draken worden ingezet door de Zwarten. Beide partijen lijden enorme verliezen, maar de Zwarten heroveren de controle over de toegang tot de Blackwater Bay.",
+      "show": "hotd"
+    },
+    {
+      "year": "130 NK",
+      "title": "Rhaenyra verovert King's Landing",
+      "description": "Rhaenyra slaagt erin King's Landing te bezetten en proclameert zichzelf koningin. Haar heerschappij over de hoofdstad is echter kortstondig, want het volk van de stad keert zich al snel tegen haar.",
+      "show": "hotd"
+    },
+    {
+      "year": "130 NK",
+      "title": "Drakenpit-oproer — Syrax sterft",
+      "description": "Het volk van King's Landing komt in opstand en bestormt de Drakenpit. Meerdere draken worden gedood door de opstandige massa, waaronder Rhaenyra's eigen draak Syrax.",
+      "show": "hotd"
+    },
+    {
+      "year": "131 NK",
+      "title": "Rhaenyra sterft — gevangen door Aegon II",
+      "description": "Rhaenyra vlucht uit King's Landing maar wordt gevangen door Aegon II, die haar laat verslinden door zijn zwaar gewonde draak Sunfyre. De rechtmatige erfgename is dood.",
+      "show": "hotd"
+    },
+    {
+      "year": "131 NK",
+      "title": "Aegon II sterft — Aegon III wordt koning",
+      "description": "Aegon II overleeft zijn rivale slechts enkele maanden. Hij sterft zelf, en zijn neef Aegon III (Rhaenyra's zoon) wordt de nieuwe koning van Westeros — de Dansers zijn voorbij.",
+      "show": "hotd"
+    },
+    {
+      "year": "135–296 NK",
+      "title": "~170 jaar verstrijken — De draken sterven uit",
+      "description": "Onder Aegon III sterven de laatste Targaryen-draken een voor een. Ze worden steeds meer als legendarische wezens beschouwd, totdat ze volledig uit de geschiedenis verdwijnen.",
+      "type": "gap"
+    },
+    {
+      "year": "297 NK",
+      "title": "Jon Arryn sterft — Ned Stark geroepen",
+      "description": "De Hand des Konings Jon Arryn sterft onder verdachte omstandigheden. Koning Robert Baratheon vraagt zijn oude vriend Ned Stark om de functie over te nemen — en daarmee begint de tragedie van House Stark.",
+      "show": "got"
+    },
+    {
+      "year": "297 NK",
+      "title": "Ned ontdekt het geheim van Cersei",
+      "description": "In King's Landing ontdekt Ned dat Jon Arryn vermoord werd omdat hij de ware afstamming van Cersei's kinderen had ontdekt — ze zijn niet van Robert, maar kinderen van Cersei en haar broer Jaime.",
+      "show": "got"
+    },
+    {
+      "year": "298 NK",
+      "title": "Daenerys trouwt met Khal Drogo",
+      "description": "Daenerys Targaryen trouwt op aandringen van haar broer Viserys met de Dothraki-krijgsleider Khal Drogo. In de steppe ontdekt ze haar innerlijke kracht en gezag als khaleesi.",
+      "show": "got"
+    },
+    {
+      "year": "298 NK",
+      "title": "Ned Stark onthoofd",
+      "description": "Ned Stark wordt gearresteerd wegens verraad en hoewel hij schuld bekent in ruil voor gratie, laat de jonge Joffrey hem toch onthoofden — een onverwachte klap voor ieder die dacht de 'held' te volgen.",
+      "show": "got"
+    },
+    {
+      "year": "298 NK",
+      "title": "Daenerys' draken uitgebroeid",
+      "description": "Na de dood van Khal Drogo stapt Daenerys in zijn brandende begrafenisvuur. De volgende ochtend komt ze ongedeerd tevoorschijn met drie pas uitgebroede draken — voor het eerst in bijna 170 jaar.",
+      "show": "got"
+    },
+    {
+      "year": "299 NK",
+      "title": "De Rode Bruiloft",
+      "description": "Tijdens een bruiloft van zijn oom slaan de Freys en de Boltons toe: Robb Stark, zijn zwangere vrouw Talisa en moeder Catelyn worden allen vermoord — een van de meest traumatiserende televisie-evenementen ooit.",
+      "show": "got"
+    },
+    {
+      "year": "300 NK",
+      "title": "Joffrey vergiftigd",
+      "description": "Joffrey Baratheon wordt vergiftigd op zijn eigen huwelijksfeest. Tyrion Lannister wordt ten onrechte beschuldigd; hij vlucht na het doden van zijn vader Tywin naar Essos om Daenerys te dienen.",
+      "show": "got"
+    },
+    {
+      "year": "300 NK",
+      "title": "Jon Snow's eerste dood",
+      "description": "Na een controversieel bondgenootschap met de Wildlings wordt Jon Snow door zijn eigen Nachtwacht-broeders neergestoken en voor dood achtergelaten in de sneeuw. De Nachtwacht ziet hem als verrader.",
+      "show": "got"
+    },
+    {
+      "year": "301 NK",
+      "title": "Jon Snow herrezen — zijn ware afkomst",
+      "description": "Melisandre wekt Jon Snow terug tot leven. Bran onthult via een visioen dat Jon de geheime zoon is van Lyanna Stark en Rhaegar Targaryen — en daarmee de wettige erfgenaam van de IJzeren Troon.",
+      "show": "got"
+    },
+    {
+      "year": "301 NK",
+      "title": "Herovering van Winterfell",
+      "description": "Jon en Sansa heroveren Winterfell in de Slag van de Bastaard Kinderen, gered op het laatste moment door de ridders van het Dal. Ramsay Bolton, de sadistische heerser, wordt door Sansa gevoed aan zijn eigen honden.",
+      "show": "got"
+    },
+    {
+      "year": "301 NK",
+      "title": "Cersei kroont zichzelf koningin",
+      "description": "Cersei laat het Septum van Baelor opblazen met wildfire, waarbij honderden sterven. Na de zelfmoord van haar zoon Tommen kroont ze zichzelf tot koningin van de Zeven Koninkrijken.",
+      "show": "got"
+    },
+    {
+      "year": "302 NK",
+      "title": "Daenerys landt in Westeros",
+      "description": "Daenerys arriveert eindelijk op Dragonstone met haar drie draken, Dothraki en Onbezoedelden. Ze ontmoet Jon Snow en trekt samen ten strijde, maar haar ware aard ontvouwt zich steeds verder.",
+      "show": "got"
+    },
+    {
+      "year": "302 NK",
+      "title": "Night King doodt Viserion — The Wall valt",
+      "description": "Voorbij The Wall gooit de Night King een ijsspeer en doodt Daenerys' draak Viserion. Hij wekt de draak op als een ijsdraak die The Wall helpt vernietigen — de bescherming van duizend jaar valt.",
+      "show": "got"
+    },
+    {
+      "year": "303 NK",
+      "title": "Arya doodt de Night King",
+      "description": "In de Slag om Winterfell sluipt Arya Stark van achter naar de Night King en doodt hem met het Valyriaanse stalen dolk. Het volledige leger van de doden valt in één klap uiteen.",
+      "show": "got"
+    },
+    {
+      "year": "303 NK",
+      "title": "Verbranding van King's Landing",
+      "description": "Daenerys verbrand King's Landing en duizenden onschuldige burgers. Jon Snow doodt haar om verder bloedbad te voorkomen; Drogon smelt de IJzeren Troon en vliegt weg. Bran Stark wordt de nieuwe koning.",
+      "show": "got"
+    }
+  ]
+}

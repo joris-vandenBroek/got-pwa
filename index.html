@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
   <header>
@@ -42,6 +42,8 @@
     <button class="nav-tab" data-tab="organizations" role="tab" aria-selected="false">Organisaties</button>
     <button class="nav-tab" data-tab="glossary" role="tab" aria-selected="false">Woordenlijst</button>
     <button class="nav-tab" data-tab="seasons" role="tab" aria-selected="false">Seizoenen</button>
+    <button class="nav-tab" data-tab="timeline" role="tab" aria-selected="false">Tijdlijn</button>
+    <button class="nav-tab" data-tab="familytree" role="tab" aria-selected="false">Stamboom</button>
   </nav>
 
   <main id="main-content">
@@ -95,8 +97,27 @@
       <div id="seasons-list" class="seasons-list"></div>
     </section>
 
+    <!-- === TIJDLIJN === -->
+    <section id="timeline-view" class="view">
+      <div class="timeline-controls">
+        <button class="tl-filter-btn active" data-filter="all">Alle events</button>
+        <button class="tl-filter-btn hotd" data-filter="hotd">House of the Dragon</button>
+        <button class="tl-filter-btn got" data-filter="got">Game of Thrones</button>
+      </div>
+      <div id="timeline-list" class="timeline-list"></div>
+    </section>
+
+    <!-- === STAMBOOM === -->
+    <section id="familytree-view" class="view">
+      <div class="family-selector-bar">
+        <label for="family-select" class="family-selector-label">Kies een familie:</label>
+        <select id="family-select" class="family-selector"></select>
+      </div>
+      <div id="family-tree-container"></div>
+    </section>
+
   </main>
 
-  <script src="js/app.js?v=11"></script>
+  <script src="js/app.js?v=12"></script>
 </body>
 </html>

@@ -1,5 +1,8 @@
 let allHouses = [];
 let worldData = {};
+let timelineData = [];
+let familyTreeData = [];
+let gotWorldData = {}; // GoT world data altijd in geheugen voor draken-gecombineerde weergave
 let activeTab = 'houses';
 let currentShow = 'got'; // 'got' of 'hotd'
 
@@ -85,10 +88,28 @@ async function loadData(show) {
   const charFile  = show === 'hotd' ? 'data/hotd-characters.json' : 'data/characters.json';
   const worldFile = show === 'hotd' ? 'data/hotd-world.json'      : 'data/world.json';
   try {
-    const [charRes, worldRes] = await Promise.all([fetch(charFile), fetch(worldFile)]);
-    const charData = await charRes.json();
-    worldData = await worldRes.json();
+    const fetches = [fetch(charFile), fetch(worldFile)];
+    const needTimeline    = !timelineData.length;
+    const needFamilyTrees = !familyTreeData.length;
+    const needGotWorld    = !Object.keys(gotWorldData).length && show === 'hotd';
+
+    if (needTimeline)    fetches.push(fetch('data/timeline.json'));
+    if (needFamilyTrees) fetches.push(fetch('data/family-trees.json'));
+    if (needGotWorld)    fetches.push(fetch('data/world.json'));
+
+    const results = await Promise.all(fetches);
+    const charData = await results[0].json();
+    worldData = await results[1].json();
     allHouses = charData.houses;
+
+    // Als GoT-show actief is, IS worldData de GoT-world — zet gotWorldData direct
+    if (show === 'got') gotWorldData = worldData;
+
+    let idx = 2;
+    if (needTimeline)    { const d = await results[idx++].json(); timelineData = d.events || []; }
+    if (needFamilyTrees) { const d = await results[idx++].json(); familyTreeData = d.families || []; }
+    if (needGotWorld)    { gotWorldData = await results[idx].json(); }
+
     // Pas thema-kleur aan op de actieve show
     document.documentElement.dataset.show = show;
     activeTab = 'houses';
@@ -126,6 +147,8 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
       case 'organizations': renderOrganizations(); break;
       case 'glossary':     renderGlossary(); break;
       case 'seasons':      renderSeasons(); break;
+      case 'timeline':     renderTimeline(); break;
+      case 'familytree':   renderFamilyTree(); break;
     }
   });
 });
@@ -468,11 +491,62 @@ function renderLocations() {
 function renderCreatures() {
   const list = document.getElementById('creatures-list');
   list.innerHTML = '';
-  (worldData.creatures || []).forEach(c => {
-    list.appendChild(buildInfoCard(c, {
-      meta: c.associated_with || null
-    }));
-  });
+
+  // Verzamel draken van BEIDE shows (GoT uit gotWorldData, HotD uit worldData als currentShow=hotd)
+  const gotDragons  = (gotWorldData.creatures || []).filter(c => c.show === 'got' || ['drogon','rhaegal','viserion'].includes(c.id));
+  const hotdDragons = (currentShow === 'hotd') ? (worldData.creatures || []) : [];
+
+  // Gecombineerde drakenlijst: GoT draken + HotD draken
+  const allDragons = [];
+  // GoT specifieke draken (hebben show: "got")
+  gotDragons.forEach(c => { allDragons.push({ ...c, _fromShow: 'got' }); });
+  // HotD draken (alle wezens in HotD zijn draken)
+  hotdDragons.forEach(c => { allDragons.push({ ...c, _fromShow: 'hotd' }); });
+
+  if (allDragons.length > 0) {
+    // Draken-sectieheader
+    const dragonHeader = document.createElement('div');
+    dragonHeader.className = 'section-heading';
+    dragonHeader.style.cssText = 'max-width:900px;margin:0 auto 0.75rem;';
+    dragonHeader.textContent = 'Draken';
+    list.appendChild(dragonHeader);
+
+    allDragons.forEach(c => {
+      const showLabel = c._fromShow === 'hotd' ? 'House of the Dragon' : 'Game of Thrones';
+      const showClass = c._fromShow === 'hotd' ? 'hotd' : 'got';
+      const card = buildInfoCard(c, { meta: c.associated_with || null });
+      // Voeg show-badge toe aan card body
+      const body = card.querySelector('.info-card-body');
+      if (body) {
+        const badge = document.createElement('span');
+        badge.className = `tl-show-badge ${showClass}`;
+        badge.textContent = showLabel;
+        body.insertBefore(badge, body.firstChild);
+      }
+      list.appendChild(card);
+    });
+  }
+
+  // Overige wezens van de actieve show (niet-draken)
+  // In HotD zijn alle wezens draken (al getoond); bij GoT toon overige wezens
+  const dragonIds = new Set(allDragons.map(c => c.id));
+  const otherCreatures = currentShow === 'hotd'
+    ? []
+    : (worldData.creatures || []).filter(c => !dragonIds.has(c.id));
+
+  if (otherCreatures.length > 0) {
+    if (allDragons.length > 0) {
+      const divider = document.createElement('div');
+      divider.className = 'section-heading';
+      divider.style.cssText = 'max-width:900px;margin:1.5rem auto 0.75rem;';
+      divider.textContent = 'Overige wezens';
+      list.appendChild(divider);
+    }
+    otherCreatures.forEach(c => {
+      list.appendChild(buildInfoCard(c, { meta: c.associated_with || null }));
+    });
+  }
+
   showView('creatures-view');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -537,6 +611,197 @@ function renderSeasons() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// === Tijdlijn ===
+function renderTimeline() {
+  const list = document.getElementById('timeline-list');
+  list.innerHTML = '';
+
+  // Bepaal actief filter
+  const activeFilter = list.dataset.filter || 'all';
+
+  (timelineData || []).forEach(ev => {
+    if (ev.type === 'gap') {
+      // Gap-kaart
+      const gapEl = document.createElement('div');
+      gapEl.className = 'tl-gap-card';
+      gapEl.innerHTML = `
+        <div class="tl-gap-inner">
+          <div class="tl-gap-title">${ev.year}</div>
+          <div class="tl-gap-sub">${ev.title}</div>
+        </div>
+      `;
+      // Gap altijd tonen tenzij filter op één show staat (dan niet relevant)
+      if (activeFilter !== 'hotd' && activeFilter !== 'got') {
+        list.appendChild(gapEl);
+      }
+      return;
+    }
+
+    if (activeFilter !== 'all' && ev.show !== activeFilter) return;
+
+    const details = document.createElement('details');
+    details.className = 'tl-event-card';
+
+    const showLabel = ev.show === 'hotd' ? 'House of the Dragon' : 'Game of Thrones';
+    details.innerHTML = `
+      <summary>
+        <span class="tl-year-badge">${ev.year}</span>
+        <span class="tl-event-title">${ev.title}</span>
+        <span class="tl-chevron">&#9660;</span>
+      </summary>
+      <div class="tl-event-body">
+        <span class="tl-show-badge ${ev.show}">${showLabel}</span>
+        <p>${ev.description}</p>
+      </div>
+    `;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'tl-event';
+    wrapper.dataset.show = ev.show || '';
+    wrapper.appendChild(details);
+    list.appendChild(wrapper);
+  });
+
+  showView('timeline-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Filter-knoppen voor tijdlijn
+document.querySelectorAll('.tl-filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tl-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const list = document.getElementById('timeline-list');
+    list.dataset.filter = btn.dataset.filter;
+    renderTimeline();
+  });
+});
+
+// === Stamboom ===
+let currentFamilyId = null;
+
+function renderFamilyTree() {
+  const select = document.getElementById('family-select');
+  const container = document.getElementById('family-tree-container');
+
+  // Vul selector met families gefilterd op huidige show
+  const filteredFamilies = (familyTreeData || []).filter(f => f.show === currentShow);
+
+  // Herbouw selector alleen als show veranderd is of nog leeg
+  const currentOptions = Array.from(select.options).map(o => o.value);
+  const newIds = filteredFamilies.map(f => f.id);
+  const needsRebuild = JSON.stringify(currentOptions) !== JSON.stringify(newIds);
+
+  if (needsRebuild) {
+    select.innerHTML = '';
+    filteredFamilies.forEach(f => {
+      const opt = document.createElement('option');
+      opt.value = f.id;
+      opt.textContent = f.name;
+      select.appendChild(opt);
+    });
+    currentFamilyId = filteredFamilies.length > 0 ? filteredFamilies[0].id : null;
+    select.value = currentFamilyId || '';
+  }
+
+  // Render de gekozen familie
+  const chosen = filteredFamilies.find(f => f.id === (select.value || currentFamilyId));
+  container.innerHTML = '';
+  if (!chosen) {
+    container.innerHTML = '<p class="no-results">Geen stamboom beschikbaar voor deze serie.</p>';
+    showView('familytree-view');
+    return;
+  }
+
+  chosen.units.forEach(unit => {
+    const unitEl = document.createElement('div');
+    unitEl.className = 'family-unit';
+    unitEl.style.setProperty('--family-color', chosen.color || 'var(--gold)');
+
+    // Ouders-rij
+    const parentsRow = document.createElement('div');
+    parentsRow.className = 'parents-row';
+
+    unit.parents.forEach((parent, idx) => {
+      if (idx > 0) {
+        const connector = document.createElement('div');
+        connector.className = 'partner-connector';
+        connector.textContent = '♥';
+        parentsRow.appendChild(connector);
+      }
+      parentsRow.appendChild(buildPersonCard(parent, 'parent-card', 'parent-name'));
+    });
+    unitEl.appendChild(parentsRow);
+
+    // Kinderen-rij
+    if (unit.children && unit.children.length > 0) {
+      const childrenRow = document.createElement('div');
+      childrenRow.className = 'children-row';
+      unit.children.forEach(child => {
+        childrenRow.appendChild(buildPersonCard(child, 'child-card', 'child-name'));
+      });
+      unitEl.appendChild(childrenRow);
+    }
+
+    // Noot
+    if (unit.note) {
+      const noteEl = document.createElement('p');
+      noteEl.className = 'family-unit-note';
+      noteEl.textContent = unit.note;
+      unitEl.appendChild(noteEl);
+    }
+
+    container.appendChild(unitEl);
+  });
+
+  showView('familytree-view');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function buildPersonCard(person, cardClass, nameClass) {
+  const card = document.createElement('div');
+  card.className = cardClass;
+
+  const img = document.createElement('img');
+  img.src = person.image || 'images/characters/placeholder.jpg';
+  img.alt = person.name;
+  img.loading = 'lazy';
+  img.onerror = () => { img.src = 'images/characters/placeholder.jpg'; img.onerror = null; };
+
+  const name = document.createElement('span');
+  name.className = nameClass;
+  name.textContent = person.name;
+
+  card.appendChild(img);
+  card.appendChild(name);
+
+  // Klikken navigeert naar het huis-overzicht van dit personage
+  if (person.houseId) {
+    card.addEventListener('click', () => {
+      const house = allHouses.find(h => h.id === person.houseId);
+      if (house) {
+        setActiveTab('houses');
+        showHouse(house);
+        // Scroll naar specifieke personage als aanwezig
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            const charEl = document.getElementById(`char-${person.id}`);
+            if (charEl) charEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+        });
+      }
+    });
+  }
+
+  return card;
+}
+
+// Selector change handler
+document.getElementById('family-select').addEventListener('change', function () {
+  currentFamilyId = this.value;
+  renderFamilyTree();
+});
+
 // === Live zoekfunctie (zoekt door alles) ===
 document.getElementById('search-input').addEventListener('input', function () {
   const query = this.value.trim().toLowerCase();
@@ -548,6 +813,8 @@ document.getElementById('search-input').addEventListener('input', function () {
       case 'organizations': renderOrganizations(); break;
       case 'glossary': renderGlossary(); break;
       case 'seasons': renderSeasons(); break;
+      case 'timeline': renderTimeline(); break;
+      case 'familytree': renderFamilyTree(); break;
       default: renderHouses();
     }
     return;
