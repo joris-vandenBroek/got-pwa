@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Achtergrond -->
+  <rect width="512" height="512" fill="#1a0a00" rx="80"/>
+  <!-- Kroon -->
+  <polygon points="96,360 96,200 160,260 256,140 352,260 416,200 416,360" fill="none" stroke="#CFB53B" stroke-width="18" stroke-linejoin="round"/>
+  <!-- Kroonbasis -->
+  <rect x="96" y="350" width="320" height="40" rx="8" fill="#CFB53B"/>
+  <!-- Kroonjuwelen -->
+  <circle cx="256" cy="155" r="18" fill="#8B0000"/>
+  <circle cx="416" cy="210" r="14" fill="#1565C0"/>
+  <circle cx="96" cy="210" r="14" fill="#2E7D32"/>
+  <!-- GoT tekst -->
+  <text x="256" y="450" font-size="52" text-anchor="middle" fill="#CFB53B" font-family="Georgia, serif" font-weight="bold" letter-spacing="8">GoT</text>
+</svg>
