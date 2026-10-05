@@ -1153,3 +1153,28 @@ html.small-screen .glossary-list { grid-template-columns: 1fr; }
   .logo { font-size: 1.6rem; }
   .search-container { max-width: 380px; }
 }
+
+/* === Doneer-footer === */
+.donate-footer {
+  text-align: center;
+  padding: 1.25rem 1rem 2rem;
+  border-top: 1px solid var(--border);
+}
+.donate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.donate-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(207,181,59,0.07);
+}

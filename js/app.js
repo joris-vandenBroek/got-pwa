@@ -70,7 +70,8 @@ const I18N = {
     mapPinDothrakiSea: 'Dothraki Zee',
     mapLegendPin: 'Locatie (klik om te bekijken)',
     mapLegendWall: 'The Wall',
-    loadError: 'Fout bij laden van data. Probeer de pagina te herladen.'
+    loadError: 'Fout bij laden van data. Probeer de pagina te herladen.',
+    donateText: 'Vond je dit leuk? Koop me een koffie'
   },
   en: {
     houses: 'Houses',
@@ -128,7 +129,8 @@ const I18N = {
     mapPinDothrakiSea: 'Dothraki Sea',
     mapLegendPin: 'Location (click to view)',
     mapLegendWall: 'The Wall',
-    loadError: 'Error loading data. Please reload the page.'
+    loadError: 'Error loading data. Please reload the page.',
+    donateText: 'Enjoyed this? Buy me a coffee'
   }
 };
 
@@ -264,6 +266,10 @@ function updateUILabels() {
   // Tijdlijn alle-events knop
   const allEventsBtn = document.querySelector('.tl-filter-btn[data-filter="all"]');
   if (allEventsBtn) allEventsBtn.textContent = t.allEvents;
+
+  // Doneer-tekst
+  const donateText = document.getElementById('donate-text');
+  if (donateText) donateText.textContent = t.donateText;
 }
 
 // === Huidige tab opnieuw renderen ===
