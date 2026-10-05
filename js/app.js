@@ -1,17 +1,93 @@
 let allHouses = [];
 let worldData = {};
 let activeTab = 'houses';
+let currentShow = 'got'; // 'got' of 'hotd'
+
+// IMDB name IDs per acteur → directe profielpagina
+const IMDB_IDS = {
+  'Sean Bean':              'nm0065531',
+  'Michelle Fairley':       'nm0266668',
+  'Richard Madden':         'nm2340051',
+  'Sophie Turner':          'nm3849842',
+  'Maisie Williams':        'nm3853851',
+  'Isaac Hempstead Wright': 'nm4426064',
+  'Kit Harington':          'nm3229685',
+  'Joseph Mawle':           'nm0560819',
+  'Charles Dance':          'nm0001102',
+  'Lena Headey':            'nm0372176',
+  'Nikolaj Coster-Waldau':  'nm0182666',
+  'Peter Dinklage':         'nm0227759',
+  'Jack Gleeson':           'nm3523498',
+  'Emilia Clarke':          'nm3592338',
+  'Harry Lloyd':            'nm1325985',
+  'Jason Momoa':            'nm0597388',
+  'Iain Glen':              'nm0322407',
+  'Mark Addy':              'nm0009629',
+  'Stephen Dillane':        'nm0227944',
+  'Gethin Anthony':         'nm3688671',
+  'Natalie Dormer':         'nm1760441',
+  'Diana Rigg':             'nm0727080',
+  'Finn Jones':             'nm3154222',
+  'Alfie Allen':            'nm1403729',
+  'Patrick Malahide':       'nm0539135',
+  'Gemma Whelan':           'nm3506393',
+  'Pedro Pascal':           'nm0050959',
+  'Alexander Siddig':       'nm0796278',
+  'Indira Varma':           'nm0889400',
+  'Kate Dickie':            'nm1359095',
+  'Lino Facioli':           'nm3918719',
+  'James Cosmo':            'nm0181734',
+  'John Bradley':           'nm4263413',
+  'Aidan Gillen':           'nm0316968',
+  'Conleth Hill':           'nm0384489',
+  // House of the Dragon
+  'Paddy Considine':        'nm0175056',
+  'Emma D\'Arcy':           'nm6451889',
+  'Matt Smith':             'nm1741292',
+  'Olivia Cooke':           'nm3549347',
+  'Rhys Ifans':             'nm0406975',
+  'Steve Toussaint':        'nm0869659',
+  'Eve Best':               'nm0078399',
+  'Fabien Frankel':         'nm8659441',
+  'Tom Glynn-Carney':       'nm6669048',
+  'Ewan Mitchell':          'nm9813563',
+  'Phia Saban':             'nm9685622',
+  'Ryan Corr':              'nm3232043',
+  'Matthew Needham':        'nm5607120',
+  'Gavin Spokes':           'nm0818483',
+  'Sonoya Mizuno':          'nm4921763',
+  'Harry Collett':          'nm9013424',
+  'Elliot Grihault':        'nm11559494',
+  'Bethany Antonia':        'nm7781008',
+  'Phoebe Campbell':        'nm6451026',
+  'John Macmillan':         'nm3501886',
+  'Savannah Steyn':         'nm10135124',
+  'Milly Alcock':           'nm8513360',
+  'Emily Carey':            'nm4327292',
+};
+
+function actorImdbUrl(actorName) {
+  const id = IMDB_IDS[actorName];
+  return id
+    ? `https://www.imdb.com/name/${id}/`
+    : `https://www.imdb.com/find/?q=${encodeURIComponent(actorName)}&s=nm`;
+}
 
 // === Data laden ===
-async function loadData() {
+async function loadData(show) {
+  show = show || currentShow;
+  currentShow = show;
+  const charFile  = show === 'hotd' ? 'data/hotd-characters.json' : 'data/characters.json';
+  const worldFile = show === 'hotd' ? 'data/hotd-world.json'      : 'data/world.json';
   try {
-    const [charRes, worldRes] = await Promise.all([
-      fetch('data/characters.json'),
-      fetch('data/world.json')
-    ]);
+    const [charRes, worldRes] = await Promise.all([fetch(charFile), fetch(worldFile)]);
     const charData = await charRes.json();
     worldData = await worldRes.json();
     allHouses = charData.houses;
+    // Pas thema-kleur aan op de actieve show
+    document.documentElement.dataset.show = show;
+    activeTab = 'houses';
+    setActiveTab('houses');
     renderHouses();
   } catch (e) {
     document.getElementById('houses-grid').innerHTML =
@@ -105,7 +181,7 @@ function buildCharacterCard(char, houseColor) {
   const body = document.createElement('div');
   body.className = 'card-body';
   const actorLine = char.actor
-    ? `<p class="actor-badge">Gespeeld door: <a class="actor-link" href="https://www.imdb.com/find/?q=${encodeURIComponent(char.actor)}&s=nm" target="_blank" rel="noopener noreferrer">${char.actor}</a></p>`
+    ? `<p class="actor-badge">Gespeeld door: <a class="actor-link" href="${actorImdbUrl(char.actor)}" target="_blank" rel="noopener noreferrer">${char.actor}</a></p>`
     : '';
   body.innerHTML = `<h3>${char.name}</h3>${actorLine}<p class="description">${char.description}</p>`;
 
@@ -595,6 +671,20 @@ document.getElementById('back-btn').addEventListener('click', () => {
   document.getElementById('search-input').value = '';
   renderHouses();
 });
+
+// === Show-selector (GOT / HOTD) ===
+(function () {
+  const btns = document.querySelectorAll('.show-btn');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const show = btn.dataset.show;
+      if (show === currentShow) return;
+      btns.forEach(b => b.classList.toggle('active', b.dataset.show === show));
+      document.getElementById('search-input').value = '';
+      loadData(show);
+    });
+  });
+})();
 
 // === Thema-toggle (donker/licht) ===
 (function () {

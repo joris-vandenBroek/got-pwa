@@ -1,4 +1,4 @@
-const CACHE_NAME = 'got-pwa-v3';
+const CACHE_NAME = 'got-pwa-v4';
 
 const ASSETS = [
   './',
@@ -49,6 +49,31 @@ const ASSETS = [
   './images/characters/doran-martell.webp',
   './images/characters/lysa-arryn.webp',
   './images/characters/robin-arryn.webp',
+  // HotD data
+  './data/hotd-characters.json',
+  './data/hotd-world.json',
+  // HotD personages
+  './images/hotd/characters/viserys-targaryen.webp',
+  './images/hotd/characters/rhaenyra-targaryen.webp',
+  './images/hotd/characters/daemon-targaryen.webp',
+  './images/hotd/characters/alicent-hightower.webp',
+  './images/hotd/characters/otto-hightower.webp',
+  './images/hotd/characters/corlys-velaryon.webp',
+  './images/hotd/characters/rhaenys-targaryen-velaryon.webp',
+  './images/hotd/characters/laena-velaryon.webp',
+  './images/hotd/characters/laenor-velaryon.webp',
+  './images/hotd/characters/aegon-ii-targaryen.webp',
+  './images/hotd/characters/aemond-targaryen.webp',
+  './images/hotd/characters/helaena-targaryen.webp',
+  './images/hotd/characters/criston-cole.webp',
+  './images/hotd/characters/harwin-strong.webp',
+  './images/hotd/characters/larys-strong.webp',
+  './images/hotd/characters/lyonel-strong.webp',
+  './images/hotd/characters/mysaria.webp',
+  './images/hotd/characters/jacaerys-velaryon.webp',
+  './images/hotd/characters/lucerys-velaryon.webp',
+  './images/hotd/characters/baela-targaryen.webp',
+  './images/hotd/characters/rhaena-targaryen.webp',
 ];
 
 self.addEventListener('install', event => {

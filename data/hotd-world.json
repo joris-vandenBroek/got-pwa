@@ -1,0 +1,198 @@
+{
+  "locations": [
+    {
+      "id": "hotd-kings-landing",
+      "name": "King's Landing",
+      "region": "De Kroonlanden",
+      "description": "De hoofdstad van Westeros en zetel van de Ijzeren Troon. In het tijdperk van House of the Dragon is de stad groter en rijker dan ooit, maar onder de oppervlakte broeien de politieke spanningen die uitlopen op de Dansers van de Draken.",
+      "significance": "Politiek centrum van Westeros",
+      "image": "images/locations/kings-landing.webp"
+    },
+    {
+      "id": "dragonstone",
+      "name": "Dragonstone",
+      "region": "De Kroonlanden",
+      "description": "Het eilandkasteel van de Targaryens, gebouwd van Valyriaans steen en gevormd als kronkelende draken. Het is de thuisbasis van Rhaenyra en haar Zwarten tijdens de burgeroorlog. Onder het kasteel liggen uitgestrekte drakengroeven.",
+      "significance": "Thuisbasis van Rhaenyra en de Zwarten",
+      "image": "images/locations/dragonstone.webp"
+    },
+    {
+      "id": "driftmark",
+      "name": "Driftmark",
+      "region": "De Kroonlanden (kust)",
+      "description": "Het eiland en de zetel van House Velaryon, gelegen aan de monding van de Blackwater Bay. High Tide is de naam van het kasteel. De rijkste zeevloot van Westeros vaart vanuit deze haven.",
+      "significance": "Zetel van House Velaryon"
+    },
+    {
+      "id": "harrenhal",
+      "name": "Harrenhal",
+      "region": "Rivierland",
+      "description": "Het grootste kasteel ooit gebouwd in Westeros, maar ook het meest vervloekte — verwoest door Balerion de Zwarte Dood bij de verovering van Aegon I. In het tijdperk van HotD is het de zetel van House Strong, maar iedereen die het bezit lijkt gedoemd.",
+      "significance": "Zetel van House Strong, symbool van vervloeking"
+    },
+    {
+      "id": "de-steppenstenen",
+      "name": "De Steppenstenen",
+      "region": "De Smalle Zee",
+      "description": "Een keten van kleine eilanden in de Smalle Zee tussen Westeros en Essos, strategisch van belang voor zeeroutes. Daemon Targaryen en Corlys Velaryon vochten hier jarenlang tegen de Krabbeneter (Craghas Drahar) en zijn Triarchaat-bondgenoten.",
+      "significance": "Strategische zeestraat, inzet van de eerste oorlog"
+    },
+    {
+      "id": "pentos",
+      "name": "Pentos",
+      "region": "Essos",
+      "description": "Een rijke vrijstad in Essos waar Daemon en Rhaenyra tijdelijk leven nadat ze Westeros hebben verlaten. De stad staat bekend om haar magisters en haar handel.",
+      "significance": "Exil van Daemon en Rhaenyra",
+      "image": "images/locations/pentos.webp"
+    },
+    {
+      "id": "oldtown",
+      "name": "Oldtown",
+      "region": "Het Bereik",
+      "description": "De oudste stad van Westeros, thuisbasis van de Citadel (zetel van de Maester-orde) en de Hoge Toren van Hightower. Otto Hightower en zijn familie stammen van hier, en de stad speelt een politieke rol in de opkomst van de Groenen.",
+      "significance": "Zetel van de Maesters en House Hightower"
+    },
+    {
+      "id": "storms-end",
+      "name": "Storm's End",
+      "region": "Stormgronden",
+      "description": "Het onneembare kasteel aan de Stormlandse kust, zetel van House Baratheon. Lucerys Velaryon wordt hier gestuurd als boodschapper om steun te winnen, maar treft Aemond Targaryen aan — wat uitloopt op zijn dood.",
+      "significance": "Sleutellocatie bij de openingsschoten van de Dansers",
+      "image": "images/locations/storm-s-end.webp"
+    }
+  ],
+  "creatures": [
+    {
+      "id": "syrax",
+      "name": "Syrax",
+      "associated_with": "Rhaenyra Targaryen",
+      "description": "De gele draak van Rhaenyra Targaryen, vrouwelijk en middelgroot. Ze wordt in gevangenschap gehouden op Dragonstone en is een van de bekendste draken van de Dansers. Syrax wordt gedood tijdens het Drakenpit-oproer.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "caraxes",
+      "name": "Caraxes",
+      "associated_with": "Daemon Targaryen",
+      "description": "Bijgenaamd 'de Bloedworm' — een lang, slangeachtig en bloedroze gekleurde draak die bekend staat om zijn schelle kreet. Hij is de draak van Daemon Targaryen en een van de meest gevreesde vechters in de lucht.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "vhagar",
+      "name": "Vhagar",
+      "associated_with": "Eerst Laena Velaryon, later Aemond Targaryen",
+      "description": "De grootste levende draak, bijna zo groot als Balerion de Zwarte Dood. Ze is meer dan honderdvijftig jaar oud en was de draak van Koningin Visenya Targaryen bij de verovering van Aegon I. Aemond Targaryen rijdt haar na de dood van Laena — wat een van de meest bepalende machtsverschuivingen is in de oorlog.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "meleys",
+      "name": "Meleys",
+      "associated_with": "Rhaenys Targaryen",
+      "description": "Bijgenaamd 'de Rode Koningin' — een snelle, scharlaken draak die ooit de snelste van Westeros was. Ze wordt gereden door Rhaenys Targaryen en sterft samen met haar rijdster in de Slag van Rook's Rest.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "vermithor",
+      "name": "Vermithor",
+      "associated_with": "Daemon Targaryen (later Hugon Hammer)",
+      "description": "Bijgenaamd 'de Bronzen Woede' — een van de grootste levende draken, ooit gereden door Jaehaerys I. Hij leeft verwilderd op Dragonstone totdat Daemon hem met zijn lied sust. Hij speelt een sleutelrol in de Slag aan de Gullet.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "sunfyre",
+      "name": "Sunfyre",
+      "associated_with": "Aegon II Targaryen",
+      "description": "De goud-schubige draak van Aegon II, beschreven als de mooiste draak ooit gezien in Westeros. Hij raakt zwaar gewond in de Slag van Rook's Rest maar geneest. Zijn lot is nauw verweven met dat van zijn rijder.",
+      "image": "images/creatures/dragons.webp"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "de-kleine-raad-hotd",
+      "name": "De Kleine Raad",
+      "base": "King's Landing",
+      "description": "Het uitvoerend bestuurscollege van de Zeven Koninkrijken, geleid door de Hand des Konings. In het tijdperk van Viserys I zijn Otto Hightower en Lyonel Strong de voornaamste Handen. De raad is de spil waarrond alle politieke intriges draaien.",
+      "motto": "Ons Koninkrijk, onze plicht",
+      "image": "images/organizations/small-council.webp"
+    },
+    {
+      "id": "de-koningsgarde-hotd",
+      "name": "De Koningsgarde",
+      "base": "King's Landing",
+      "description": "Zeven ridders gezworen tot de bescherming van de vorst en zijn familie. Ser Criston Cole stijgt op van eenvoudige Koningsgarde-ridder tot Lord Commander — een sleutelfiguur in de opkomst van de Groenen.",
+      "motto": "Sword and Shield of the King",
+      "image": "images/organizations/kingsguard.svg"
+    },
+    {
+      "id": "de-dragonriders",
+      "name": "De Drakenrijders",
+      "base": "Dragonstone / King's Landing",
+      "description": "De zeldzame groep van Targaryen-bloedverwanten en 'zaaddragers' die een band kunnen smeden met een draak. In de Dansers van de Draken is de strijd om drakenrijders een cruciale tactische factor — beide kanten zoeken wilde draken en nieuwe rijders.",
+      "motto": "Op de vleugels van de draak"
+    },
+    {
+      "id": "de-stadswatch",
+      "name": "De Gouden Mantels",
+      "base": "King's Landing",
+      "description": "De stadswacht van King's Landing, herkenbaar aan hun vergulde mantels. Daemon Targaryen was hun berucht commandant voordat hij in ongenade viel. Ze spelen een rol bij de machtsovername door de Groenen na de dood van Viserys I.",
+      "motto": "Recht en orde in de hoofdstad"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "dansers-van-de-draken",
+      "term": "Dansers van de Draken",
+      "definition": "De Targaryen-burgeroorlog tussen de Zwarten (Rhaenyra's factie) en de Groenen (Alicent/Aegon II's factie). De naam verwijst naar de draken die beide zijden inzetten — het is een van de bloedigste conflicten in de Westerosi geschiedenis."
+    },
+    {
+      "id": "de-zwarten",
+      "term": "De Zwarten",
+      "definition": "De factie die Rhaenyra Targaryen steunt als rechtmatige erfgename van de Ijzeren Troon. Ze worden 'de Zwarten' genoemd naar de kleuren van hun banier — het zwarte kleed van Rhaenyra tijdens een cruciale hofgala."
+    },
+    {
+      "id": "de-groenen",
+      "term": "De Groenen",
+      "definition": "De factie die Aegon II Targaryen steunt. Ze worden 'de Groenen' genoemd naar de groene japon die Alicent Hightower droeg tijdens hetzelfde hofgala waar Rhaenyra zwart droeg — een bewuste politieke keuze."
+    },
+    {
+      "id": "draakzaad",
+      "term": "Draakzaad (Dragonseeds)",
+      "definition": "Bastaard-afstammelingen van Targaryen-bloed die een draak kunnen beteugelen. Omdat beide fracties draken nodig hebben voor de oorlog, zoeken ze 'draakzaad' — mensen met genoeg Targaryen-bloed om een wilde draak te rijden."
+    },
+    {
+      "id": "valyriaans-staal",
+      "term": "Valyriaans Staal",
+      "definition": "In Oud-Valyria gesmeed magisch staal dat nooit bot wordt en scherper is dan gewoon staal. Slechts een handvol zwaarden bestaat nog. In het tijdperk van HotD zijn er meer dan in GoT omdat Valyria pas tweehonderd jaar eerder verwoest werd."
+    },
+    {
+      "id": "drakenpit",
+      "term": "De Drakenpit",
+      "definition": "De grote ronde koepel in King's Landing waar de Targaryen-draken werden gehouden in gevangenschap. Critici beweren dat de opsluiting de draken kleiner en zwakker maakte dan hun vrij levende soortgenoten."
+    },
+    {
+      "id": "de-smaldeel",
+      "term": "De Smaldeel",
+      "definition": "Het nauw waterkanaal tussen het eiland Driftmark en het vasteland, strategisch van belang voor de Velaryon-vloot. De Slag aan de Gullet — een van de grootste zeeslagen van de Dansers — wordt hier uitgevochten."
+    },
+    {
+      "id": "vlyriaanse-droom",
+      "term": "Draken-droom (Targaryen-profetie)",
+      "definition": "Sommige Targaryens hebben profetiën of visioenen in hun dromen. Aegon I 'droomde' de komst van de White Walkers en vond dit de reden voor Westeros's eenheid. Viserys fluistert dit geheim door aan Rhaenyra — en later aan Aegon II."
+    }
+  ],
+  "seasons": [
+    {
+      "number": 1,
+      "year": 2022,
+      "episodes": 10,
+      "spoiler_level": "hoog",
+      "summary": "Seizoen 1 vertelt de opkomst en val van de koninklijke harmonie in het Targaryen-tijdperk. De eerste helft speelt zich af rond de jonge Rhaenyra (Milly Alcock) en de jonge Alicent (Emily Carey): twee vriendinnen die langzaam tot rivalen worden. Viserys I benoemt Rhaenyra als zijn erfgename — een ongekende daad in de patriarchale wereld van Westeros — maar zijn broer Daemon (Matt Smith) valt in ongenade nadat hij in de kroegen van King's Landing praalt over de 'Delightful heir'. Rhaenyra ontsnapt met Daemon naar de sloppen van de stad, en Alicent huwt tot Rhaenyra's schok de weduwe-geworden Viserys. De tweede helft springt tien jaar vooruit: Rhaenyra (nu Emma D'Arcy) is getrouwd met Laenor Velaryon maar heeft een geheime affaire met Harwin Strong, wiens bastaard-zonen de reden zijn voor groeiende twijfels aan haar nakomelingen. Laena Velaryon sterft in Pentos. Harwin en Lord Lyonel Strong sterven in de brand van Harrenhal — aangestoken door Larys Strong in dienst van Alicent. Rhaenyra en Daemon trouwen op Driftmark. Het seizoen eindigt met een dramatische twist: Viserys I sterft, maar Alicent misinterpreteert zijn laatste woorden als een bevestiging van haar zoonsopvolging — Aegon II wordt snel gekroond, en de Dansers van de Draken beginnen."
+    },
+    {
+      "number": 2,
+      "year": 2024,
+      "episodes": 8,
+      "spoiler_level": "maximum",
+      "summary": "Seizoen 2 opent met een van de meest schokkende momenten van de serie: de Blood and Cheese-aanslag. Als wraak voor de dood van Lucerys Velaryon (door Aemond en Vhagar gedood boven Storm's End) stuurt Daemon twee huurmoordenaars — Blood en Cheese — naar het Rode Kasteel. Ze dringen Helaeana's slaapkamer in en dwingen haar te kiezen welk van haar kinderen sterft. Haar zoontje Jaehaerys wordt onthoofd. Helaena raakt hierna diep getraumatiseerd. De oorlog escaleert: Rhaenyra valt King's Landing niet onmiddellijk aan omdat ze diplomatiek hoopt Westeros te overtuigen. Daemon reist naar Harrenhal om het Rivierland te mobiliseren maar verzinkt in visioenen van Viserys. De Slag van Rook's Rest is de eerste grote drakenslag: Aemond lokt Rhaenys en haar draak Meleys in een hinderlaag boven Rook's Rest, waarbij ook Aegon II's draak Sunfyre ernstig gewond raakt. Rhaenys en Meleys sterven. Daemon sust de grote verwilderde draak Vermithor op Dragonstone. De Zwarten zoeken 'Draakzaad' — mensen met Targaryen-bloed die wilde draken kunnen rijden. Het seizoen eindigt met de spectaculaire Slag aan de Gullet waarbij drie wilde draken ingezet worden, maar ook beide partijen enorme verliezen lijden."
+    }
+  ]
+}

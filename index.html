@@ -11,12 +11,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
   <header>
     <div class="header-top">
-      <h1 class="logo">Game of Thrones</h1>
+      <nav class="show-selector" aria-label="Kies serie">
+        <button class="show-btn active" data-show="got">Game of Thrones</button>
+        <span class="show-divider">|</span>
+        <button class="show-btn" data-show="hotd">House of the Dragon</button>
+      </nav>
       <button id="theme-toggle" class="theme-toggle" aria-label="Schakel thema" title="Schakel naar lichte modus">☀️</button>
     </div>
     <div class="search-container">
@@ -93,6 +97,6 @@
 
   </main>
 
-  <script src="js/app.js?v=4"></script>
+  <script src="js/app.js?v=5"></script>
 </body>
 </html>

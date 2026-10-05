@@ -1,0 +1,305 @@
+{
+  "houses": [
+    {
+      "id": "viserys-hof",
+      "name": "Viserys I & het Hof",
+      "sigil": "Driekoppige draak",
+      "motto": "Fire and Blood",
+      "color": "#8B0000",
+      "characters": [
+        {
+          "id": "viserys-targaryen",
+          "name": "Viserys I Targaryen",
+          "actor": "Paddy Considine",
+          "image": "images/hotd/characters/viserys-targaryen.webp",
+          "description": "De vijfde Targaryen-koning van Westeros, een goedhartige heerser die de eenheid van zijn familie boven alles stelt. Zijn weigering om zijn dochter Rhaenyra als opvolgster duidelijk te verdedigen zaait de zaden voor de Dansers van de Draken.",
+          "relationships": [
+            { "id": "rhaenyra-targaryen", "label": "Dochter" },
+            { "id": "daemon-targaryen", "label": "Broer" },
+            { "id": "alicent-hightower", "label": "Tweede echtgenote" },
+            { "id": "otto-hightower", "label": "Hand des Konings" }
+          ]
+        },
+        {
+          "id": "otto-hightower",
+          "name": "Otto Hightower",
+          "actor": "Rhys Ifans",
+          "image": "images/hotd/characters/otto-hightower.webp",
+          "description": "De sluwe en ambitieuze Hand des Konings, vader van Alicent. Hij manoeuvreert zijn familie naar de hoogste macht door zijn dochter aan de weduwnaar-koning te koppelen en de zaden van dynastieke strijd te zaaien.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Dochter" },
+            { "id": "viserys-targaryen", "label": "Koning" }
+          ]
+        },
+        {
+          "id": "lyonel-strong",
+          "name": "Lyonel Strong",
+          "actor": "Gavin Spokes",
+          "image": "images/hotd/characters/lyonel-strong.webp",
+          "description": "Lord van Harrenhal en opvolger van Otto Hightower als Hand des Konings. Hij is een eerlijk en principieel adviseur die probeert de scheuren in het koningshuis te dichten.",
+          "relationships": [
+            { "id": "harwin-strong", "label": "Zoon" },
+            { "id": "larys-strong", "label": "Zoon" },
+            { "id": "viserys-targaryen", "label": "Koning" }
+          ]
+        },
+        {
+          "id": "criston-cole",
+          "name": "Criston Cole",
+          "actor": "Fabien Frankel",
+          "image": "images/hotd/characters/criston-cole.webp",
+          "description": "Ridder van lage geboorte uit Dorne, benoemd tot de Koningsgarde door Rhaenyra. Na een afwijzing wordt hij haar bitterste vijand en trouwe beschermer van Alicent en de Groenen.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Bondgenote" },
+            { "id": "rhaenyra-targaryen", "label": "Aartsvijand" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-zwarten",
+      "name": "De Zwarten (Rhaenyra)",
+      "sigil": "Driekoppige draak (zwart)",
+      "motto": "Zij die de Troon verdient",
+      "color": "#1a1a2e",
+      "characters": [
+        {
+          "id": "rhaenyra-targaryen",
+          "name": "Rhaenyra Targaryen",
+          "actor": "Emma D'Arcy",
+          "image": "images/hotd/characters/rhaenyra-targaryen.webp",
+          "description": "Door haar vader Viserys I aangewezen als zijn erfgename — de eerste vrouwelijke Targaryen die de Ijzeren Troon zou moeten bestijgen. Ze rijdt de draak Syrax en vecht haar hele leven voor haar recht op de kroon tegen de Groenen.",
+          "relationships": [
+            { "id": "viserys-targaryen", "label": "Vader" },
+            { "id": "daemon-targaryen", "label": "Oom / Echtgenoot" },
+            { "id": "alicent-hightower", "label": "Stiefmoeder / Rivale" },
+            { "id": "jacaerys-velaryon", "label": "Zoon" },
+            { "id": "lucerys-velaryon", "label": "Zoon" }
+          ]
+        },
+        {
+          "id": "daemon-targaryen",
+          "name": "Daemon Targaryen",
+          "actor": "Matt Smith",
+          "image": "images/hotd/characters/daemon-targaryen.webp",
+          "description": "De jongere broer van Viserys I, beruchte dragonrider en oorlogsheld. Hij rijdt de bloedige Caraxes en is even charmant als gevaarlijk. Hij huwt uiteindelijk zijn nichtje Rhaenyra en wordt de meest geduchte vechter aan de zijde van de Zwarten.",
+          "relationships": [
+            { "id": "viserys-targaryen", "label": "Broer" },
+            { "id": "rhaenyra-targaryen", "label": "Nichtje / Echtgenote" },
+            { "id": "corlys-velaryon", "label": "Bondgenoot" }
+          ]
+        },
+        {
+          "id": "jacaerys-velaryon",
+          "name": "Jacaerys Velaryon",
+          "actor": "Harry Collett",
+          "image": "images/hotd/characters/jacaerys-velaryon.webp",
+          "description": "Rhaenyra's oudste zoon en erfgenaam, rijder van de draak Vermax. Hij is tactisch en moedig, en reist als ambassadeur naar het Noorden en naar Oudraven om steun voor de Zwarten te vergaren.",
+          "relationships": [
+            { "id": "rhaenyra-targaryen", "label": "Moeder" },
+            { "id": "lucerys-velaryon", "label": "Broer" },
+            { "id": "baela-targaryen", "label": "Verloofde" }
+          ]
+        },
+        {
+          "id": "lucerys-velaryon",
+          "name": "Lucerys Velaryon",
+          "actor": "Elliot Grihault",
+          "image": "images/hotd/characters/lucerys-velaryon.webp",
+          "description": "Rhaenyra's tweede zoon, rijder van de jonge draak Arrax. Hij wordt als boodschapper naar Storm's End gestuurd maar komt Aemond Targaryen en zijn grote draak Vhagar tegen — met fatale gevolgen.",
+          "relationships": [
+            { "id": "rhaenyra-targaryen", "label": "Moeder" },
+            { "id": "jacaerys-velaryon", "label": "Broer" },
+            { "id": "aemond-targaryen", "label": "Noodlottige vijand" }
+          ]
+        },
+        {
+          "id": "baela-targaryen",
+          "name": "Baela Targaryen",
+          "actor": "Bethany Antonia",
+          "image": "images/hotd/characters/baela-targaryen.webp",
+          "description": "Dochter van Daemon en Laena Velaryon, rijdster van de draak Moondancer. Ze is impulsief en moedig, en verlooft zich met Jacaerys Velaryon als onderdeel van de alliantie tussen de Zwarten.",
+          "relationships": [
+            { "id": "daemon-targaryen", "label": "Vader" },
+            { "id": "rhaena-targaryen", "label": "Zus" },
+            { "id": "jacaerys-velaryon", "label": "Verloofde" }
+          ]
+        },
+        {
+          "id": "rhaena-targaryen",
+          "name": "Rhaena Targaryen",
+          "actor": "Phoebe Campbell",
+          "image": "images/hotd/characters/rhaena-targaryen.webp",
+          "description": "Jongere dochter van Daemon en Laena Velaryon, tweelingzus van Baela. Ze heeft moeite een draak te vinden die haar accepteert, maar blijft vasthoudend loyaal aan de zaak van de Zwarten.",
+          "relationships": [
+            { "id": "daemon-targaryen", "label": "Vader" },
+            { "id": "baela-targaryen", "label": "Zus" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-groenen",
+      "name": "De Groenen (Alicent)",
+      "sigil": "Driekoppige draak (groen)",
+      "motto": "Koningin voor het volk",
+      "color": "#1a3a1a",
+      "characters": [
+        {
+          "id": "alicent-hightower",
+          "name": "Alicent Hightower",
+          "actor": "Olivia Cooke",
+          "image": "images/hotd/characters/alicent-hightower.webp",
+          "description": "Dochter van Otto Hightower, tweede echtgenote van Viserys I en moeder van Aegon II. Ze begint als Rhaenyra's beste vriendin maar wordt haar grootste politieke tegenstander wanneer ze vecht voor de rechten van haar eigen zonen op de Ijzeren Troon.",
+          "relationships": [
+            { "id": "otto-hightower", "label": "Vader" },
+            { "id": "viserys-targaryen", "label": "Echtgenoot" },
+            { "id": "aegon-ii-targaryen", "label": "Zoon" },
+            { "id": "aemond-targaryen", "label": "Zoon" },
+            { "id": "helaena-targaryen", "label": "Dochter" },
+            { "id": "rhaenyra-targaryen", "label": "Rivale" }
+          ]
+        },
+        {
+          "id": "aegon-ii-targaryen",
+          "name": "Aegon II Targaryen",
+          "actor": "Tom Glynn-Carney",
+          "image": "images/hotd/characters/aegon-ii-targaryen.webp",
+          "description": "Oudste zoon van Viserys I en Alicent, door de Groenen op de Ijzeren Troon gezet na de dood van zijn vader. Hij rijdt de draak Sunfyre en is impulsief en onverantwoordelijk, maar bij momenten toch moediger dan verwacht.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Moeder" },
+            { "id": "aemond-targaryen", "label": "Broer" },
+            { "id": "helaena-targaryen", "label": "Zus / Echtgenote" }
+          ]
+        },
+        {
+          "id": "aemond-targaryen",
+          "name": "Aemond Targaryen",
+          "actor": "Ewan Mitchell",
+          "image": "images/hotd/characters/aemond-targaryen.webp",
+          "description": "De tweede zoon van Viserys I, rijder van de gigantische Vhagar — de grootste en oudste levende draak. Hij verloor als kind een oog aan Lucerys Velaryon en koestert een levenslange wrok. Hij is de meest geduchte krijger en strateeg van de Groenen.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Moeder" },
+            { "id": "aegon-ii-targaryen", "label": "Broer" },
+            { "id": "lucerys-velaryon", "label": "Doodde hem" }
+          ]
+        },
+        {
+          "id": "helaena-targaryen",
+          "name": "Helaena Targaryen",
+          "actor": "Phia Saban",
+          "image": "images/hotd/characters/helaena-targaryen.webp",
+          "description": "Dochter van Viserys I en Alicent, getrouwd met haar broer Aegon II. Ze is dromerig en profetisch van aard, bezeten van insecten, en lijdt zwaar onder de politieke intrigues die haar kinderen en haar geest verwoesten.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Moeder" },
+            { "id": "aegon-ii-targaryen", "label": "Broer / Echtgenoot" },
+            { "id": "aemond-targaryen", "label": "Broer" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "house-velaryon",
+      "name": "House Velaryon",
+      "sigil": "Zeepaard",
+      "motto": "The Old, the True, the Brave",
+      "color": "#0a3a5a",
+      "characters": [
+        {
+          "id": "corlys-velaryon",
+          "name": "Corlys Velaryon",
+          "actor": "Steve Toussaint",
+          "image": "images/hotd/characters/corlys-velaryon.webp",
+          "description": "Bijgenaamd de 'Zeeslang', de rijkste edelman van Westeros en Lord van Driftmark. Een legendarisch zeevaarder die negen grote zeevoyages maakte en de Steppenstenen veroverde. Hij huwt zijn kinderen Laena en Laenor aan de Targaryens.",
+          "relationships": [
+            { "id": "rhaenys-targaryen-velaryon", "label": "Echtgenote" },
+            { "id": "laenor-velaryon", "label": "Zoon" },
+            { "id": "laena-velaryon", "label": "Dochter" }
+          ]
+        },
+        {
+          "id": "rhaenys-targaryen-velaryon",
+          "name": "Rhaenys Targaryen",
+          "actor": "Eve Best",
+          "image": "images/hotd/characters/rhaenys-targaryen-velaryon.webp",
+          "description": "Bijgenaamd de 'Koningin die nooit was' — ze verloor de troon aan haar neef Viserys I ondanks haar betere claim. Ze rijdt de draak Meleys en steunt uiteindelijk de zaak van Rhaenyra. Haar dood in de Slag van Rook's Rest is een van de grote verliezen van de Zwarten.",
+          "relationships": [
+            { "id": "corlys-velaryon", "label": "Echtgenoot" },
+            { "id": "laenor-velaryon", "label": "Zoon" },
+            { "id": "laena-velaryon", "label": "Dochter" },
+            { "id": "rhaenyra-targaryen", "label": "Bondgenote" }
+          ]
+        },
+        {
+          "id": "laenor-velaryon",
+          "name": "Laenor Velaryon",
+          "actor": "John Macmillan",
+          "image": "images/hotd/characters/laenor-velaryon.webp",
+          "description": "Zoon van Corlys en Rhaenys, eerste echtgenoot van Rhaenyra Targaryen in een politiek huwelijk. Rijder van de draak Seasmoke. Hij feit zijn eigen dood om met zijn geliefde weg te vluchten.",
+          "relationships": [
+            { "id": "corlys-velaryon", "label": "Vader" },
+            { "id": "rhaenys-targaryen-velaryon", "label": "Moeder" },
+            { "id": "rhaenyra-targaryen", "label": "Echtgenote" }
+          ]
+        },
+        {
+          "id": "laena-velaryon",
+          "name": "Laena Velaryon",
+          "actor": "Savannah Steyn",
+          "image": "images/hotd/characters/laena-velaryon.webp",
+          "description": "Dochter van Corlys en Rhaenys, rijdster van de legendarische Vhagar. Ze huwt Daemon Targaryen en baart hem twee dochters (Baela en Rhaena) voordat ze bij een moeilijke bevalling de dood kiest door haar eigen draak.",
+          "relationships": [
+            { "id": "corlys-velaryon", "label": "Vader" },
+            { "id": "rhaenys-targaryen-velaryon", "label": "Moeder" },
+            { "id": "daemon-targaryen", "label": "Echtgenoot" },
+            { "id": "baela-targaryen", "label": "Dochter" },
+            { "id": "rhaena-targaryen", "label": "Dochter" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "house-strong-overig",
+      "name": "House Strong & Overigen",
+      "sigil": "Gebalde vuist",
+      "motto": "A Song of Ash and Ember",
+      "color": "#3a2a0a",
+      "characters": [
+        {
+          "id": "harwin-strong",
+          "name": "Harwin Strong",
+          "actor": "Ryan Corr",
+          "image": "images/hotd/characters/harwin-strong.webp",
+          "description": "Bijgenaamd 'Breakbones' — de sterkste man van Westeros. Commandant van de Stadsgarde en vermoedelijke biologische vader van Rhaenyra's eerste drie zonen. Hij sterft in de brand van Harrenhal, vermoedelijk aangestoken door zijn eigen broer Larys.",
+          "relationships": [
+            { "id": "lyonel-strong", "label": "Vader" },
+            { "id": "larys-strong", "label": "Broer" },
+            { "id": "rhaenyra-targaryen", "label": "Geliefde" }
+          ]
+        },
+        {
+          "id": "larys-strong",
+          "name": "Larys Strong",
+          "actor": "Matthew Needham",
+          "image": "images/hotd/characters/larys-strong.webp",
+          "description": "De kreupele maar briljante Lord van Harrenhal, meester van geheimen en manipulatie. Hij vermoordde zijn eigen vader en broer om macht te verwerven en dient als Alicentş vertrouwensman — voor een prijs.",
+          "relationships": [
+            { "id": "lyonel-strong", "label": "Vader (vermoord)" },
+            { "id": "harwin-strong", "label": "Broer (vermoord)" },
+            { "id": "alicent-hightower", "label": "Meesteres / Bondgenote" }
+          ]
+        },
+        {
+          "id": "mysaria",
+          "name": "Mysaria",
+          "actor": "Sonoya Mizuno",
+          "image": "images/hotd/characters/mysaria.webp",
+          "description": "Een Lysense danser die Daemons minnares wordt. Ze bouwt in de sloppen van King's Landing een netwerk van informanten op en wordt een machtige spion die zowel de Zwarten als de Groenen informatie verkoopt.",
+          "relationships": [
+            { "id": "daemon-targaryen", "label": "Voormalige minnaar" }
+          ]
+        }
+      ]
+    }
+  ]
+}
