@@ -1,0 +1,190 @@
+{
+  "events": [
+    {
+      "year": "101 AC",
+      "title": "Rhaenyra named heir",
+      "description": "King Viserys I names his daughter Rhaenyra as his successor — an unprecedented choice in the patriarchal world of Westeros. This decision sows the seeds of the Dance of the Dragons.",
+      "show": "hotd"
+    },
+    {
+      "year": "102 AC",
+      "title": "Daemon exiled: Heir for a Day",
+      "description": "Daemon Targaryen falls from favour after his mocking remark about Rhaenyra as 'heir for a day'. Viserys exiles his brother, who subsequently goes to conquer the Stepstones.",
+      "show": "hotd"
+    },
+    {
+      "year": "104 AC",
+      "title": "Rhaenyra weds Laenor Velaryon",
+      "description": "To forge political ties, Rhaenyra weds Laenor Velaryon, heir of House Velaryon. The marriage strengthens the alliance between the Targaryens and the wealthiest naval fleet in Westeros.",
+      "show": "hotd"
+    },
+    {
+      "year": "106 AC",
+      "title": "Alicent Hightower weds Viserys I",
+      "description": "Viserys I remarries the young Alicent Hightower — Rhaenyra's closest friend — at the behest of the cunning Hand of the King, Otto Hightower. Rhaenyra feels deeply betrayed.",
+      "show": "hotd"
+    },
+    {
+      "year": "111 AC",
+      "title": "Aemond claims Vhagar",
+      "description": "After the death of Laena Velaryon, young Aemond Targaryen sneaks up to the largest living dragon Vhagar at night and tames her. The incident erupts into a fight in which Aemond loses an eye.",
+      "show": "hotd"
+    },
+    {
+      "year": "112 AC",
+      "title": "Fire at Harrenhal — the Strong family perishes",
+      "description": "Lord Lyonel Strong and his son Harwin — Rhaenyra's loyal protector — die in a suspicious fire at Harrenhal. The scheming Larys Strong set the fire as a service to Alicent Hightower.",
+      "show": "hotd"
+    },
+    {
+      "year": "113 AC",
+      "title": "Rhaenyra and Daemon wed",
+      "description": "After the deaths of their respective spouses, Rhaenyra and her uncle Daemon wed on Driftmark. The two factions — the Blacks and the Greens — are definitively formed.",
+      "show": "hotd"
+    },
+    {
+      "year": "129 AC",
+      "title": "Viserys I dies — the Dance begins",
+      "description": "King Viserys I dies after a prolonged illness. Alicent misinterprets his last words as a wish for Aegon II as successor, whereupon the Greens act swiftly and crown Aegon II — the war erupts.",
+      "show": "hotd"
+    },
+    {
+      "year": "129 AC",
+      "title": "Blood and Cheese",
+      "description": "As revenge for the death of Lucerys Velaryon, Daemon and Rhaenyra send assassins to the Red Keep. They break into Helaena's bedroom and murder her young son Jaehaerys.",
+      "show": "hotd"
+    },
+    {
+      "year": "129 AC",
+      "title": "Battle of Rook's Rest",
+      "description": "Aemond lures Rhaenys and her dragon Meleys into an ambush above Rook's Rest. Rhaenys and Meleys die heroically; Aegon II's dragon Sunfyre is also badly wounded.",
+      "show": "hotd"
+    },
+    {
+      "year": "130 AC",
+      "title": "Battle of the Gullet",
+      "description": "A massive naval battle in the Narrow Sea in which three wild dragons are deployed by the Blacks. Both sides suffer enormous losses, but the Blacks regain control of access to Blackwater Bay.",
+      "show": "hotd"
+    },
+    {
+      "year": "130 AC",
+      "title": "Rhaenyra conquers King's Landing",
+      "description": "Rhaenyra manages to occupy King's Landing and proclaims herself queen. Her rule over the capital is brief, however, as the city's population soon turns against her.",
+      "show": "hotd"
+    },
+    {
+      "year": "130 AC",
+      "title": "Dragonpit riot — Syrax dies",
+      "description": "The people of King's Landing rise up and storm the Dragonpit. Several dragons are killed by the rioting mob, including Rhaenyra's own dragon Syrax.",
+      "show": "hotd"
+    },
+    {
+      "year": "131 AC",
+      "title": "Rhaenyra dies — captured by Aegon II",
+      "description": "Rhaenyra flees King's Landing but is captured by Aegon II, who has her devoured by his badly wounded dragon Sunfyre. The rightful heir is dead.",
+      "show": "hotd"
+    },
+    {
+      "year": "131 AC",
+      "title": "Aegon II dies — Aegon III becomes king",
+      "description": "Aegon II survives his rival by only a few months. He himself dies, and his nephew Aegon III (Rhaenyra's son) becomes the new king of Westeros — the Dance is over.",
+      "show": "hotd"
+    },
+    {
+      "year": "135–296 AC",
+      "title": "~170 years pass — The dragons die out",
+      "description": "Under Aegon III the last Targaryen dragons die one by one. They come to be regarded increasingly as legendary creatures, until they disappear entirely from history.",
+      "type": "gap"
+    },
+    {
+      "year": "297 AC",
+      "title": "Jon Arryn dies — Ned Stark summoned",
+      "description": "Hand of the King Jon Arryn dies under suspicious circumstances. King Robert Baratheon asks his old friend Ned Stark to take over the role — and with that, the tragedy of House Stark begins.",
+      "show": "got"
+    },
+    {
+      "year": "297 AC",
+      "title": "Ned discovers Cersei's secret",
+      "description": "In King's Landing, Ned discovers that Jon Arryn was murdered because he had uncovered the true parentage of Cersei's children — they are not Robert's, but children of Cersei and her brother Jaime.",
+      "show": "got"
+    },
+    {
+      "year": "298 AC",
+      "title": "Daenerys weds Khal Drogo",
+      "description": "Daenerys Targaryen is wed at her brother Viserys's insistence to Dothraki warlord Khal Drogo. On the steppe she discovers her inner strength and authority as khaleesi.",
+      "show": "got"
+    },
+    {
+      "year": "298 AC",
+      "title": "Ned Stark executed",
+      "description": "Ned Stark is arrested for treason and, although he confesses guilt in exchange for mercy, the young Joffrey has him executed regardless — an unexpected blow to all who thought they were following the hero.",
+      "show": "got"
+    },
+    {
+      "year": "298 AC",
+      "title": "Daenerys's dragons hatched",
+      "description": "After Khal Drogo's death, Daenerys steps into his burning funeral pyre. The next morning she emerges unharmed with three newly hatched dragons — for the first time in nearly 170 years.",
+      "show": "got"
+    },
+    {
+      "year": "299 AC",
+      "title": "The Red Wedding",
+      "description": "During his uncle's wedding, the Freys and Boltons strike: Robb Stark, his pregnant wife Talisa, and his mother Catelyn are all murdered — one of the most traumatic television events of all time.",
+      "show": "got"
+    },
+    {
+      "year": "300 AC",
+      "title": "Joffrey poisoned",
+      "description": "Joffrey Baratheon is poisoned at his own wedding feast. Tyrion Lannister is wrongfully accused; he flees after killing his father Tywin and goes to Essos to serve Daenerys.",
+      "show": "got"
+    },
+    {
+      "year": "300 AC",
+      "title": "Jon Snow's first death",
+      "description": "After a controversial alliance with the Wildlings, Jon Snow is stabbed by his own Night's Watch brothers and left for dead in the snow. The Night's Watch regards him as a traitor.",
+      "show": "got"
+    },
+    {
+      "year": "301 AC",
+      "title": "Jon Snow resurrected — his true lineage revealed",
+      "description": "Melisandre resurrects Jon Snow. Bran reveals through a vision that Jon is the secret son of Lyanna Stark and Rhaegar Targaryen — and therefore the rightful heir to the Iron Throne.",
+      "show": "got"
+    },
+    {
+      "year": "301 AC",
+      "title": "Recapture of Winterfell",
+      "description": "Jon and Sansa retake Winterfell in the Battle of the Bastards, saved at the last moment by the knights of the Vale. Ramsay Bolton, the sadistic ruler, is fed to his own starving hounds by Sansa.",
+      "show": "got"
+    },
+    {
+      "year": "301 AC",
+      "title": "Cersei crowns herself queen",
+      "description": "Cersei blows up the Sept of Baelor with wildfire, killing hundreds. After her son Tommen's suicide, she crowns herself Queen of the Seven Kingdoms.",
+      "show": "got"
+    },
+    {
+      "year": "302 AC",
+      "title": "Daenerys lands in Westeros",
+      "description": "Daenerys finally arrives on Dragonstone with her three dragons, Dothraki, and Unsullied. She meets Jon Snow and they fight side by side, but her true nature continues to reveal itself.",
+      "show": "got"
+    },
+    {
+      "year": "302 AC",
+      "title": "Night King kills Viserion — The Wall falls",
+      "description": "Beyond The Wall, the Night King hurls an ice spear and kills Daenerys's dragon Viserion. He raises the dragon as an ice dragon, which helps destroy The Wall — a thousand years of protection falls.",
+      "show": "got"
+    },
+    {
+      "year": "303 AC",
+      "title": "Arya kills the Night King",
+      "description": "In the Battle of Winterfell, Arya Stark sneaks up behind the Night King and kills him with the Valyrian steel dagger. The entire army of the dead collapses in an instant.",
+      "show": "got"
+    },
+    {
+      "year": "303 AC",
+      "title": "Burning of King's Landing",
+      "description": "Daenerys burns King's Landing and thousands of innocent civilians. Jon Snow kills her to prevent further slaughter; Drogon melts the Iron Throne and flies away. Bran Stark is chosen as the new king.",
+      "show": "got"
+    }
+  ]
+}

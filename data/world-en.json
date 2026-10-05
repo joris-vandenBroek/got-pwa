@@ -1,0 +1,408 @@
+{
+  "locations": [
+    {
+      "id": "kings-landing",
+      "name": "King's Landing",
+      "region": "The Crownlands",
+      "description": "The capital of the Seven Kingdoms, situated at the mouth of the Blackwater River. The Iron Throne stands here in the Red Keep, the seat of power of Westeros.",
+      "significance": "Political centre of Westeros",
+      "image": "images/locations/kings-landing.webp"
+    },
+    {
+      "id": "winterfell",
+      "name": "Winterfell",
+      "region": "The North",
+      "description": "The ancient castle and seat of House Stark, located in the heart of the North. Despite its name, Winterfell keeps its inhabitants warm thanks to hot springs that run through its walls.",
+      "significance": "Seat of House Stark",
+      "image": "images/locations/winterfell.webp"
+    },
+    {
+      "id": "the-wall",
+      "name": "The Wall",
+      "region": "The Far North",
+      "description": "A massive barrier of ice and stone, over 300 metres high and hundreds of kilometres long, marking the boundary of the civilised world. The Night's Watch guards this wall against threats from the north.",
+      "significance": "Boundary between the inhabited world and the wilderness",
+      "image": "images/locations/the-wall.webp"
+    },
+    {
+      "id": "casterly-rock",
+      "name": "Casterly Rock",
+      "region": "The Westerlands",
+      "description": "The imposing castle of House Lannister, built into and upon an enormous rock on the Sunset Sea. Once a rich gold mine, it is the wealthiest stronghold in all of Westeros.",
+      "significance": "Seat of House Lannister",
+      "image": "images/locations/casterly-rock.webp"
+    },
+    {
+      "id": "dragonstone",
+      "name": "Dragonstone",
+      "region": "Blackwater Bay",
+      "description": "An island castle built of dark stone, once the ancestral home of House Targaryen before they conquered the Seven Kingdoms. The island is covered in dragon carvings and is known for its grim atmosphere.",
+      "significance": "Ancient home of House Targaryen",
+      "image": "images/locations/dragonstone.webp"
+    },
+    {
+      "id": "the-eyrie",
+      "name": "The Eyrie",
+      "region": "The Vale",
+      "description": "The near-impregnable castle of House Arryn, perched high in the Mountains of the Moon. It can only be reached on foot via a narrow mountain path and is notorious for its 'sky cells' — open cells at the edge of the mountaintop.",
+      "significance": "Seat of House Arryn",
+      "image": "images/locations/the-eyrie.webp"
+    },
+    {
+      "id": "storm-s-end",
+      "name": "Storm's End",
+      "region": "The Stormlands",
+      "description": "The massive castle of House Baratheon on the Stormlands coast, built to withstand the fierce hurricanes that batter the shore. Its walls are so thick that no storm or magic can breach them.",
+      "significance": "Seat of House Baratheon",
+      "image": "images/locations/storm-s-end.webp"
+    },
+    {
+      "id": "highgarden",
+      "name": "Highgarden",
+      "region": "The Reach",
+      "description": "The rich and opulent castle of House Tyrell, surrounded by blooming gardens and fields. The Reach is the most fertile region of Westeros and Highgarden is the symbol of its abundance.",
+      "significance": "Seat of House Tyrell",
+      "image": "images/locations/highgarden.webp"
+    },
+    {
+      "id": "pyke",
+      "name": "Pyke",
+      "region": "The Iron Islands",
+      "description": "The ruinous castle of House Greyjoy, spread across several small islets connected by narrow bridges. The Iron Islands are harsh and poor, but their people are skilled seafarers and fighters.",
+      "significance": "Seat of House Greyjoy",
+      "image": "images/locations/pyke.webp"
+    },
+    {
+      "id": "sunspear",
+      "name": "Sunspear",
+      "region": "Dorne",
+      "description": "The capital of Dorne and seat of House Martell, located in the desert-like southern reaches of Westeros. Dorne is the only region to have withstood the Targaryen dragon conquest and has its own laws and traditions.",
+      "significance": "Seat of House Martell",
+      "image": "images/locations/sunspear.webp"
+    },
+    {
+      "id": "the-godswood",
+      "name": "The Godswood",
+      "region": "Throughout the North",
+      "description": "A sacred grove found at every Northern castle, centred on a Heart Tree — a large white tree with a face-like pattern carved into its bark. It is the place of worship for the Old Gods, the religion of the North.",
+      "significance": "Sacred site of the Old Gods",
+      "image": "images/locations/the-godswood.webp"
+    },
+    {
+      "id": "castle-black",
+      "name": "Castle Black",
+      "region": "The Far North",
+      "description": "The headquarters of the Night's Watch, situated at the foot of The Wall. It is a dilapidated fort that was once a great garrison but now houses only a fraction of its former garrison.",
+      "significance": "Headquarters of the Night's Watch",
+      "image": "images/locations/castle-black.webp"
+    },
+    {
+      "id": "braavos",
+      "name": "Braavos",
+      "region": "The Free Cities",
+      "description": "The richest and most powerful of the Free Cities, situated on an archipelago off the western coast of Essos. Braavos is known for its Iron Bank, its Faceless Men, and the colossal statue known as the Titan of Braavos.",
+      "significance": "Most important Free City",
+      "image": "images/locations/braavos.webp"
+    },
+    {
+      "id": "pentos",
+      "name": "Pentos",
+      "region": "The Free Cities",
+      "description": "A prosperous trading city on the western coast of Essos, governed by magisters. It is the city where Daenerys Targaryen and her brother Viserys resided before their journey to the Dothraki.",
+      "significance": "Starting point of Daenerys's journey",
+      "image": "images/locations/pentos.webp"
+    },
+    {
+      "id": "the-dothraki-sea",
+      "name": "The Dothraki Sea",
+      "region": "Essos",
+      "description": "An enormous, seemingly endless grassland on the continent of Essos, home to the nomadic Dothraki peoples. It is called a sea because the wind creates waves through the tall grass that resemble water.",
+      "significance": "Homeland of the Dothraki",
+      "image": "images/locations/the-dothraki-sea.webp"
+    }
+  ],
+  "creatures": [
+    {
+      "id": "drogon",
+      "name": "Drogon",
+      "description": "The largest and most savage of Daenerys's dragons, black with red wings and named after her fallen husband Khal Drogo. Drogon is the most feared dragon of his era and vanishes without trace after Daenerys's death.",
+      "associated_with": "Daenerys Targaryen",
+      "image": "images/creatures/dragons.webp",
+      "show": "got"
+    },
+    {
+      "id": "rhaegal",
+      "name": "Rhaegal",
+      "description": "A green and bronze-coloured dragon, named after Daenerys's brother Rhaegar Targaryen. Jon Snow rides Rhaegal as the first non-Targaryen dragonrider in centuries. Rhaegal is killed by Euron's fleet above the Narrow Sea.",
+      "associated_with": "Daenerys Targaryen / Jon Snow",
+      "image": "images/creatures/dragons.webp",
+      "show": "got"
+    },
+    {
+      "id": "viserion",
+      "name": "Viserion",
+      "description": "A cream and gold-coloured dragon, named after Daenerys's brother Viserys. Killed by an ice spear thrown by the Night King beyond The Wall, then reborn as an ice dragon ridden by the Night King, who uses it to destroy The Wall.",
+      "associated_with": "Daenerys Targaryen / Night King",
+      "image": "images/creatures/dragons.webp",
+      "show": "got"
+    },
+    {
+      "id": "white-walkers",
+      "name": "White Walkers",
+      "description": "Mysterious, ice-cold beings from the far north, also known as the 'Others'. They can manipulate death and raise the dead as undead soldiers. Most people in Westeros regard them as legend or myth.",
+      "associated_with": "The Far North",
+      "image": "images/creatures/white-walkers.webp"
+    },
+    {
+      "id": "wights",
+      "name": "Wights (Undead)",
+      "description": "Dead humans or animals reanimated by the White Walkers. They serve as the army of the White Walkers and are recognisable by their blue eyes. They can only be killed by fire or dragonglass.",
+      "associated_with": "White Walkers",
+      "image": "images/creatures/wights.webp"
+    },
+    {
+      "id": "direwolves",
+      "name": "Direwolves",
+      "description": "Enormous wolf-like predators, larger than a horse, that serve as the symbol of House Stark. Normally only found beyond The Wall, they are spotted in the North at the start of the series — regarded as an ill omen.",
+      "associated_with": "House Stark",
+      "image": "images/creatures/direwolves.webp"
+    },
+    {
+      "id": "giants",
+      "name": "Giants",
+      "description": "Enormous humanoid creatures that live beyond The Wall alongside the Wildlings. They stand over three metres tall and possess superhuman strength. The people of Westeros consider them mythological.",
+      "associated_with": "The Far North",
+      "image": "images/creatures/giants.webp"
+    },
+    {
+      "id": "shadowcats",
+      "name": "Shadowcats",
+      "description": "Large wild cats that inhabit the Mountains of the Moon around the Vale of Arryn. They are dangerous to travellers crossing the mountain passes to the Eyrie.",
+      "associated_with": "The Mountains of the Moon"
+    },
+    {
+      "id": "sea-monsters",
+      "name": "Sea Monsters",
+      "description": "Legendary great creatures said to threaten ships in the deepest seas. They play no direct role in the stories but are mentioned in the seafaring lore of Westeros and Essos.",
+      "associated_with": "The oceans"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "nights-watch",
+      "name": "The Night's Watch",
+      "description": "An ancient brotherhood of men who guard the frontier at The Wall. Members swear to hold no lands, claim no titles, and take no wives, serving until death. They often recruit criminals, bastards, and outcasts.",
+      "motto": "Night gathers, and now my watch begins",
+      "base": "Castle Black",
+      "image": "images/organizations/nights-watch.svg"
+    },
+    {
+      "id": "kingsguard",
+      "name": "The Kingsguard",
+      "description": "Seven elite knights who have sworn to protect the life of the monarch with their own. They wear white armour and serve until death. They may hold no lands and may not marry.",
+      "motto": "We do not retreat",
+      "base": "King's Landing",
+      "image": "images/organizations/kingsguard.svg"
+    },
+    {
+      "id": "small-council",
+      "name": "The Small Council",
+      "description": "The advisory body of the King, composed of his most trusted counsellors. Standing members include the Hand of the King, the Master of Coin, the Master of Whisperers, the Master of Ships, and the Master of Laws.",
+      "motto": null,
+      "base": "King's Landing",
+      "image": "images/organizations/small-council.webp"
+    },
+    {
+      "id": "dothraki",
+      "name": "The Dothraki",
+      "description": "A nomadic steppe people of Essos, infamous riders and warriors. They live in roving tribes (khalasars) led by a khal. They believe that anything that can walk can be conquered.",
+      "motto": "Nothing that runs upon the earth can resist us",
+      "base": "The Dothraki Sea",
+      "image": "images/organizations/dothraki.webp"
+    },
+    {
+      "id": "wildlings",
+      "name": "Wildlings (Free Folk)",
+      "description": "The people who live beyond The Wall, also called the 'Free Folk' or 'Freefolk'. They acknowledge no kings and live in tribes. The people of Westeros consider them savages, but they have a rich culture of their own.",
+      "motto": "We kneel for no king",
+      "base": "The Far North",
+      "image": "images/organizations/wildlings.webp"
+    },
+    {
+      "id": "faceless-men",
+      "name": "The Faceless Men",
+      "description": "A mysterious brotherhood of assassins based in Braavos. They worship the Many-Faced God, who views death as a mercy. They can change their appearance and are known as the most skilled assassins in the world.",
+      "motto": "Valar Morghulis — All men must die",
+      "base": "Braavos",
+      "image": "images/organizations/faceless-men.svg"
+    },
+    {
+      "id": "maesters",
+      "name": "The Maesters",
+      "description": "Scholars trained at the Citadel in Oldtown. They serve as doctors, teachers, and advisors in the castles of Westeros. Every maester wears a chain of different metal links around his neck, each symbolising an area of knowledge.",
+      "motto": null,
+      "base": "The Citadel, Oldtown",
+      "image": "images/organizations/maesters.webp"
+    },
+    {
+      "id": "lords-of-westeros",
+      "name": "The Great Lords",
+      "description": "The powerful nobility of Westeros, known as the Lords Paramount. Each rules over a great region and is theoretically loyal to the Iron Throne, but they also pursue their own politics and wars.",
+      "motto": null,
+      "base": "Westeros",
+      "image": "images/organizations/lords-of-westeros.webp"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Khalasar",
+      "definition": "A Dothraki tribe or travelling army, led by a Khal. A khalasar can consist of tens of thousands of warriors and their families."
+    },
+    {
+      "term": "Khal",
+      "definition": "The leader of a Dothraki khalasar. The position is earned through strength and victory in battle. The wife of a Khal is called a Khaleesi."
+    },
+    {
+      "term": "Khaleesi",
+      "definition": "The title for the wife of a Dothraki Khal. It is the Dothraki feminine counterpart to the title Khal."
+    },
+    {
+      "term": "Heart Tree",
+      "definition": "A sacred white tree (Weirwood) with a face-like pattern carved into its red bark, standing at the centre of a Godswood. Followers of the Old Gods pray before the Heart Tree."
+    },
+    {
+      "term": "Weirwood",
+      "definition": "A type of sacred tree with white bark and red leaves that can live for thousands of years. They stand at the centre of the religion of the Old Gods and are only found in Godswoods."
+    },
+    {
+      "term": "Maester",
+      "definition": "A scholar trained at the Citadel who serves as advisor, physician, and teacher in the castles of Westeros. Every Maester wears a metal chain around his neck as a sign of his knowledge."
+    },
+    {
+      "term": "Septon / Septa",
+      "definition": "Clergy of the Faith of the Seven, the main religion of Westeros. A Septon is male, a Septa female. They teach and preach the seven aspects of the deity."
+    },
+    {
+      "term": "The Faith of the Seven",
+      "definition": "The dominant religion in Westeros (outside the North), which believes in one god with seven aspects: Father, Mother, Maiden, Warrior, Smith, Crone, and Stranger."
+    },
+    {
+      "term": "The Old Gods",
+      "definition": "The nameless gods of the First Men and the Children of the Forest, worshipped in the North. Followers pray in Godswoods before Weirwood trees."
+    },
+    {
+      "term": "Valar Morghulis",
+      "definition": "A High Valyrian phrase meaning 'All men must die'. The customary response is 'Valar Dohaeris' — All men must serve."
+    },
+    {
+      "term": "Valar Dohaeris",
+      "definition": "A High Valyrian phrase meaning 'All men must serve'. It is the answer to 'Valar Morghulis'."
+    },
+    {
+      "term": "Dragonglass",
+      "definition": "Also known as Obsidian or Firestone, a black volcanic glass. Weapons made of dragonglass are one of the few means by which White Walkers and wights can be killed."
+    },
+    {
+      "term": "Valyrian Steel",
+      "definition": "A rare, exceptionally sharp and lightweight steel forged with the aid of dragon magic in ancient Valyria. Only a handful of swords of this material still exist. Valyrian Steel is also effective against White Walkers."
+    },
+    {
+      "term": "Hand of the King",
+      "definition": "The Hand of the King is the highest counsellor and deputy of the monarch of Westeros. He manages the day-to-day affairs of the realm and wields enormous power."
+    },
+    {
+      "term": "Lord Commander",
+      "definition": "The highest rank in the Night's Watch, chosen by the members of the brotherhood. The Lord Commander leads all Night's Watch operations and resides at Castle Black."
+    },
+    {
+      "term": "Bastard",
+      "definition": "A child born out of wedlock. In Westeros, bastards bear a special surname by region: Snow (the North), Sand (Dorne), Storm (the Stormlands), Flowers (the Reach), and so on."
+    },
+    {
+      "term": "The Iron Throne",
+      "definition": "The Iron Throne — literally a throne forged from the swords of defeated enemies, the symbol of power over the Seven Kingdoms. Whoever sits on the throne rules all of Westeros."
+    },
+    {
+      "term": "Dothraki",
+      "definition": "Both the name of the people and the language they speak — the nomadic steppe folk of Essos. As a linguistic term: the Dothraki language that Daenerys learns to speak."
+    },
+    {
+      "term": "Essos",
+      "definition": "The eastern continent, across from Westeros. Here lie the Free Cities, the Dothraki Sea, Slaver's Bay, and other lands. Daenerys begins her story here."
+    },
+    {
+      "term": "Westeros",
+      "definition": "The western continent where the Seven Kingdoms are located. It is the primary setting of Game of Thrones."
+    },
+    {
+      "term": "The Seven Kingdoms",
+      "definition": "The name for the united realm of Westeros, consisting of seven ancient kingdoms that were merged centuries ago. Each region still maintains its own culture and great ruler."
+    },
+    {
+      "term": "Greensight",
+      "definition": "A rare gift whereby a person sees visions of the past, present, or future through dreams or trances. It is one of the magical abilities that appear in the series."
+    },
+    {
+      "term": "Warg / Skinchanger",
+      "definition": "Someone who can project their mind into an animal and control it. Some people beyond The Wall possess this ability, and it has also been found among certain people from the North."
+    }
+  ],
+  "seasons": [
+    {
+      "number": 1,
+      "year": 2011,
+      "episodes": 10,
+      "spoiler_level": "laag",
+      "summary": "Westeros is introduced through the perspective of the Stark family. Ned Stark, Lord of Winterfell, is asked by his old friend King Robert Baratheon to become Hand of the King after the previous Hand, Jon Arryn, suddenly died. In King's Landing, Ned discovers that Arryn was murdered because he had uncovered a disturbing secret: Queen Cersei's three 'children' are not Robert's at all, but the fruit of a secret affair between Cersei and her own brother Jaime Lannister. Young Bran Stark witnesses Cersei and Jaime's secret — whereupon Jaime pushes him from a high tower without hesitation to silence him. Bran survives but is left paralyzed. Meanwhile, Daenerys Targaryen is married off by her brutal brother Viserys to Dothraki warlord Khal Drogo and adapts to steppe culture. Arya begins sword lessons. Jon Snow joins the Night's Watch at The Wall. Ned confronts Cersei with his knowledge of the secret but is soon arrested on the orders of the cruel young Joffrey, who ascends the throne after Robert's death in a suspicious hunting accident. Although Ned confesses guilt in exchange for mercy, Joffrey has him executed anyway — a shock to all who expected the hero to survive the season. Robb Stark calls his banners and marches south for revenge. In Essos, Khal Drogo dies from a magical infection, but Daenerys walks unharmed through his funeral pyre and emerges the next morning with three newly hatched dragons — for the first time in centuries."
+    },
+    {
+      "number": 2,
+      "year": 2012,
+      "episodes": 10,
+      "spoiler_level": "middel",
+      "summary": "Robert Baratheon's death unleashes the 'War of the Five Kings': Joffrey Lannister (the sitting king), Stannis Baratheon (the rightful heir), Renly Baratheon (his popular younger brother), Robb Stark (King in the North), and later Balon Greyjoy (King of the Iron Islands) all claim the throne. Renly, the great favourite, is murdered by a mysterious shadow figure born of Melisandre, Stannis's red priestess. Theon Greyjoy, long a ward and 'ally' of the Starks, betrays Robb and seizes Winterfell in a surprise attack. Daenerys crosses Essos with her three young dragons in search of ships and allies, arriving at the wealthy city of Qarth. Jon Snow ventures beyond The Wall with a Night's Watch scouting party and witnesses the threat gathering in the north for the first time. Tyrion Lannister, sent by his father Tywin as Hand of the King, turns King's Landing upside down with his political acumen. The season culminates in the Battle of the Blackwater, where Stannis's fleet and army crash against Tyrion's wildfire trap in a devastating assault on King's Landing — thousands of ships are engulfed in flames and Stannis retreats. Tyrion is wounded and sidelined by his father Tywin."
+    },
+    {
+      "number": 3,
+      "year": 2013,
+      "episodes": 10,
+      "spoiler_level": "hoog",
+      "summary": "The most shocking season, infamous for the Red Wedding. Daenerys buys an army of 8,000 Unsullied (trained slave-soldiers) in Astapor, but then betrays the slaver: she has Drogon burn the man and his guards and declares the Unsullied free — who nonetheless remain loyal to her as a liberated army. In Westeros, Jaime Lannister loses his sword hand during a capture — a humbling lesson in vulnerability for the proud knight. Robb Stark has broken his vow by not marrying a daughter of Lord Walder Frey, wedding Talisa Maegyr instead. At the wedding of Robb's uncle Edmure to a Frey daughter, the Freys and Lannisters strike: Robb, Talisa (who was pregnant), and Catelyn Stark are all murdered in what is known as the Red Wedding — one of the most traumatic television moments ever. Arya is close to her family but arrives just too late and escapes with Sandor Clegane. Bran Stark pushes beyond The Wall with his group in search of the mystical Three-Eyed Raven. Jon Snow has temporarily infiltrated the Wildlings as a spy but his cover begins to unravel."
+    },
+    {
+      "number": 4,
+      "year": 2014,
+      "episodes": 10,
+      "spoiler_level": "hoog",
+      "summary": "Joffrey Baratheon is poisoned at his own wedding feast to Margaery Tyrell, in front of his mother Cersei and his uncle Jaime. Tyrion, who had just quarrelled with Joffrey, is accused of the murder and imprisoned. Oberyn Martell of Dorne offers to fight as Tyrion's champion — he wants revenge on Ser Gregor 'The Mountain' Clegane, who raped and murdered his sister. In an epic duel Oberyn initially bests the gigantic Mountain, but as he forces him to confess his crimes, the Mountain turns the tables and crushes Oberyn's skull. Tyrion is condemned and awaits execution. His brother Jaime frees him, but Tyrion makes a detour: he confronts his father Tywin — who had his love Shae executed — and kills him with a crossbow on the privy. Tyrion flees to Essos. Arya travels with Sandor 'the Hound' Clegane, who takes her to her aunt Lysa Arryn — but Lysa has just been pushed through the Moon Door by Petyr Baelish. Bran finally reaches the Three-Eyed Raven. Daenerys conquers Meereen. In the North, Jon Snow attempts to repel the Wildling assault on Castle Black — thousands of Wildlings storm The Wall while the Night's Watch defends with only a handful of men."
+    },
+    {
+      "number": 5,
+      "year": 2015,
+      "episodes": 10,
+      "spoiler_level": "hoog",
+      "summary": "Cersei, out of desperation and jealousy, grants the High Sparrow (a religious fanatic) permission to reestablish his own armed police: the Faith Militant. This soon leads to her own arrest for adultery. She is forced to do her 'Walk of Shame': walking naked through the streets of King's Landing while the crowd mocks her. Jon Snow is elected Lord Commander of the Night's Watch and forges a controversial agreement with the Wildlings: he allows them through The Wall to protect them together against the White Walkers. His own brothers regard this as treason. Stannis Baratheon marches on Winterfell through the snow; his fanatical advisor Melisandre persuades him to burn his own daughter Shireen alive as a sacrifice — whereupon his army disintegrates and he is killed by Brienne of Tarth. Arya undertakes her novitiate with the Faceless Men in Braavos and learns to change faces. Jon Snow returns from a mission with the Wildlings but is lured into an ambush: his own officers stab him repeatedly and leave him for dead in the snow."
+    },
+    {
+      "number": 6,
+      "year": 2016,
+      "episodes": 10,
+      "spoiler_level": "hoog",
+      "summary": "Melisandre resurrects Jon Snow. Bran witnesses in a vision the birth of Jon Snow at the 'Tower of Joy' — and discovers that Jon is not Ned Stark's bastard, but the secret son of Lyanna Stark and Rhaegar Targaryen (and therefore of royal Targaryen blood). Hodor dies heroically holding the door so that Bran and Meera can escape the Wights — the heartbreaking moment also explains his entire name. Jon and Sansa retake Winterfell in the Battle of the Bastards: Jon's army is on the verge of destruction when the Knights of the Vale, summoned by Sansa via Petyr Baelish, save the day. Ramsay Bolton, the sadistic ruler of Winterfell, is subsequently fed to his own starving hounds by Sansa. Cersei avoids her trial by blowing up the Great Sept of Baelor with hidden caches of wildfire — hundreds die, including the High Sparrow, Margaery, and her family. Her son Tommen, overwhelmed by grief, commits suicide. Cersei crowns herself Queen of Westeros. In Essos, Daenerys conquers the Dothraki khalasars' leaders by burning them, after which thousands of Dothraki willingly follow her. Arya returns to Westeros and kills Walder Frey — after first feeding him a pie made from his own sons."
+    },
+    {
+      "number": 7,
+      "year": 2017,
+      "episodes": 7,
+      "spoiler_level": "hoog",
+      "summary": "Daenerys finally arrives in Westeros and establishes her base on Dragonstone — the island castle of her birth house. Jon Snow travels to meet her to request aid against the White Walkers and permission to mine dragonglass. They meet for the first time — two people each convinced they are doing what is right, but with very different backgrounds. Daenerys loses several allies through Cersei's scheming: Euron Greyjoy's fleet destroys the Dornish alliance and Yara's Greyjoy fleet, and Highgarden falls. Jaime leads a raid on Daenerys's supply convoy, but Daenerys appears with Drogon and the Dothraki and annihilates the Lannister army. To prove the White Walkers to Cersei, Jon ventures beyond The Wall with a small group to capture a living wight. The Night King hurls an ice spear and kills one of Daenerys's dragons — Viserion — which he then raises as an ice dragon. Jon and Daenerys grow closer. The ice dragon Viserion, at the Night King's command, destroys a large section of The Wall — the 300-metre-high barrier that had protected the realm for a thousand years falls."
+    },
+    {
+      "number": 8,
+      "year": 2019,
+      "episodes": 6,
+      "spoiler_level": "maximum",
+      "summary": "The final season brings all storylines together for the last battles. The Long Night: the army of the White Walkers reaches Winterfell. In a dark, chaotic battle the combined army of the living is on the verge of defeat — until Arya Stark, the trained assassin, approaches the Night King from behind and kills him with the Valyrian steel dagger, causing his entire ice army to collapse in an instant. Daenerys, deeply grieved and feeling that no one in Westeros truly accepts her as queen, also loses her second dragon Rhaegal to Euron Greyjoy's fleet and watches her closest friend Missandei executed by Cersei. She decides to attack King's Landing — but even after the city surrenders, she continues burning its population, homes, and neighbourhoods with Drogon. Thousands of innocent civilians die in the flames. Jon Snow, who has meanwhile discovered who he truly is (the rightful heir to the Iron Throne), confronts Daenerys with her actions but ultimately kills her to prevent further slaughter. Drogon melts the Iron Throne and flies away with Daenerys's body. The surviving lords choose Bran Stark as the new King of Westeros. Jon Snow is exiled beyond The Wall — where he ultimately marches north with the Wildlings into the true freedom of the far north."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "locations": [
+    {
+      "id": "hotd-kings-landing",
+      "name": "King's Landing",
+      "region": "The Crownlands",
+      "description": "The capital of Westeros and seat of the Iron Throne. In the era of House of the Dragon the city is larger and wealthier than ever, but beneath the surface political tensions are brewing that will erupt into the Dance of the Dragons.",
+      "significance": "Political centre of Westeros",
+      "image": "images/locations/kings-landing.webp"
+    },
+    {
+      "id": "dragonstone",
+      "name": "Dragonstone",
+      "region": "The Crownlands",
+      "description": "The Targaryen island castle, built of Valyrian stone and shaped like coiling dragons. It serves as the base of Rhaenyra and her Blacks during the civil war. Beneath the castle lie vast dragon caves.",
+      "significance": "Base of Rhaenyra and the Blacks",
+      "image": "images/locations/dragonstone.webp"
+    },
+    {
+      "id": "driftmark",
+      "name": "Driftmark",
+      "region": "The Crownlands (coast)",
+      "description": "The island and seat of House Velaryon, located at the mouth of Blackwater Bay. High Tide is the name of the castle. The wealthiest naval fleet in Westeros sails from this harbour.",
+      "significance": "Seat of House Velaryon"
+    },
+    {
+      "id": "harrenhal",
+      "name": "Harrenhal",
+      "region": "The Riverlands",
+      "description": "The largest castle ever built in Westeros, but also the most cursed — destroyed by Balerion the Black Dread during Aegon I's conquest. In the HotD era it is the seat of House Strong, but everyone who holds it seems doomed.",
+      "significance": "Seat of House Strong, symbol of a curse"
+    },
+    {
+      "id": "de-steppenstenen",
+      "name": "The Stepstones",
+      "region": "The Narrow Sea",
+      "description": "A chain of small islands in the Narrow Sea between Westeros and Essos, strategically vital for sea routes. Daemon Targaryen and Corlys Velaryon fought here for years against the Crabfeeder (Craghas Drahar) and his Triarchy allies.",
+      "significance": "Strategic strait, site of the first war"
+    },
+    {
+      "id": "pentos",
+      "name": "Pentos",
+      "region": "Essos",
+      "description": "A wealthy Free City in Essos where Daemon and Rhaenyra temporarily live after leaving Westeros. The city is known for its magisters and its trade.",
+      "significance": "Exile of Daemon and Rhaenyra",
+      "image": "images/locations/pentos.webp"
+    },
+    {
+      "id": "oldtown",
+      "name": "Oldtown",
+      "region": "The Reach",
+      "description": "The oldest city in Westeros, home to the Citadel (seat of the Maester order) and the tall Hightower. Otto Hightower and his family hail from here, and the city plays a political role in the rise of the Greens.",
+      "significance": "Seat of the Maesters and House Hightower"
+    },
+    {
+      "id": "storms-end",
+      "name": "Storm's End",
+      "region": "The Stormlands",
+      "description": "The impregnable castle on the Stormlands coast, seat of House Baratheon. Lucerys Velaryon is sent here as a messenger to win support, but encounters Aemond Targaryen — which leads to his death.",
+      "significance": "Key location at the opening shots of the Dance",
+      "image": "images/locations/storm-s-end.webp"
+    }
+  ],
+  "creatures": [
+    {
+      "id": "syrax",
+      "name": "Syrax",
+      "associated_with": "Rhaenyra Targaryen",
+      "description": "Rhaenyra Targaryen's yellow dragon, female and mid-sized. She is kept in captivity on Dragonstone and is one of the most well-known dragons of the Dance. Syrax is killed during the Dragonpit riot.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "caraxes",
+      "name": "Caraxes",
+      "associated_with": "Daemon Targaryen",
+      "description": "Nicknamed 'the Blood Wyrm' — a long, serpentine, blood-red dragon known for its piercing shriek. He is the dragon of Daemon Targaryen and one of the most feared aerial combatants.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "vhagar",
+      "name": "Vhagar",
+      "associated_with": "First Laena Velaryon, later Aemond Targaryen",
+      "description": "The largest living dragon, nearly as large as Balerion the Black Dread. She is over one hundred and fifty years old and was the dragon of Queen Visenya Targaryen during Aegon I's conquest. Aemond Targaryen claims her after Laena's death — one of the most decisive power shifts of the war.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "meleys",
+      "name": "Meleys",
+      "associated_with": "Rhaenys Targaryen",
+      "description": "Nicknamed 'the Red Queen' — a swift, scarlet dragon once the fastest in Westeros. She is ridden by Rhaenys Targaryen and dies alongside her rider at the Battle of Rook's Rest.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "vermithor",
+      "name": "Vermithor",
+      "associated_with": "Daemon Targaryen (later Hugh Hammer)",
+      "description": "Nicknamed 'the Bronze Fury' — one of the largest living dragons, once ridden by Jaehaerys I. He lives wild on Dragonstone until Daemon soothes him with his song. He plays a key role in the Battle of the Gullet.",
+      "image": "images/creatures/dragons.webp"
+    },
+    {
+      "id": "sunfyre",
+      "name": "Sunfyre",
+      "associated_with": "Aegon II Targaryen",
+      "description": "The golden-scaled dragon of Aegon II, described as the most beautiful dragon ever seen in Westeros. He is badly wounded at the Battle of Rook's Rest but heals. His fate is closely intertwined with that of his rider.",
+      "image": "images/creatures/dragons.webp"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "de-kleine-raad-hotd",
+      "name": "The Small Council",
+      "base": "King's Landing",
+      "description": "The executive governing body of the Seven Kingdoms, led by the Hand of the King. In the era of Viserys I, Otto Hightower and Lyonel Strong are the foremost Hands. The council is the pivot around which all political intrigues revolve.",
+      "motto": "Our Kingdom, our duty",
+      "image": "images/organizations/small-council.webp"
+    },
+    {
+      "id": "de-koningsgarde-hotd",
+      "name": "The Kingsguard",
+      "base": "King's Landing",
+      "description": "Seven knights sworn to the protection of the monarch and his family. Ser Criston Cole rises from ordinary Kingsguard knight to Lord Commander — a key figure in the ascent of the Greens.",
+      "motto": "Sword and Shield of the King",
+      "image": "images/organizations/kingsguard.svg"
+    },
+    {
+      "id": "de-dragonriders",
+      "name": "The Dragonriders",
+      "base": "Dragonstone / King's Landing",
+      "description": "The rare group of Targaryen kin and 'dragonseeds' who can bond with a dragon. In the Dance of the Dragons, the contest for dragonriders is a crucial tactical factor — both sides seek wild dragons and new riders.",
+      "motto": "On the wings of the dragon"
+    },
+    {
+      "id": "de-stadswatch",
+      "name": "The Gold Cloaks",
+      "base": "King's Landing",
+      "description": "The city watch of King's Landing, recognisable by their gilded cloaks. Daemon Targaryen was their notorious commander before falling out of favour. They play a role in the Greens' seizure of power following Viserys I's death.",
+      "motto": "Order and justice in the capital"
+    }
+  ],
+  "glossary": [
+    {
+      "id": "dansers-van-de-draken",
+      "term": "Dance of the Dragons",
+      "definition": "The Targaryen civil war between the Blacks (Rhaenyra's faction) and the Greens (Alicent/Aegon II's faction). The name refers to the dragons both sides deploy — it is one of the bloodiest conflicts in Westerosi history."
+    },
+    {
+      "id": "de-zwarten",
+      "term": "The Blacks",
+      "definition": "The faction supporting Rhaenyra Targaryen as the rightful heir to the Iron Throne. They are called 'the Blacks' after the colours of their banner — the black dress Rhaenyra wore during a pivotal court gala."
+    },
+    {
+      "id": "de-groenen",
+      "term": "The Greens",
+      "definition": "The faction supporting Aegon II Targaryen. They are called 'the Greens' after the green gown Alicent Hightower wore at the same court gala where Rhaenyra wore black — a deliberate political statement."
+    },
+    {
+      "id": "draakzaad",
+      "term": "Dragonseeds",
+      "definition": "Bastard descendants of Targaryen blood who are able to tame a dragon. Because both factions need dragons for the war, they seek 'dragonseeds' — people with enough Targaryen blood to ride a wild dragon."
+    },
+    {
+      "id": "valyriaans-staal",
+      "term": "Valyrian Steel",
+      "definition": "Magical steel forged in ancient Valyria that never dulls and is sharper than common steel. Only a handful of swords still exist. In the HotD era there are more than in GoT, as Valyria was destroyed only two hundred years prior."
+    },
+    {
+      "id": "drakenpit",
+      "term": "The Dragonpit",
+      "definition": "The great domed structure in King's Landing where the Targaryen dragons were kept in captivity. Critics argue that the confinement made dragons smaller and weaker than their free-living counterparts."
+    },
+    {
+      "id": "de-smaldeel",
+      "term": "The Gullet",
+      "definition": "The narrow waterway between the island of Driftmark and the mainland, strategically vital to the Velaryon fleet. The Battle of the Gullet — one of the greatest naval battles of the Dance — is fought here."
+    },
+    {
+      "id": "vlyriaanse-droom",
+      "term": "Dragon Dream (Targaryen Prophecy)",
+      "definition": "Some Targaryens have prophecies or visions in their dreams. Aegon I 'dreamed' of the coming of the White Walkers and considered this the reason for Westeros's unity. Viserys whispers this secret to Rhaenyra — and later to Aegon II."
+    }
+  ],
+  "seasons": [
+    {
+      "number": 1,
+      "year": 2022,
+      "episodes": 10,
+      "spoiler_level": "hoog",
+      "summary": "Season 1 tells the rise and fall of royal harmony in the Targaryen era. The first half centres on the young Rhaenyra (Milly Alcock) and the young Alicent (Emily Carey): two friends who slowly become rivals. Viserys I names Rhaenyra as his heir — an unprecedented act in the patriarchal world of Westeros — but his brother Daemon (Matt Smith) falls from favour after boasting in King's Landing's taverns about the 'Delightful heir'. Rhaenyra escapes with Daemon into the city's slums, and Alicent, to Rhaenyra's shock, weds the newly widowed Viserys. The second half jumps forward ten years: Rhaenyra (now Emma D'Arcy) is married to Laenor Velaryon but has a secret affair with Harwin Strong, whose bastard sons are the cause of growing doubts about her offspring. Laena Velaryon dies in Pentos. Harwin and Lord Lyonel Strong perish in the fire at Harrenhal — set by Larys Strong in the service of Alicent. Rhaenyra and Daemon marry on Driftmark. The season ends with a dramatic twist: Viserys I dies, but Alicent misinterprets his last words as a confirmation of her son's succession — Aegon II is quickly crowned, and the Dance of the Dragons begins."
+    },
+    {
+      "number": 2,
+      "year": 2024,
+      "episodes": 8,
+      "spoiler_level": "maximum",
+      "summary": "Season 2 opens with one of the most shocking moments in the series: the Blood and Cheese attack. As revenge for the death of Lucerys Velaryon (killed by Aemond and Vhagar above Storm's End), Daemon sends two assassins — Blood and Cheese — to the Red Keep. They break into Helaena's bedroom and force her to choose which of her children dies. Her young son Jaehaerys is beheaded. Helaena is left deeply traumatised. The war escalates: Rhaenyra does not immediately attack King's Landing, hoping to win Westeros over diplomatically. Daemon travels to Harrenhal to mobilise the Riverlands but sinks into visions of Viserys. The Battle of Rook's Rest is the first great dragon battle: Aemond lures Rhaenys and her dragon Meleys into an ambush above Rook's Rest, during which Aegon II's dragon Sunfyre is also badly wounded. Rhaenys and Meleys die. Daemon soothes the great wild dragon Vermithor on Dragonstone. The Blacks seek 'dragonseeds' — people with Targaryen blood who can ride wild dragons. The season ends with the spectacular Battle of the Gullet, in which three wild dragons are deployed, but both sides suffer enormous losses."
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "houses": [
+    {
+      "id": "stark",
+      "name": "House Stark",
+      "sigil": "Direwolf",
+      "motto": "Winter is Coming",
+      "color": "#708090",
+      "characters": [
+        {
+          "id": "eddard-stark",
+          "name": "Eddard Stark",
+          "actor": "Sean Bean",
+          "image": "images/characters/eddard-stark.jpg",
+          "description": "Honourable and just Lord of Winterfell and head of House Stark. He is known for his strict moral code and unwavering loyalty to the law.",
+          "relationships": [
+            { "id": "catelyn-stark", "label": "Wife" },
+            { "id": "robb-stark", "label": "Son" },
+            { "id": "sansa-stark", "label": "Daughter" },
+            { "id": "arya-stark", "label": "Daughter" },
+            { "id": "bran-stark", "label": "Son" },
+            { "id": "jon-snow", "label": "Nephew (raised as son)" },
+            { "id": "robert-baratheon", "label": "Old friend and king" }
+          ]
+        },
+        {
+          "id": "catelyn-stark",
+          "name": "Catelyn Stark",
+          "actor": "Michelle Fairley",
+          "image": "images/characters/catelyn-stark.jpg",
+          "description": "Lady of Winterfell and wife of Eddard Stark, born of House Tully. She is a determined and fiercely protective mother.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Husband" },
+            { "id": "robb-stark", "label": "Son" },
+            { "id": "sansa-stark", "label": "Daughter" },
+            { "id": "arya-stark", "label": "Daughter" },
+            { "id": "lysa-arryn", "label": "Sister" }
+          ]
+        },
+        {
+          "id": "robb-stark",
+          "name": "Robb Stark",
+          "actor": "Richard Madden",
+          "image": "images/characters/robb-stark.jpg",
+          "description": "The eldest son and heir of House Stark, raised to be the future lord of Winterfell. He is known for his leadership abilities and courage.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Father" },
+            { "id": "catelyn-stark", "label": "Mother" },
+            { "id": "jon-snow", "label": "Cousin (raised as brother)" }
+          ]
+        },
+        {
+          "id": "sansa-stark",
+          "name": "Sansa Stark",
+          "actor": "Sophie Turner",
+          "image": "images/characters/sansa-stark.jpg",
+          "description": "The eldest daughter of House Stark, raised with chivalric ideals and courtly manners. She dreams of a life at the royal court.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Father" },
+            { "id": "catelyn-stark", "label": "Mother" },
+            { "id": "arya-stark", "label": "Sister" },
+            { "id": "joffrey-baratheon", "label": "Betrothed" }
+          ]
+        },
+        {
+          "id": "arya-stark",
+          "name": "Arya Stark",
+          "actor": "Maisie Williams",
+          "image": "images/characters/arya-stark.jpg",
+          "description": "The younger daughter of House Stark, wilful and adventurous by nature. She is far more interested in fighting than in conventional feminine roles.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Father" },
+            { "id": "catelyn-stark", "label": "Mother" },
+            { "id": "sansa-stark", "label": "Sister" },
+            { "id": "jon-snow", "label": "Cousin (raised as brother)" }
+          ]
+        },
+        {
+          "id": "bran-stark",
+          "name": "Bran Stark",
+          "actor": "Isaac Hempstead Wright",
+          "image": "images/characters/bran-stark.jpg",
+          "description": "The second son of House Stark, a lively boy with a passion for climbing and adventure. He dreams of one day becoming a knight.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Father" },
+            { "id": "catelyn-stark", "label": "Mother" },
+            { "id": "robb-stark", "label": "Brother" }
+          ]
+        },
+        {
+          "id": "jon-snow",
+          "name": "Jon Snow",
+          "actor": "Kit Harington",
+          "image": "images/characters/jon-snow.jpg",
+          "description": "Raised in Winterfell as a cousin of the Stark children. Honest and dutiful, he joins the Night's Watch at The Wall.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Uncle (raised as father)" },
+            { "id": "robb-stark", "label": "Cousin (raised as brother)" },
+            { "id": "arya-stark", "label": "Cousin (raised as sister)" },
+            { "id": "samwell-tarly", "label": "Friend at the Night's Watch" },
+            { "id": "jeor-mormont", "label": "Commander" }
+          ]
+        },
+        {
+          "id": "benjen-stark",
+          "name": "Benjen Stark",
+          "actor": "Joseph Mawle",
+          "image": "images/characters/benjen-stark.webp",
+          "description": "Younger brother of Eddard Stark and First Ranger of the Night's Watch. An experienced ranger who patrols beyond the Wall.",
+          "relationships": [
+            { "id": "eddard-stark", "label": "Brother" },
+            { "id": "jon-snow", "label": "Nephew" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lannister",
+      "name": "House Lannister",
+      "sigil": "Lion",
+      "motto": "Hear Me Roar",
+      "color": "#CFB53B",
+      "characters": [
+        {
+          "id": "tywin-lannister",
+          "name": "Tywin Lannister",
+          "actor": "Charles Dance",
+          "image": "images/characters/tywin-lannister.jpg",
+          "description": "The mighty head of House Lannister and one of the most feared political strategists in Westeros. He places the honour and power of his house above all else.",
+          "relationships": [
+            { "id": "cersei-lannister", "label": "Daughter" },
+            { "id": "jaime-lannister", "label": "Son" },
+            { "id": "tyrion-lannister", "label": "Son" }
+          ]
+        },
+        {
+          "id": "cersei-lannister",
+          "name": "Cersei Lannister",
+          "actor": "Lena Headey",
+          "image": "images/characters/cersei-lannister.jpg",
+          "description": "Daughter of Tywin Lannister and Queen of Westeros as wife of King Robert Baratheon. She is ambitious and fiercely protective of her children.",
+          "relationships": [
+            { "id": "tywin-lannister", "label": "Father" },
+            { "id": "jaime-lannister", "label": "Brother" },
+            { "id": "tyrion-lannister", "label": "Brother" },
+            { "id": "robert-baratheon", "label": "Husband" },
+            { "id": "joffrey-baratheon", "label": "Son" }
+          ]
+        },
+        {
+          "id": "jaime-lannister",
+          "name": "Jaime Lannister",
+          "actor": "Nikolaj Coster-Waldau",
+          "image": "images/characters/jaime-lannister.jpg",
+          "description": "Member of the Kingsguard and one of the most talented swordsmen in Westeros, nicknamed the 'Kingslayer'. Brother of Cersei and Tyrion.",
+          "relationships": [
+            { "id": "tywin-lannister", "label": "Father" },
+            { "id": "cersei-lannister", "label": "Sister" },
+            { "id": "tyrion-lannister", "label": "Brother" }
+          ]
+        },
+        {
+          "id": "tyrion-lannister",
+          "name": "Tyrion Lannister",
+          "actor": "Peter Dinklage",
+          "image": "images/characters/tyrion-lannister.jpg",
+          "description": "The youngest son of Tywin Lannister, known for his sharp wit, sense of humour, and political cunning. He compensates for his small stature with words and intellect.",
+          "relationships": [
+            { "id": "tywin-lannister", "label": "Father" },
+            { "id": "cersei-lannister", "label": "Sister" },
+            { "id": "jaime-lannister", "label": "Brother" },
+            { "id": "varys", "label": "Council colleague" }
+          ]
+        },
+        {
+          "id": "joffrey-baratheon",
+          "name": "Joffrey Baratheon",
+          "actor": "Jack Gleeson",
+          "image": "images/characters/joffrey-baratheon.jpg",
+          "description": "Prince of Westeros and heir to the throne, son of Queen Cersei and King Robert. He is spoiled and obsessed with power and prestige.",
+          "relationships": [
+            { "id": "cersei-lannister", "label": "Mother" },
+            { "id": "robert-baratheon", "label": "Father" },
+            { "id": "sansa-stark", "label": "Betrothed" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "targaryen",
+      "name": "House Targaryen",
+      "sigil": "Dragon",
+      "motto": "Fire and Blood",
+      "color": "#8B0000",
+      "characters": [
+        {
+          "id": "daenerys-targaryen",
+          "name": "Daenerys Targaryen",
+          "actor": "Emilia Clarke",
+          "image": "images/characters/daenerys-targaryen.jpg",
+          "description": "The last known heir of House Targaryen, once a powerful royal dynasty. She begins her journey as a young woman far from her homeland, finding her way in a hostile world.",
+          "relationships": [
+            { "id": "viserys-targaryen", "label": "Brother" },
+            { "id": "khal-drogo", "label": "Husband" },
+            { "id": "jorah-mormont", "label": "Advisor and protector" }
+          ]
+        },
+        {
+          "id": "viserys-targaryen",
+          "name": "Viserys Targaryen",
+          "actor": "Harry Lloyd",
+          "image": "images/characters/viserys-targaryen.jpg",
+          "description": "Older brother of Daenerys and self-proclaimed heir to the Iron Throne. He is determined to reclaim the throne his family lost.",
+          "relationships": [
+            { "id": "daenerys-targaryen", "label": "Sister" }
+          ]
+        },
+        {
+          "id": "khal-drogo",
+          "name": "Khal Drogo",
+          "actor": "Jason Momoa",
+          "image": "images/characters/khal-drogo.jpg",
+          "description": "A powerful Dothraki warlord (khal) renowned for his undefeated record in battle. He is the husband of Daenerys Targaryen.",
+          "relationships": [
+            { "id": "daenerys-targaryen", "label": "Wife" }
+          ]
+        },
+        {
+          "id": "jorah-mormont",
+          "name": "Jorah Mormont",
+          "actor": "Iain Glen",
+          "image": "images/characters/jorah-mormont.jpg",
+          "description": "An exiled Westerosi knight who serves as advisor and protector to Daenerys Targaryen. He has intimate knowledge of Westerosi politics.",
+          "relationships": [
+            { "id": "daenerys-targaryen", "label": "Protégée" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baratheon",
+      "name": "House Baratheon",
+      "sigil": "Stag",
+      "motto": "Ours is the Fury",
+      "color": "#B8860B",
+      "characters": [
+        {
+          "id": "robert-baratheon",
+          "name": "Robert Baratheon",
+          "actor": "Mark Addy",
+          "image": "images/characters/robert-baratheon.jpg",
+          "description": "King of the Seven Kingdoms, a once-great warrior who seized the throne in a great rebellion. He now prefers feasting to politics.",
+          "relationships": [
+            { "id": "cersei-lannister", "label": "Wife" },
+            { "id": "eddard-stark", "label": "Old friend" },
+            { "id": "stannis-baratheon", "label": "Brother" },
+            { "id": "renly-baratheon", "label": "Brother" },
+            { "id": "joffrey-baratheon", "label": "Son" }
+          ]
+        },
+        {
+          "id": "stannis-baratheon",
+          "name": "Stannis Baratheon",
+          "actor": "Stephen Dillane",
+          "image": "images/characters/stannis-baratheon.jpg",
+          "description": "The middle brother of King Robert Baratheon and Lord of Dragonstone. He is a stern and principled man who believes in duty and justice above all else.",
+          "relationships": [
+            { "id": "robert-baratheon", "label": "Brother" },
+            { "id": "renly-baratheon", "label": "Brother" }
+          ]
+        },
+        {
+          "id": "renly-baratheon",
+          "name": "Renly Baratheon",
+          "actor": "Gethin Anthony",
+          "image": "images/characters/renly-baratheon.webp",
+          "description": "The youngest brother of King Robert, popular at court and amiable in character. He is Lord of Storm's End.",
+          "relationships": [
+            { "id": "robert-baratheon", "label": "Brother" },
+            { "id": "stannis-baratheon", "label": "Brother" },
+            { "id": "loras-tyrell", "label": "Knight of his guard" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tyrell",
+      "name": "House Tyrell",
+      "sigil": "Rose",
+      "motto": "Growing Strong",
+      "color": "#2E7D32",
+      "characters": [
+        {
+          "id": "margaery-tyrell",
+          "name": "Margaery Tyrell",
+          "actor": "Natalie Dormer",
+          "image": "images/characters/margaery-tyrell.jpg",
+          "description": "Granddaughter of Olenna Tyrell and a skilled political player at court. She is charming, kind, and popular among the common people.",
+          "relationships": [
+            { "id": "olenna-tyrell", "label": "Grandmother" },
+            { "id": "loras-tyrell", "label": "Brother" }
+          ]
+        },
+        {
+          "id": "olenna-tyrell",
+          "name": "Olenna Tyrell",
+          "actor": "Diana Rigg",
+          "image": "images/characters/olenna-tyrell.jpg",
+          "description": "Nicknamed the 'Queen of Thorns', she is the shrewd and sharp-tongued head of House Tyrell. A master of court politics.",
+          "relationships": [
+            { "id": "margaery-tyrell", "label": "Granddaughter" },
+            { "id": "loras-tyrell", "label": "Grandson" }
+          ]
+        },
+        {
+          "id": "loras-tyrell",
+          "name": "Loras Tyrell",
+          "actor": "Finn Jones",
+          "image": "images/characters/loras-tyrell.webp",
+          "description": "Known as the 'Knight of Flowers', he is one of the most handsome and talented tournament fighters in Westeros.",
+          "relationships": [
+            { "id": "margaery-tyrell", "label": "Sister" },
+            { "id": "olenna-tyrell", "label": "Grandmother" },
+            { "id": "renly-baratheon", "label": "Lord he serves" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "greyjoy",
+      "name": "House Greyjoy",
+      "sigil": "Kraken",
+      "motto": "We Do Not Sow",
+      "color": "#37474F",
+      "characters": [
+        {
+          "id": "theon-greyjoy",
+          "name": "Theon Greyjoy",
+          "actor": "Alfie Allen",
+          "image": "images/characters/theon-greyjoy.jpg",
+          "description": "Heir of House Greyjoy and ward raised with House Stark at Winterfell. He struggles with his identity between two worlds.",
+          "relationships": [
+            { "id": "balon-greyjoy", "label": "Father" },
+            { "id": "yara-greyjoy", "label": "Sister" },
+            { "id": "robb-stark", "label": "Friend (grew up together)" }
+          ]
+        },
+        {
+          "id": "balon-greyjoy",
+          "name": "Balon Greyjoy",
+          "actor": "Patrick Malahide",
+          "image": "images/characters/balon-greyjoy.webp",
+          "description": "Lord of the Iron Islands and head of House Greyjoy. He is proud of his people's reaving traditions and holds farming and sowing in contempt.",
+          "relationships": [
+            { "id": "theon-greyjoy", "label": "Son" },
+            { "id": "yara-greyjoy", "label": "Daughter" }
+          ]
+        },
+        {
+          "id": "yara-greyjoy",
+          "name": "Yara Greyjoy",
+          "actor": "Gemma Whelan",
+          "image": "images/characters/yara-greyjoy.jpg",
+          "description": "Daughter of Balon Greyjoy and captain of her own ship. She is a skilled and courageous fighter who inspires her men.",
+          "relationships": [
+            { "id": "balon-greyjoy", "label": "Father" },
+            { "id": "theon-greyjoy", "label": "Brother" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "martell",
+      "name": "House Martell",
+      "sigil": "Sun and spear",
+      "motto": "Unbowed, Unbent, Unbroken",
+      "color": "#E65100",
+      "characters": [
+        {
+          "id": "oberyn-martell",
+          "name": "Oberyn Martell",
+          "actor": "Pedro Pascal",
+          "image": "images/characters/oberyn-martell.jpg",
+          "description": "Prince of Dorne and nicknamed the 'Red Viper', known for his flamboyance and his deadly skills as a spear fighter and poisoner.",
+          "relationships": [
+            { "id": "doran-martell", "label": "Brother" },
+            { "id": "ellaria-sand", "label": "Life companion" }
+          ]
+        },
+        {
+          "id": "doran-martell",
+          "name": "Doran Martell",
+          "actor": "Alexander Siddig",
+          "image": "images/characters/doran-martell.webp",
+          "description": "Prince of Dorne and the calm, measured head of House Martell. He prefers diplomacy over war.",
+          "relationships": [
+            { "id": "oberyn-martell", "label": "Brother" }
+          ]
+        },
+        {
+          "id": "ellaria-sand",
+          "name": "Ellaria Sand",
+          "actor": "Indira Varma",
+          "image": "images/characters/ellaria-sand.jpg",
+          "description": "Life companion of Oberyn Martell and mother of several of his daughters. She is known for her fierce and fearless character.",
+          "relationships": [
+            { "id": "oberyn-martell", "label": "Life companion" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arryn",
+      "name": "House Arryn",
+      "sigil": "Falcon",
+      "motto": "As High as Honor",
+      "color": "#1565C0",
+      "characters": [
+        {
+          "id": "lysa-arryn",
+          "name": "Lysa Arryn",
+          "actor": "Kate Dickie",
+          "image": "images/characters/lysa-arryn.webp",
+          "description": "Sister of Catelyn Stark and widow of the former Hand of the King. She rules as regent over the Eyrie on behalf of her young son.",
+          "relationships": [
+            { "id": "catelyn-stark", "label": "Sister" },
+            { "id": "robin-arryn", "label": "Son" },
+            { "id": "petyr-baelish", "label": "Old acquaintance" }
+          ]
+        },
+        {
+          "id": "robin-arryn",
+          "name": "Robin Arryn",
+          "actor": "Lino Facioli",
+          "image": "images/characters/robin-arryn.webp",
+          "description": "Young Lord of the Eyrie and heir of House Arryn. He grows up in the impregnable castle high in the mountains.",
+          "relationships": [
+            { "id": "lysa-arryn", "label": "Mother" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nachtwacht",
+      "name": "The Night's Watch",
+      "sigil": "Sword and raven",
+      "motto": "Night gathers, and now my watch begins",
+      "color": "#546E7A",
+      "characters": [
+        {
+          "id": "jeor-mormont",
+          "name": "Jeor Mormont",
+          "actor": "James Cosmo",
+          "image": "images/characters/jeor-mormont.jpg",
+          "description": "Lord Commander of the Night's Watch, nicknamed the 'Old Bear'. He leads the brotherhood with a strict but just hand.",
+          "relationships": [
+            { "id": "jon-snow", "label": "Young recruit under his command" },
+            { "id": "samwell-tarly", "label": "Recruit" }
+          ]
+        },
+        {
+          "id": "samwell-tarly",
+          "name": "Samwell Tarly",
+          "actor": "John Bradley",
+          "image": "images/characters/samwell-tarly.jpg",
+          "description": "A kind and well-read young man who enlists in the Night's Watch. He is no born fighter but possesses a sharp mind and broad knowledge.",
+          "relationships": [
+            { "id": "jon-snow", "label": "Best friend" },
+            { "id": "jeor-mormont", "label": "Commander" }
+          ]
+        },
+        {
+          "id": "petyr-baelish",
+          "name": "Petyr Baelish",
+          "actor": "Aidan Gillen",
+          "image": "images/characters/petyr-baelish.jpg",
+          "description": "Nicknamed 'Littlefinger', he is the Master of Coin at the court of King's Landing. A master of intrigue and financial manipulation.",
+          "relationships": [
+            { "id": "lysa-arryn", "label": "Old flame" },
+            { "id": "catelyn-stark", "label": "Old acquaintance" },
+            { "id": "varys", "label": "Rival at court" }
+          ]
+        },
+        {
+          "id": "varys",
+          "name": "Varys",
+          "actor": "Conleth Hill",
+          "image": "images/characters/varys.jpg",
+          "description": "The Master of Whisperers at the court of King's Landing, nicknamed the 'Spider'. He commands a vast network of informants throughout Westeros.",
+          "relationships": [
+            { "id": "petyr-baelish", "label": "Rival at court" },
+            { "id": "tyrion-lannister", "label": "Council colleague" }
+          ]
+        }
+      ]
+    }
+  ]
+}

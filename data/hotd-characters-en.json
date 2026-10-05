@@ -1,0 +1,305 @@
+{
+  "houses": [
+    {
+      "id": "viserys-hof",
+      "name": "Viserys I & the Court",
+      "sigil": "Three-headed dragon",
+      "motto": "Fire and Blood",
+      "color": "#8B0000",
+      "characters": [
+        {
+          "id": "viserys-targaryen",
+          "name": "Viserys I Targaryen",
+          "actor": "Paddy Considine",
+          "image": "images/hotd/characters/viserys-targaryen.webp",
+          "description": "The fifth Targaryen king of Westeros, a good-natured ruler who places the unity of his family above all else. His reluctance to firmly defend his daughter Rhaenyra's succession sows the seeds of the Dance of the Dragons.",
+          "relationships": [
+            { "id": "rhaenyra-targaryen", "label": "Daughter" },
+            { "id": "daemon-targaryen", "label": "Brother" },
+            { "id": "alicent-hightower", "label": "Second wife" },
+            { "id": "otto-hightower", "label": "Hand of the King" }
+          ]
+        },
+        {
+          "id": "otto-hightower",
+          "name": "Otto Hightower",
+          "actor": "Rhys Ifans",
+          "image": "images/hotd/characters/otto-hightower.webp",
+          "description": "The cunning and ambitious Hand of the King, father of Alicent. He manoeuvres his family toward ultimate power by coupling his daughter to the widowed king and sowing the seeds of dynastic strife.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Daughter" },
+            { "id": "viserys-targaryen", "label": "King" }
+          ]
+        },
+        {
+          "id": "lyonel-strong",
+          "name": "Lyonel Strong",
+          "actor": "Gavin Spokes",
+          "image": "images/hotd/characters/lyonel-strong.webp",
+          "description": "Lord of Harrenhal and successor to Otto Hightower as Hand of the King. He is an honest and principled advisor who attempts to heal the rifts forming in the royal house.",
+          "relationships": [
+            { "id": "harwin-strong", "label": "Son" },
+            { "id": "larys-strong", "label": "Son" },
+            { "id": "viserys-targaryen", "label": "King" }
+          ]
+        },
+        {
+          "id": "criston-cole",
+          "name": "Criston Cole",
+          "actor": "Fabien Frankel",
+          "image": "images/hotd/characters/criston-cole.webp",
+          "description": "A knight of lowly birth from Dorne, appointed to the Kingsguard by Rhaenyra. After a rejection he becomes her bitterest enemy and a loyal protector of Alicent and the Greens.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Ally" },
+            { "id": "rhaenyra-targaryen", "label": "Archenemy" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-zwarten",
+      "name": "The Blacks (Rhaenyra)",
+      "sigil": "Three-headed dragon (black)",
+      "motto": "She Who Is Owed the Throne",
+      "color": "#1a1a2e",
+      "characters": [
+        {
+          "id": "rhaenyra-targaryen",
+          "name": "Rhaenyra Targaryen",
+          "actor": "Emma D'Arcy",
+          "image": "images/hotd/characters/rhaenyra-targaryen.webp",
+          "description": "Named by her father Viserys I as his heir — the first female Targaryen to be positioned to ascend the Iron Throne. She rides the dragon Syrax and fights her entire life for her right to the crown against the Greens.",
+          "relationships": [
+            { "id": "viserys-targaryen", "label": "Father" },
+            { "id": "daemon-targaryen", "label": "Uncle / Husband" },
+            { "id": "alicent-hightower", "label": "Stepmother / Rival" },
+            { "id": "jacaerys-velaryon", "label": "Son" },
+            { "id": "lucerys-velaryon", "label": "Son" }
+          ]
+        },
+        {
+          "id": "daemon-targaryen",
+          "name": "Daemon Targaryen",
+          "actor": "Matt Smith",
+          "image": "images/hotd/characters/daemon-targaryen.webp",
+          "description": "The younger brother of Viserys I, notorious dragonrider and war hero. He rides the blood-red Caraxes and is as charming as he is dangerous. He eventually weds his niece Rhaenyra and becomes the most formidable fighter on the side of the Blacks.",
+          "relationships": [
+            { "id": "viserys-targaryen", "label": "Brother" },
+            { "id": "rhaenyra-targaryen", "label": "Niece / Wife" },
+            { "id": "corlys-velaryon", "label": "Ally" }
+          ]
+        },
+        {
+          "id": "jacaerys-velaryon",
+          "name": "Jacaerys Velaryon",
+          "actor": "Harry Collett",
+          "image": "images/hotd/characters/jacaerys-velaryon.webp",
+          "description": "Rhaenyra's eldest son and heir, rider of the dragon Vermax. He is tactical and brave, and travels as an ambassador to the North and to the Eyrie to gather support for the Blacks.",
+          "relationships": [
+            { "id": "rhaenyra-targaryen", "label": "Mother" },
+            { "id": "lucerys-velaryon", "label": "Brother" },
+            { "id": "baela-targaryen", "label": "Betrothed" }
+          ]
+        },
+        {
+          "id": "lucerys-velaryon",
+          "name": "Lucerys Velaryon",
+          "actor": "Elliot Grihault",
+          "image": "images/hotd/characters/lucerys-velaryon.webp",
+          "description": "Rhaenyra's second son, rider of the young dragon Arrax. He is sent as a messenger to Storm's End but encounters Aemond Targaryen and his great dragon Vhagar — with fatal consequences.",
+          "relationships": [
+            { "id": "rhaenyra-targaryen", "label": "Mother" },
+            { "id": "jacaerys-velaryon", "label": "Brother" },
+            { "id": "aemond-targaryen", "label": "Fateful enemy" }
+          ]
+        },
+        {
+          "id": "baela-targaryen",
+          "name": "Baela Targaryen",
+          "actor": "Bethany Antonia",
+          "image": "images/hotd/characters/baela-targaryen.webp",
+          "description": "Daughter of Daemon and Laena Velaryon, rider of the dragon Moondancer. She is impulsive and brave, and is betrothed to Jacaerys Velaryon as part of the alliance between the Blacks.",
+          "relationships": [
+            { "id": "daemon-targaryen", "label": "Father" },
+            { "id": "rhaena-targaryen", "label": "Sister" },
+            { "id": "jacaerys-velaryon", "label": "Betrothed" }
+          ]
+        },
+        {
+          "id": "rhaena-targaryen",
+          "name": "Rhaena Targaryen",
+          "actor": "Phoebe Campbell",
+          "image": "images/hotd/characters/rhaena-targaryen.webp",
+          "description": "Younger daughter of Daemon and Laena Velaryon, twin sister of Baela. She struggles to find a dragon willing to bond with her, but remains stubbornly loyal to the cause of the Blacks.",
+          "relationships": [
+            { "id": "daemon-targaryen", "label": "Father" },
+            { "id": "baela-targaryen", "label": "Sister" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de-groenen",
+      "name": "The Greens (Alicent)",
+      "sigil": "Three-headed dragon (green)",
+      "motto": "Queen for the People",
+      "color": "#1a3a1a",
+      "characters": [
+        {
+          "id": "alicent-hightower",
+          "name": "Alicent Hightower",
+          "actor": "Olivia Cooke",
+          "image": "images/hotd/characters/alicent-hightower.webp",
+          "description": "Daughter of Otto Hightower, second wife of Viserys I, and mother of Aegon II. She begins as Rhaenyra's closest friend but becomes her greatest political opponent as she fights for her own sons' rights to the Iron Throne.",
+          "relationships": [
+            { "id": "otto-hightower", "label": "Father" },
+            { "id": "viserys-targaryen", "label": "Husband" },
+            { "id": "aegon-ii-targaryen", "label": "Son" },
+            { "id": "aemond-targaryen", "label": "Son" },
+            { "id": "helaena-targaryen", "label": "Daughter" },
+            { "id": "rhaenyra-targaryen", "label": "Rival" }
+          ]
+        },
+        {
+          "id": "aegon-ii-targaryen",
+          "name": "Aegon II Targaryen",
+          "actor": "Tom Glynn-Carney",
+          "image": "images/hotd/characters/aegon-ii-targaryen.webp",
+          "description": "Eldest son of Viserys I and Alicent, placed on the Iron Throne by the Greens following his father's death. He rides the dragon Sunfyre and is impulsive and irresponsible, though at times braver than expected.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Mother" },
+            { "id": "aemond-targaryen", "label": "Brother" },
+            { "id": "helaena-targaryen", "label": "Sister / Wife" }
+          ]
+        },
+        {
+          "id": "aemond-targaryen",
+          "name": "Aemond Targaryen",
+          "actor": "Ewan Mitchell",
+          "image": "images/hotd/characters/aemond-targaryen.webp",
+          "description": "The second son of Viserys I, rider of the colossal Vhagar — the largest and oldest living dragon. He lost an eye as a child to Lucerys Velaryon and harbours a lifelong grudge. He is the most formidable warrior and strategist of the Greens.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Mother" },
+            { "id": "aegon-ii-targaryen", "label": "Brother" },
+            { "id": "lucerys-velaryon", "label": "Killed him" }
+          ]
+        },
+        {
+          "id": "helaena-targaryen",
+          "name": "Helaena Targaryen",
+          "actor": "Phia Saban",
+          "image": "images/hotd/characters/helaena-targaryen.webp",
+          "description": "Daughter of Viserys I and Alicent, married to her brother Aegon II. She is dreamy and prophetic by nature, obsessed with insects, and suffers greatly under the political intrigues that destroy her children and her mind.",
+          "relationships": [
+            { "id": "alicent-hightower", "label": "Mother" },
+            { "id": "aegon-ii-targaryen", "label": "Brother / Husband" },
+            { "id": "aemond-targaryen", "label": "Brother" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "house-velaryon",
+      "name": "House Velaryon",
+      "sigil": "Seahorse",
+      "motto": "The Old, the True, the Brave",
+      "color": "#0a3a5a",
+      "characters": [
+        {
+          "id": "corlys-velaryon",
+          "name": "Corlys Velaryon",
+          "actor": "Steve Toussaint",
+          "image": "images/hotd/characters/corlys-velaryon.webp",
+          "description": "Nicknamed the 'Sea Snake', the wealthiest nobleman in Westeros and Lord of Driftmark. A legendary seafarer who completed nine great voyages and conquered the Stepstones. He weds his children Laena and Laenor to the Targaryens.",
+          "relationships": [
+            { "id": "rhaenys-targaryen-velaryon", "label": "Wife" },
+            { "id": "laenor-velaryon", "label": "Son" },
+            { "id": "laena-velaryon", "label": "Daughter" }
+          ]
+        },
+        {
+          "id": "rhaenys-targaryen-velaryon",
+          "name": "Rhaenys Targaryen",
+          "actor": "Eve Best",
+          "image": "images/hotd/characters/rhaenys-targaryen-velaryon.webp",
+          "description": "Nicknamed the 'Queen Who Never Was' — she lost the throne to her cousin Viserys I despite having a stronger claim. She rides the dragon Meleys and ultimately supports Rhaenyra's cause. Her death at the Battle of Rook's Rest is one of the great losses for the Blacks.",
+          "relationships": [
+            { "id": "corlys-velaryon", "label": "Husband" },
+            { "id": "laenor-velaryon", "label": "Son" },
+            { "id": "laena-velaryon", "label": "Daughter" },
+            { "id": "rhaenyra-targaryen", "label": "Ally" }
+          ]
+        },
+        {
+          "id": "laenor-velaryon",
+          "name": "Laenor Velaryon",
+          "actor": "John Macmillan",
+          "image": "images/hotd/characters/laenor-velaryon.webp",
+          "description": "Son of Corlys and Rhaenys, first husband of Rhaenyra Targaryen in a political marriage. Rider of the dragon Seasmoke. He fakes his own death in order to flee with his beloved.",
+          "relationships": [
+            { "id": "corlys-velaryon", "label": "Father" },
+            { "id": "rhaenys-targaryen-velaryon", "label": "Mother" },
+            { "id": "rhaenyra-targaryen", "label": "Wife" }
+          ]
+        },
+        {
+          "id": "laena-velaryon",
+          "name": "Laena Velaryon",
+          "actor": "Savannah Steyn",
+          "image": "images/hotd/characters/laena-velaryon.webp",
+          "description": "Daughter of Corlys and Rhaenys, rider of the legendary Vhagar. She weds Daemon Targaryen and bears him two daughters (Baela and Rhaena) before choosing death by her own dragon during a difficult childbirth.",
+          "relationships": [
+            { "id": "corlys-velaryon", "label": "Father" },
+            { "id": "rhaenys-targaryen-velaryon", "label": "Mother" },
+            { "id": "daemon-targaryen", "label": "Husband" },
+            { "id": "baela-targaryen", "label": "Daughter" },
+            { "id": "rhaena-targaryen", "label": "Daughter" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "house-strong-overig",
+      "name": "House Strong & Others",
+      "sigil": "Clenched fist",
+      "motto": "A Song of Ash and Ember",
+      "color": "#3a2a0a",
+      "characters": [
+        {
+          "id": "harwin-strong",
+          "name": "Harwin Strong",
+          "actor": "Ryan Corr",
+          "image": "images/hotd/characters/harwin-strong.webp",
+          "description": "Nicknamed 'Breakbones' — the strongest man in Westeros. Commander of the City Watch and rumoured biological father of Rhaenyra's first three sons. He dies in the fire at Harrenhal, believed to have been set by his own brother Larys.",
+          "relationships": [
+            { "id": "lyonel-strong", "label": "Father" },
+            { "id": "larys-strong", "label": "Brother" },
+            { "id": "rhaenyra-targaryen", "label": "Beloved" }
+          ]
+        },
+        {
+          "id": "larys-strong",
+          "name": "Larys Strong",
+          "actor": "Matthew Needham",
+          "image": "images/hotd/characters/larys-strong.webp",
+          "description": "The lame but brilliant Lord of Harrenhal, master of secrets and manipulation. He murdered his own father and brother to gain power and serves as Alicent's most trusted confidant — for a price.",
+          "relationships": [
+            { "id": "lyonel-strong", "label": "Father (murdered)" },
+            { "id": "harwin-strong", "label": "Brother (murdered)" },
+            { "id": "alicent-hightower", "label": "Mistress / Ally" }
+          ]
+        },
+        {
+          "id": "mysaria",
+          "name": "Mysaria",
+          "actor": "Sonoya Mizuno",
+          "image": "images/hotd/characters/mysaria.webp",
+          "description": "A Lysene dancer who becomes Daemon's mistress. She builds a network of informants in the slums of King's Landing and becomes a powerful spy who sells information to both the Blacks and the Greens.",
+          "relationships": [
+            { "id": "daemon-targaryen", "label": "Former lover" }
+          ]
+        }
+      ]
+    }
+  ]
+}

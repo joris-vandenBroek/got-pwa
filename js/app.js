@@ -5,11 +5,132 @@ let familyTreeData = [];
 let gotWorldData = {}; // GoT world data altijd in geheugen voor draken-gecombineerde weergave
 let activeTab = 'houses';
 let currentShow = 'got'; // 'got' of 'hotd'
+let currentLang = localStorage.getItem('lang') || 'nl';
 
 // Zet class op basis van echte schermgrootte — werkt ook in Chrome desktopmodus
 if (Math.min(screen.width, screen.height) < 600) {
   document.documentElement.classList.add('small-screen');
 }
+
+// === I18N ===
+const I18N = {
+  nl: {
+    houses: 'Huizen',
+    locations: 'Locaties',
+    creatures: 'Wezens',
+    organizations: 'Organisaties',
+    glossary: 'Woordenlijst',
+    seasons: 'Seizoenen',
+    timeline: 'Tijdlijn',
+    familytree: 'Stamboom',
+    searchPlaceholder: 'Zoek personages, locaties, termen...',
+    searchLabel: 'Zoeken',
+    showSelectorLabel: 'Kies serie',
+    langToggle: '&#127468;&#127463; EN',
+    backBtn: '← Terug',
+    backBtnLabel: 'Terug naar huizen',
+    characters: 'personages',
+    playedBy: 'Gespeeld door:',
+    playedBySearch: 'Gespeeld door',
+    dragons: 'Draken',
+    otherCreatures: 'Overige wezens',
+    season: 'Seizoen',
+    episodes: 'afleveringen',
+    spoilerLabels: {
+      laag:    '&#128994; Lage spoilergraad',
+      middel:  '&#128993; Gemiddelde spoilergraad',
+      hoog:    '&#128308; Hoge spoilergraad',
+      maximum: '&#128308; Maximale spoilergraad — alleen lezen na volledig kijken'
+    },
+    spoilerNotice: '⚠ De seizoensamenvattingen bevatten spoilers. Open ze pas nadat je dat seizoen hebt gekeken.',
+    searchResultsHeading: 'Zoekresultaten',
+    noResults: 'Geen resultaten gevonden voor deze zoekopdracht.',
+    searchTypeCharacter: 'Personage',
+    searchTypeLocation: 'Locatie',
+    searchTypeCreature: 'Wezen',
+    searchTypeOrganization: 'Organisatie',
+    searchTypeTerm: 'Term',
+    noFamilyTree: 'Geen stamboom beschikbaar voor deze serie.',
+    familySelectorLabel: 'Kies een familie:',
+    allEvents: 'Alle events',
+    mapTitle: 'Kaart van de Bekende Wereld',
+    mapAriaLabel: 'Kaart van Westeros en Essos',
+    mapNarrowSea: 'Smalle',
+    mapNarrowSeaLine2: 'Zee',
+    mapDothrakiSea: 'Dothraki Zee',
+    mapFreeCities: 'Vrije Steden',
+    mapRegionNorth: 'Het Noorden',
+    mapRegionRiverlands: 'Rivierland',
+    mapRegionWesterlands: 'Westerlanden',
+    mapRegionVale: 'Het Dal',
+    mapRegionCrownlands: 'Kroonland',
+    mapRegionStormlands: 'Stormgronden',
+    mapRegionReach: 'Het Bereik',
+    mapRegionDorne: 'Dorne',
+    mapPinDothrakiSea: 'Dothraki Zee',
+    mapLegendPin: 'Locatie (klik om te bekijken)',
+    mapLegendWall: 'The Wall',
+    loadError: 'Fout bij laden van data. Probeer de pagina te herladen.'
+  },
+  en: {
+    houses: 'Houses',
+    locations: 'Locations',
+    creatures: 'Creatures',
+    organizations: 'Organizations',
+    glossary: 'Glossary',
+    seasons: 'Seasons',
+    timeline: 'Timeline',
+    familytree: 'Family Tree',
+    searchPlaceholder: 'Search characters, locations, terms...',
+    searchLabel: 'Search',
+    showSelectorLabel: 'Choose series',
+    langToggle: '&#127475;&#127473; NL',
+    backBtn: '← Back',
+    backBtnLabel: 'Back to houses',
+    characters: 'characters',
+    playedBy: 'Played by:',
+    playedBySearch: 'Played by',
+    dragons: 'Dragons',
+    otherCreatures: 'Other creatures',
+    season: 'Season',
+    episodes: 'episodes',
+    spoilerLabels: {
+      laag:    '&#128994; Low spoiler level',
+      middel:  '&#128993; Moderate spoiler level',
+      hoog:    '&#128308; High spoiler level',
+      maximum: '&#128308; Maximum spoiler level — read only after watching fully'
+    },
+    spoilerNotice: '⚠ Season summaries contain spoilers. Only open them after watching that season.',
+    searchResultsHeading: 'Search Results',
+    noResults: 'No results found for this search.',
+    searchTypeCharacter: 'Character',
+    searchTypeLocation: 'Location',
+    searchTypeCreature: 'Creature',
+    searchTypeOrganization: 'Organization',
+    searchTypeTerm: 'Term',
+    noFamilyTree: 'No family tree available for this series.',
+    familySelectorLabel: 'Choose a family:',
+    allEvents: 'All events',
+    mapTitle: 'Map of the Known World',
+    mapAriaLabel: 'Map of Westeros and Essos',
+    mapNarrowSea: 'Narrow',
+    mapNarrowSeaLine2: 'Sea',
+    mapDothrakiSea: 'Dothraki Sea',
+    mapFreeCities: 'Free Cities',
+    mapRegionNorth: 'The North',
+    mapRegionRiverlands: 'Riverlands',
+    mapRegionWesterlands: 'Westerlands',
+    mapRegionVale: 'The Vale',
+    mapRegionCrownlands: 'Crownlands',
+    mapRegionStormlands: 'Stormlands',
+    mapRegionReach: 'The Reach',
+    mapRegionDorne: 'Dorne',
+    mapPinDothrakiSea: 'Dothraki Sea',
+    mapLegendPin: 'Location (click to view)',
+    mapLegendWall: 'The Wall',
+    loadError: 'Error loading data. Please reload the page.'
+  }
+};
 
 // IMDB name IDs per acteur → directe profielpagina
 const IMDB_IDS = {
@@ -81,21 +202,101 @@ function actorImdbUrl(actorName) {
     : `https://www.imdb.com/find/?q=${encodeURIComponent(actorName)}&s=nm`;
 }
 
+// === Taalwisselaar ===
+function applyLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  // Wis taalafhankelijke cache
+  timelineData = [];
+  familyTreeData = [];
+  gotWorldData = {};
+  // Herlaad data zonder tab te resetten
+  loadData(currentShow, false);
+}
+
+// === UI-labels bijwerken (statische HTML-elementen) ===
+function updateUILabels() {
+  const t = I18N[currentLang];
+
+  // HTML lang-attribuut
+  document.documentElement.setAttribute('lang', currentLang);
+
+  // Navigatietabs
+  document.querySelectorAll('.nav-tab').forEach(tab => {
+    const key = tab.dataset.tab;
+    if (t[key]) tab.textContent = t[key];
+  });
+
+  // Zoekveld
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.placeholder = t.searchPlaceholder;
+    searchInput.setAttribute('aria-label', t.searchLabel);
+  }
+
+  // Lang-toggle knop
+  const langBtn = document.getElementById('lang-toggle');
+  if (langBtn) langBtn.innerHTML = t.langToggle;
+
+  // Show-selector aria-label
+  const showSelector = document.querySelector('.show-selector');
+  if (showSelector) showSelector.setAttribute('aria-label', t.showSelectorLabel);
+
+  // Terug-knop
+  const backBtn = document.getElementById('back-btn');
+  if (backBtn) {
+    backBtn.innerHTML = t.backBtn;
+    backBtn.setAttribute('aria-label', t.backBtnLabel);
+  }
+
+  // Spoiler-notice
+  const spoilerNotice = document.querySelector('.spoiler-notice');
+  if (spoilerNotice) spoilerNotice.textContent = t.spoilerNotice;
+
+  // Zoekresultaten-heading
+  const searchHeading = document.querySelector('#search-view .section-heading');
+  if (searchHeading) searchHeading.textContent = t.searchResultsHeading;
+
+  // Familie-selector label
+  const familyLabel = document.querySelector('.family-selector-label');
+  if (familyLabel) familyLabel.textContent = t.familySelectorLabel;
+
+  // Tijdlijn alle-events knop
+  const allEventsBtn = document.querySelector('.tl-filter-btn[data-filter="all"]');
+  if (allEventsBtn) allEventsBtn.textContent = t.allEvents;
+}
+
+// === Huidige tab opnieuw renderen ===
+function renderCurrentTab() {
+  switch (activeTab) {
+    case 'houses':        renderHouses(); break;
+    case 'locations':     renderLocations(); break;
+    case 'creatures':     renderCreatures(); break;
+    case 'organizations': renderOrganizations(); break;
+    case 'glossary':      renderGlossary(); break;
+    case 'seasons':       renderSeasons(); break;
+    case 'timeline':      renderTimeline(); break;
+    case 'familytree':    renderFamilyTree(); break;
+    default:              renderHouses();
+  }
+}
+
 // === Data laden ===
-async function loadData(show) {
+async function loadData(show, resetToHouses = true) {
   show = show || currentShow;
   currentShow = show;
-  const charFile  = show === 'hotd' ? 'data/hotd-characters.json' : 'data/characters.json';
-  const worldFile = show === 'hotd' ? 'data/hotd-world.json'      : 'data/world.json';
+  const suf = currentLang === 'en' ? '-en' : '';
+  const charFile  = show === 'hotd' ? `data/hotd-characters${suf}.json` : `data/characters${suf}.json`;
+  const worldFile = show === 'hotd' ? `data/hotd-world${suf}.json`      : `data/world${suf}.json`;
   try {
     const fetches = [fetch(charFile), fetch(worldFile)];
     const needTimeline    = !timelineData.length;
     const needFamilyTrees = !familyTreeData.length;
     const needGotWorld    = !Object.keys(gotWorldData).length && show === 'hotd';
 
-    if (needTimeline)    fetches.push(fetch('data/timeline.json'));
-    if (needFamilyTrees) fetches.push(fetch('data/family-trees.json'));
-    if (needGotWorld)    fetches.push(fetch('data/world.json'));
+    if (needTimeline)    fetches.push(fetch(`data/timeline${suf}.json`));
+    if (needFamilyTrees) fetches.push(fetch(`data/family-trees${suf}.json`));
+    if (needGotWorld)    fetches.push(fetch(`data/world${suf}.json`));
 
     const results = await Promise.all(fetches);
     const charData = await results[0].json();
@@ -112,12 +313,21 @@ async function loadData(show) {
 
     // Pas thema-kleur aan op de actieve show
     document.documentElement.dataset.show = show;
-    activeTab = 'houses';
-    setActiveTab('houses');
-    renderHouses();
+
+    // Labels bijwerken en tab renderen
+    updateUILabels();
+
+    if (resetToHouses) {
+      activeTab = 'houses';
+      setActiveTab('houses');
+      renderHouses();
+    } else {
+      renderCurrentTab();
+    }
   } catch (e) {
+    const t = I18N[currentLang];
     document.getElementById('houses-grid').innerHTML =
-      '<p class="no-results">Fout bij laden van data. Probeer de pagina te herladen.</p>';
+      `<p class="no-results">${t.loadError}</p>`;
     showView('houses-view');
   }
 }
@@ -141,20 +351,21 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
     document.getElementById('search-input').value = '';
 
     switch (activeTab) {
-      case 'houses':       renderHouses(); break;
-      case 'locations':    renderLocations(); break;
-      case 'creatures':    renderCreatures(); break;
+      case 'houses':        renderHouses(); break;
+      case 'locations':     renderLocations(); break;
+      case 'creatures':     renderCreatures(); break;
       case 'organizations': renderOrganizations(); break;
-      case 'glossary':     renderGlossary(); break;
-      case 'seasons':      renderSeasons(); break;
-      case 'timeline':     renderTimeline(); break;
-      case 'familytree':   renderFamilyTree(); break;
+      case 'glossary':      renderGlossary(); break;
+      case 'seasons':       renderSeasons(); break;
+      case 'timeline':      renderTimeline(); break;
+      case 'familytree':    renderFamilyTree(); break;
     }
   });
 });
 
 // === Huizenoverzicht ===
 function renderHouses() {
+  const t = I18N[currentLang];
   const grid = document.getElementById('houses-grid');
   grid.innerHTML = '';
   allHouses.forEach(house => {
@@ -167,7 +378,7 @@ function renderHouses() {
       <h3>${house.name}</h3>
       <p class="sigil">${house.sigil}</p>
       <p class="house-motto">"${house.motto}"</p>
-      <p class="count">${house.characters.length} personages</p>
+      <p class="count">${house.characters.length} ${t.characters}</p>
     `;
     card.addEventListener('click', () => showHouse(house));
     card.addEventListener('keydown', e => { if (e.key === 'Enter') showHouse(house); });
@@ -195,6 +406,7 @@ function showHouse(house) {
 
 // === Personagekaart bouwen ===
 function buildCharacterCard(char, houseColor) {
+  const t = I18N[currentLang];
   const card = document.createElement('div');
   card.className = 'character-card';
   card.id = `char-${char.id}`;
@@ -209,7 +421,7 @@ function buildCharacterCard(char, houseColor) {
   const body = document.createElement('div');
   body.className = 'card-body';
   const actorLine = char.actor
-    ? `<p class="actor-badge">Gespeeld door: <a class="actor-link" href="${actorImdbUrl(char.actor)}" target="_blank" rel="noopener noreferrer">${char.actor}</a></p>`
+    ? `<p class="actor-badge">${t.playedBy} <a class="actor-link" href="${actorImdbUrl(char.actor)}" target="_blank" rel="noopener noreferrer">${char.actor}</a></p>`
     : '';
   body.innerHTML = `<h3>${char.name}</h3>${actorLine}<p class="description">${char.description}</p>`;
 
@@ -265,7 +477,6 @@ function findCharacter(id) {
 
 // === Navigeer naar een specifiek personage ===
 function navigateToCharacter(char, house) {
-  // Zet de tab op 'huizen' als die nog niet actief is
   setActiveTab('houses');
   showHouse(house);
   requestAnimationFrame(() => {
@@ -315,17 +526,17 @@ function buildInfoCard(item, { meta, body, tag } = {}) {
 
 // === Westeros kaart ===
 function buildWesterosMap(locations) {
+  const t = I18N[currentLang];
   const container = document.createElement('div');
   container.className = 'map-container';
-  container.innerHTML = '<h2>Kaart van de Bekende Wereld</h2>';
+  container.innerHTML = `<h2>${t.mapTitle}</h2>`;
 
-  // SVG map — simplified but recognizable geography
   const svgNS = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(svgNS, 'svg');
   svg.setAttribute('viewBox', '0 0 500 680');
   svg.setAttribute('class', 'westeros-map');
   svg.setAttribute('role', 'img');
-  svg.setAttribute('aria-label', 'Kaart van Westeros en Essos');
+  svg.setAttribute('aria-label', t.mapAriaLabel);
 
   svg.innerHTML = `
     <!-- Zee achtergrond -->
@@ -340,7 +551,7 @@ function buildWesterosMap(locations) {
 
     <!-- Het Noorden -->
     <polygon points="95,90 215,90 225,140 210,180 175,210 140,215 105,195 90,155 85,115" class="map-region north"/>
-    <text x="155" y="155" class="map-region-label">Het Noorden</text>
+    <text x="155" y="155" class="map-region-label">${t.mapRegionNorth}</text>
 
     <!-- De Ijzeren Eilanden -->
     <ellipse cx="60" cy="220" rx="22" ry="14" class="map-region" fill="#1e2020"/>
@@ -348,31 +559,31 @@ function buildWesterosMap(locations) {
 
     <!-- De Rivierland + Westerland -->
     <polygon points="90,195 140,215 175,210 210,180 225,220 215,265 185,285 155,290 120,275 90,250 80,225" class="map-region"/>
-    <text x="130" y="245" class="map-region-label">Rivierland</text>
+    <text x="130" y="245" class="map-region-label">${t.mapRegionRiverlands}</text>
 
     <!-- Westerland (Casterly Rock) -->
     <polygon points="80,225 90,250 85,295 70,320 60,290 65,255" class="map-region" fill="#2a1e08"/>
-    <text x="68" y="280" class="map-region-label" font-size="6">Westerlanden</text>
+    <text x="68" y="280" class="map-region-label" font-size="6">${t.mapRegionWesterlands}</text>
 
     <!-- Het Dal (The Vale) -->
     <polygon points="215,180 225,140 265,130 280,160 270,210 245,225 225,220" class="map-region" fill="#1e2218"/>
-    <text x="248" y="180" class="map-region-label">Het Dal</text>
+    <text x="248" y="180" class="map-region-label">${t.mapRegionVale}</text>
 
     <!-- De Kroonlanden (King's Landing) -->
     <polygon points="185,285 215,265 225,220 245,225 260,260 255,295 235,315 205,315 185,300" class="map-region crownlands"/>
-    <text x="223" y="278" class="map-region-label">Kroonland</text>
+    <text x="223" y="278" class="map-region-label">${t.mapRegionCrownlands}</text>
 
     <!-- Stormgronden -->
     <polygon points="205,315 235,315 255,295 270,310 265,355 245,375 215,370 200,345" class="map-region"/>
-    <text x="233" y="345" class="map-region-label">Stormgronden</text>
+    <text x="233" y="345" class="map-region-label">${t.mapRegionStormlands}</text>
 
     <!-- Het Bereik -->
     <polygon points="85,295 120,275 155,290 185,300 185,340 165,375 135,390 105,380 80,355 75,320" class="map-region" fill="#1a2a10"/>
-    <text x="128" y="345" class="map-region-label">Het Bereik</text>
+    <text x="128" y="345" class="map-region-label">${t.mapRegionReach}</text>
 
     <!-- Dorne -->
     <polygon points="80,355 105,380 135,390 165,375 200,380 215,370 215,410 180,440 140,445 100,430 75,400" class="map-region" fill="#2a2010"/>
-    <text x="145" y="415" class="map-region-label">Dorne</text>
+    <text x="145" y="415" class="map-region-label">${t.mapRegionDorne}</text>
 
     <!-- Dragonstone eiland -->
     <ellipse cx="278" cy="305" rx="12" ry="8" class="map-region" fill="#1e1e2a"/>
@@ -382,12 +593,12 @@ function buildWesterosMap(locations) {
     <polygon points="330,60 430,60 470,100 480,160 460,220 440,260 420,290 360,300 330,260 325,200 320,140 315,100" class="map-region essos"/>
     <!-- Dothraki Zee -->
     <polygon points="360,180 440,160 480,200 480,280 440,260 420,290 360,300 340,260 330,220" class="map-region" fill="#2a2208"/>
-    <text x="415" y="240" class="map-region-label">Dothraki Zee</text>
-    <text x="378" y="140" class="map-region-label">Vrije Steden</text>
+    <text x="415" y="240" class="map-region-label">${t.mapDothrakiSea}</text>
+    <text x="378" y="140" class="map-region-label">${t.mapFreeCities}</text>
 
     <!-- Smalle Zee -->
-    <text x="290" y="200" class="map-label" fill="#2a4a6a">Smalle</text>
-    <text x="290" y="210" class="map-label" fill="#2a4a6a">Zee</text>
+    <text x="290" y="200" class="map-label" fill="#2a4a6a">${t.mapNarrowSea}</text>
+    <text x="290" y="210" class="map-label" fill="#2a4a6a">${t.mapNarrowSeaLine2}</text>
 
     <!-- === LOCATIE-PINS === -->
     <!-- King's Landing -->
@@ -441,14 +652,14 @@ function buildWesterosMap(locations) {
 
     <!-- Dothraki Zee -->
     <circle cx="420" cy="220" r="4" class="map-pin" data-loc="the-dothraki-sea"/>
-    <text x="420" y="212" class="map-pin-label">Dothraki Zee</text>
+    <text x="420" y="212" class="map-pin-label">${t.mapPinDothrakiSea}</text>
 
     <!-- Legenda -->
     <rect x="10" y="620" width="200" height="55" fill="#0f0802" rx="4" stroke="#3a2e1e" stroke-width="0.5"/>
     <circle cx="22" cy="633" r="4" fill="#CFB53B"/>
-    <text x="30" y="637" class="map-label" text-anchor="start">Locatie (klik om te bekijken)</text>
+    <text x="30" y="637" class="map-label" text-anchor="start">${t.mapLegendPin}</text>
     <line x1="14" y1="648" x2="35" y2="648" stroke="#4a7a9b" stroke-width="2" stroke-dasharray="4,2"/>
-    <text x="40" y="651" class="map-label" text-anchor="start">The Wall</text>
+    <text x="40" y="651" class="map-label" text-anchor="start">${t.mapLegendWall}</text>
   `;
 
   // Maak pins klikbaar → scroll naar locatiekaart
@@ -471,11 +682,11 @@ function renderLocations() {
   const list = document.getElementById('locations-list');
   list.innerHTML = '';
 
-  // Voeg kaart toe (één keer bovenaan)
+  // Verwijder eventuele bestaande kaart (herbouw altijd voor taalwisseling)
   const existingMap = view.querySelector('.map-container');
-  if (!existingMap) {
-    view.insertBefore(buildWesterosMap(worldData.locations || []), list);
-  }
+  if (existingMap) existingMap.remove();
+
+  view.insertBefore(buildWesterosMap(worldData.locations || []), list);
 
   (worldData.locations || []).forEach(loc => {
     list.appendChild(buildInfoCard(loc, {
@@ -489,6 +700,7 @@ function renderLocations() {
 
 // === Wezens ===
 function renderCreatures() {
+  const t = I18N[currentLang];
   const list = document.getElementById('creatures-list');
   list.innerHTML = '';
 
@@ -498,24 +710,20 @@ function renderCreatures() {
 
   // Gecombineerde drakenlijst: GoT draken + HotD draken
   const allDragons = [];
-  // GoT specifieke draken (hebben show: "got")
   gotDragons.forEach(c => { allDragons.push({ ...c, _fromShow: 'got' }); });
-  // HotD draken (alle wezens in HotD zijn draken)
   hotdDragons.forEach(c => { allDragons.push({ ...c, _fromShow: 'hotd' }); });
 
   if (allDragons.length > 0) {
-    // Draken-sectieheader
     const dragonHeader = document.createElement('div');
     dragonHeader.className = 'section-heading';
     dragonHeader.style.cssText = 'max-width:900px;margin:0 auto 0.75rem;';
-    dragonHeader.textContent = 'Draken';
+    dragonHeader.textContent = t.dragons;
     list.appendChild(dragonHeader);
 
     allDragons.forEach(c => {
       const showLabel = c._fromShow === 'hotd' ? 'House of the Dragon' : 'Game of Thrones';
       const showClass = c._fromShow === 'hotd' ? 'hotd' : 'got';
       const card = buildInfoCard(c, { meta: c.associated_with || null });
-      // Voeg show-badge toe aan card body
       const body = card.querySelector('.info-card-body');
       if (body) {
         const badge = document.createElement('span');
@@ -528,7 +736,6 @@ function renderCreatures() {
   }
 
   // Overige wezens van de actieve show (niet-draken)
-  // In HotD zijn alle wezens draken (al getoond); bij GoT toon overige wezens
   const dragonIds = new Set(allDragons.map(c => c.id));
   const otherCreatures = currentShow === 'hotd'
     ? []
@@ -539,7 +746,7 @@ function renderCreatures() {
       const divider = document.createElement('div');
       divider.className = 'section-heading';
       divider.style.cssText = 'max-width:900px;margin:1.5rem auto 0.75rem;';
-      divider.textContent = 'Overige wezens';
+      divider.textContent = t.otherCreatures;
       list.appendChild(divider);
     }
     otherCreatures.forEach(c => {
@@ -581,27 +788,22 @@ function renderGlossary() {
 
 // === Seizoenen ===
 function renderSeasons() {
+  const t = I18N[currentLang];
   const list = document.getElementById('seasons-list');
   list.innerHTML = '';
-  const spoilerLabels = {
-    laag: '&#128994; Lage spoilergraad',
-    middel: '&#128993; Gemiddelde spoilergraad',
-    hoog: '&#128308; Hoge spoilergraad',
-    maximum: '&#128308; Maximale spoilergraad — alleen lezen na volledig kijken'
-  };
   (worldData.seasons || []).forEach(s => {
     const details = document.createElement('details');
     details.className = 'season-card';
     details.innerHTML = `
       <summary>
         <div>
-          <div class="season-title">Seizoen ${s.number} (${s.year})</div>
-          <div class="season-meta">${s.episodes} afleveringen</div>
+          <div class="season-title">${t.season} ${s.number} (${s.year})</div>
+          <div class="season-meta">${s.episodes} ${t.episodes}</div>
         </div>
         <span class="season-chevron">&#9660;</span>
       </summary>
       <div class="season-body">
-        <p class="spoiler-label">${spoilerLabels[s.spoiler_level] || ''}</p>
+        <p class="spoiler-label">${t.spoilerLabels[s.spoiler_level] || ''}</p>
         <p>${s.summary}</p>
       </div>
     `;
@@ -616,12 +818,10 @@ function renderTimeline() {
   const list = document.getElementById('timeline-list');
   list.innerHTML = '';
 
-  // Bepaal actief filter
   const activeFilter = list.dataset.filter || 'all';
 
   (timelineData || []).forEach(ev => {
     if (ev.type === 'gap') {
-      // Gap-kaart
       const gapEl = document.createElement('div');
       gapEl.className = 'tl-gap-card';
       gapEl.innerHTML = `
@@ -630,7 +830,6 @@ function renderTimeline() {
           <div class="tl-gap-sub">${ev.title}</div>
         </div>
       `;
-      // Gap altijd tonen tenzij filter op één show staat (dan niet relevant)
       if (activeFilter !== 'hotd' && activeFilter !== 'got') {
         list.appendChild(gapEl);
       }
@@ -681,25 +880,28 @@ document.querySelectorAll('.tl-filter-btn').forEach(btn => {
 let currentFamilyId = null;
 
 function renderFamilyTree() {
+  const t = I18N[currentLang];
   const select = document.getElementById('family-select');
   const container = document.getElementById('family-tree-container');
 
   // Vul selector met families gefilterd op huidige show
   const filteredFamilies = (familyTreeData || []).filter(f => f.show === currentShow);
 
-  // Herbouw selector alleen als show veranderd is of nog leeg
-  const currentOptions = Array.from(select.options).map(o => o.value);
-  const newIds = filteredFamilies.map(f => f.id);
-  const needsRebuild = JSON.stringify(currentOptions) !== JSON.stringify(newIds);
+  // Herbouw selector altijd (naam kan veranderen bij taalwisseling)
+  const previousValue = select.value;
+  select.innerHTML = '';
+  filteredFamilies.forEach(f => {
+    const opt = document.createElement('option');
+    opt.value = f.id;
+    opt.textContent = f.name;
+    select.appendChild(opt);
+  });
 
-  if (needsRebuild) {
-    select.innerHTML = '';
-    filteredFamilies.forEach(f => {
-      const opt = document.createElement('option');
-      opt.value = f.id;
-      opt.textContent = f.name;
-      select.appendChild(opt);
-    });
+  // Herstel vorige selectie indien nog geldig
+  if (previousValue && filteredFamilies.find(f => f.id === previousValue)) {
+    select.value = previousValue;
+    currentFamilyId = previousValue;
+  } else {
     currentFamilyId = filteredFamilies.length > 0 ? filteredFamilies[0].id : null;
     select.value = currentFamilyId || '';
   }
@@ -708,7 +910,7 @@ function renderFamilyTree() {
   const chosen = filteredFamilies.find(f => f.id === (select.value || currentFamilyId));
   container.innerHTML = '';
   if (!chosen) {
-    container.innerHTML = '<p class="no-results">Geen stamboom beschikbaar voor deze serie.</p>';
+    container.innerHTML = `<p class="no-results">${t.noFamilyTree}</p>`;
     showView('familytree-view');
     return;
   }
@@ -775,14 +977,12 @@ function buildPersonCard(person, cardClass, nameClass) {
   card.appendChild(img);
   card.appendChild(name);
 
-  // Klikken navigeert naar het huis-overzicht van dit personage
   if (person.houseId) {
     card.addEventListener('click', () => {
       const house = allHouses.find(h => h.id === person.houseId);
       if (house) {
         setActiveTab('houses');
         showHouse(house);
-        // Scroll naar specifieke personage als aanwezig
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
             const charEl = document.getElementById(`char-${person.id}`);
@@ -804,6 +1004,7 @@ document.getElementById('family-select').addEventListener('change', function () 
 
 // === Live zoekfunctie (zoekt door alles) ===
 document.getElementById('search-input').addEventListener('input', function () {
+  const t = I18N[currentLang];
   const query = this.value.trim().toLowerCase();
   if (!query) {
     switch (activeTab) {
@@ -832,10 +1033,10 @@ document.getElementById('search-input').addEventListener('input', function () {
         char.description.toLowerCase().includes(query)
       ) {
         results.push({
-          type: 'Personage',
+          type: t.searchTypeCharacter,
           typeLabel: house.name,
           title: char.name,
-          subtitle: char.actor ? `Gespeeld door ${char.actor}` : '',
+          subtitle: char.actor ? `${t.playedBySearch} ${char.actor}` : '',
           text: char.description,
           image: char.image,
           action: () => navigateToCharacter(char, house)
@@ -848,7 +1049,7 @@ document.getElementById('search-input').addEventListener('input', function () {
   (worldData.locations || []).forEach(loc => {
     if (loc.name.toLowerCase().includes(query) || loc.description.toLowerCase().includes(query)) {
       results.push({
-        type: 'Locatie',
+        type: t.searchTypeLocation,
         typeLabel: loc.region,
         title: loc.name,
         subtitle: loc.region,
@@ -863,7 +1064,7 @@ document.getElementById('search-input').addEventListener('input', function () {
   (worldData.creatures || []).forEach(c => {
     if (c.name.toLowerCase().includes(query) || c.description.toLowerCase().includes(query)) {
       results.push({
-        type: 'Wezen',
+        type: t.searchTypeCreature,
         typeLabel: c.associated_with || '',
         title: c.name,
         subtitle: c.associated_with || '',
@@ -878,7 +1079,7 @@ document.getElementById('search-input').addEventListener('input', function () {
   (worldData.organizations || []).forEach(org => {
     if (org.name.toLowerCase().includes(query) || org.description.toLowerCase().includes(query)) {
       results.push({
-        type: 'Organisatie',
+        type: t.searchTypeOrganization,
         typeLabel: org.base || '',
         title: org.name,
         subtitle: org.base || '',
@@ -893,7 +1094,7 @@ document.getElementById('search-input').addEventListener('input', function () {
   (worldData.glossary || []).forEach(item => {
     if (item.term.toLowerCase().includes(query) || item.definition.toLowerCase().includes(query)) {
       results.push({
-        type: 'Term',
+        type: t.searchTypeTerm,
         typeLabel: '',
         title: item.term,
         subtitle: '',
@@ -908,7 +1109,7 @@ document.getElementById('search-input').addEventListener('input', function () {
   grid.innerHTML = '';
 
   if (results.length === 0) {
-    grid.innerHTML = '<p class="no-results">Geen resultaten gevonden voor deze zoekopdracht.</p>';
+    grid.innerHTML = `<p class="no-results">${t.noResults}</p>`;
   } else {
     results.forEach(r => {
       const el = document.createElement('div');
@@ -933,7 +1134,7 @@ document.getElementById('search-input').addEventListener('input', function () {
     });
   }
 
-  setActiveTab(activeTab); // bewaar de huidige tab
+  setActiveTab(activeTab);
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   showView('search-view');
 });
@@ -958,6 +1159,15 @@ document.getElementById('back-btn').addEventListener('click', () => {
   });
 })();
 
+// === Taal-toggle (NL / EN) ===
+(function () {
+  const btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    applyLanguage(currentLang === 'nl' ? 'en' : 'nl');
+  });
+})();
+
 // === Thema-toggle (donker/licht) ===
 (function () {
   const btn = document.getElementById('theme-toggle');
@@ -974,7 +1184,8 @@ document.getElementById('back-btn').addEventListener('click', () => {
   function updateThemeIcon() {
     const isLight = document.documentElement.classList.contains('light-mode');
     btn.textContent = isLight ? '🌙' : '☀️';
-    btn.title = isLight ? 'Schakel naar donkere modus' : 'Schakel naar lichte modus';
+    btn.title = isLight ? (currentLang === 'en' ? 'Switch to dark mode' : 'Schakel naar donkere modus')
+                        : (currentLang === 'en' ? 'Switch to light mode' : 'Schakel naar lichte modus');
   }
 })();
 
@@ -982,7 +1193,6 @@ document.getElementById('back-btn').addEventListener('click', () => {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('service-worker.js').then(reg => {
-      // Herlaad pagina zodra een nieuwe service worker actief wordt
       navigator.serviceWorker.addEventListener('controllerchange', () => {
         window.location.reload();
       });
@@ -991,4 +1201,5 @@ if ('serviceWorker' in navigator) {
 }
 
 // === Start ===
+updateUILabels();
 loadData();
