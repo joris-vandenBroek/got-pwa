@@ -16,6 +16,42 @@
   --font-body: 'EB Garamond', Georgia, serif;
 }
 
+/* === Lichte modus (beter leesbaar in de zon) === */
+html.light-mode {
+  --bg: #f0e6d3;
+  --bg-card: #ede0c8;
+  --bg-card-hover: #e4d4b5;
+  --text: #1a0e00;
+  --text-muted: #5a4020;
+  --gold: #8a6a00;
+  --gold-dim: #6a5000;
+  --border: #c8a870;
+  --header-bg: #2a1800;
+  --shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+html.light-mode body { background: var(--bg); color: var(--text); }
+html.light-mode header { background: var(--header-bg); }
+html.light-mode .logo { color: #f0c040; text-shadow: 0 0 12px rgba(240,192,64,0.4); }
+html.light-mode #search-input { background: #f8f0e0; color: var(--text); border-color: var(--border); }
+html.light-mode #search-input::placeholder { color: var(--text-muted); }
+html.light-mode .main-nav { background: #3a2200; border-color: #5a3800; }
+html.light-mode .nav-tab { color: #d4b870; }
+html.light-mode .nav-tab.active { color: #f0c040; border-color: #f0c040; }
+html.light-mode .info-card-img { filter: brightness(1.05); }
+html.light-mode .map-sea { fill: #7aa8c8; }
+html.light-mode .map-region { fill: #c8b890; stroke: #8a7050; }
+html.light-mode .map-region.north { fill: #b0c8d8; }
+html.light-mode .map-region.crownlands { fill: #d4b870; }
+html.light-mode .map-region.essos { fill: #d4b870; }
+html.light-mode .map-ice { fill: #d8e8f0; }
+html.light-mode .map-pin { fill: #8a6a00; stroke: #fff; }
+html.light-mode .map-pin:hover { fill: #c09a00; }
+html.light-mode .season-card { background: var(--bg-card); border-color: var(--border); }
+html.light-mode .season-card summary { color: var(--text); }
+html.light-mode details.season-card[open] summary { border-color: var(--gold); }
+html.light-mode .actor-link { color: #0050a0; }
+html.light-mode .actor-link:hover { color: #003070; }
+
 /* === Reset & base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -45,6 +81,16 @@ header {
   box-shadow: 0 2px 16px rgba(0,0,0,0.8);
 }
 
+.header-top {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  position: relative;
+}
+
 .logo {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 4vw, 1.9rem);
@@ -54,6 +100,32 @@ header {
   text-shadow: 0 0 24px rgba(207,181,59,0.35);
   line-height: 1.2;
 }
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle:hover { border-color: var(--gold); background: rgba(207,181,59,0.1); }
+
+/* === Acteur IMDB link === */
+.actor-link {
+  color: var(--gold-dim);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.actor-link:hover { color: var(--gold); text-decoration: underline; }
 
 /* === Zoekbalk === */
 .search-container { width: 100%; max-width: 500px; }

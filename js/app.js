@@ -105,7 +105,7 @@ function buildCharacterCard(char, houseColor) {
   const body = document.createElement('div');
   body.className = 'card-body';
   const actorLine = char.actor
-    ? `<p class="actor-badge">Gespeeld door: <span>${char.actor}</span></p>`
+    ? `<p class="actor-badge">Gespeeld door: <a class="actor-link" href="https://www.imdb.com/find/?q=${encodeURIComponent(char.actor)}&s=nm" target="_blank" rel="noopener noreferrer">${char.actor}</a></p>`
     : '';
   body.innerHTML = `<h3>${char.name}</h3>${actorLine}<p class="description">${char.description}</p>`;
 
@@ -595,6 +595,26 @@ document.getElementById('back-btn').addEventListener('click', () => {
   document.getElementById('search-input').value = '';
   renderHouses();
 });
+
+// === Thema-toggle (donker/licht) ===
+(function () {
+  const btn = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('got-theme');
+  if (saved === 'light') document.documentElement.classList.add('light-mode');
+  updateThemeIcon();
+
+  btn.addEventListener('click', () => {
+    const isLight = document.documentElement.classList.toggle('light-mode');
+    localStorage.setItem('got-theme', isLight ? 'light' : 'dark');
+    updateThemeIcon();
+  });
+
+  function updateThemeIcon() {
+    const isLight = document.documentElement.classList.contains('light-mode');
+    btn.textContent = isLight ? '🌙' : '☀️';
+    btn.title = isLight ? 'Schakel naar donkere modus' : 'Schakel naar lichte modus';
+  }
+})();
 
 // === Service Worker registreren ===
 if ('serviceWorker' in navigator) {
