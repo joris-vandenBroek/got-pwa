@@ -1,4 +1,4 @@
-const CACHE_NAME = 'got-pwa-v5';
+const CACHE_NAME = 'got-pwa-v6';
 
 const ASSETS = [
   './',
